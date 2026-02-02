@@ -481,27 +481,26 @@
             <span class="text-sm font-medium">Innovating Since 2020</span>
           </div>
 
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
+          <h1 class="text-2xl md:text-3xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
             Strategic Storytelling
-            <span class="gradient-text">Powerfull Communication</span>
+            <br><span class="gradient-text text-4xl">Powerfull Communication</span><br>
             Mesureble Impact
           </h1>
           <p class="text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-lg">
-            Qadr Media and Communication Ltd is a full-services media communications agency helping brands, institions, and leaders communicate with clerity, creativity, and purpose. We combine strategic insight, compelling storytelling, and digital innovation to transform communication into a poerfull competitive advantage.
-
-            From brand building to reputation management, we help organizations control their narrative, strengthen condibility, and connect meaningfully with the audiences that matter most.
+            Qadr Media and Communication Ltd is a full-services media communications agency helping brands, institions,
+            and leaders communicate with clerity, creativity, and purpose. We combine strategic insight, compelling
+            storytelling, and digital innovation to transform communication into a poerfull competitive advantage.
           </p>
           <div class="flex flex-wrap gap-4">
-              <button id="getStartedBtn"
-                  class="px-8 py-3 gradient-bg text-white rounded-lg hover:opacity-90 transition-all duration-300 font-medium shadow-lg hover:shadow-xl">
-                  <i class="fas fa-rocket mr-2"></i> Get Started
-              </button>
-              <button id="viewPortfolioBtn"
-                  class="px-8 py-3 border border-gray-300 dark:border-dark-600 text-gray-700 dark:text-gray-300 rounded-lg hover:border-primary-600 dark:hover:border-primary-400 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-300 font-medium group">
-                  <i
-                      class="fas fa-eye mr-2 group-hover:text-primary-600 dark:group-hover:text-primary-400"></i>
-                  View Portfolio
-              </button>
+            <button id="getStartedBtn"
+              class="px-8 py-3 gradient-bg text-white rounded-lg hover:opacity-90 transition-all duration-300 font-medium shadow-lg hover:shadow-xl">
+              <i class="fas fa-rocket mr-2"></i> Get Started
+            </button>
+            <button id="viewPortfolioBtn"
+              class="px-8 py-3 border border-gray-300 dark:border-dark-600 text-gray-700 dark:text-gray-300 rounded-lg hover:border-primary-600 dark:hover:border-primary-400 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-300 font-medium group">
+              <i class="fas fa-eye mr-2 group-hover:text-primary-600 dark:group-hover:text-primary-400"></i>
+              View Portfolio
+            </button>
           </div>
 
           <div class="mt-12 flex items-center space-x-8">
@@ -1445,6 +1444,18 @@
       });
     });
 
+    document.getElementById("getStartedBtn").addEventListener("click", function () {
+      document.getElementById("contact").scrollIntoView({
+        behavior: "smooth"
+      });
+    });
+
+    document.getElementById("viewPortfolioBtn").addEventListener("click", function () {
+      document.getElementById("industries").scrollIntoView({
+        behavior: "smooth"
+      });
+    });
+
     // Form submission
     const contactForm = document.querySelector('form');
     if (contactForm) {
@@ -1499,5 +1510,3 @@
 </body>
 
 </html>
-
-
