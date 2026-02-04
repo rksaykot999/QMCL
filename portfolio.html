@@ -1,0 +1,1520 @@
+<!DOCTYPE html>
+<html lang="en" class="light scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | Qadr Media & Communications Ltd</title>
+
+  <!-- Meta tags for SEO and professionalism -->
+  <meta name="description"
+    content="Explore our portfolio of strategic communication projects across various industries. See how we drive measurable impact for our clients.">
+  <meta name="keywords"
+    content="portfolio, case studies, communication projects, brand campaigns, digital marketing, event management">
+  <meta name="author" content="Qadr Media & Communications Ltd">
+
+  <!-- Professional Fonts: Poppins for headings, Inter for body -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="shortcut icon" href="Logo/Logo(Transparent).png" type="image/x-icon">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["Inter", "ui-sans-serif", "system-ui"],
+            heading: ["Poppins", "Inter", "sans-serif"],
+          },
+          colors: {
+            // Dark mode optimized colors
+            dark: {
+              50: '#f8fafc',
+              100: '#f1f5f9',
+              200: '#e2e8f0',
+              300: '#cbd5e1',
+              400: '#94a3b8',
+              500: '#64748b',
+              600: '#475569',
+              700: '#334155',
+              800: '#1e293b',
+              900: '#0f172a',
+            },
+            // Primary brand colors
+            primary: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              200: '#bfdbfe',
+              300: '#93c5fd',
+              400: '#60a5fa',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e40af',
+              900: '#1e3a8a',
+            },
+            // Accent colors (teal)
+            accent: {
+              50: '#f0fdfa',
+              100: '#ccfbf1',
+              200: '#99f6e4',
+              300: '#5eead4',
+              400: '#2dd4bf',
+              500: '#14b8a6',
+              600: '#0d9488',
+              700: '#0f766e',
+              800: '#115e59',
+              900: '#134e4a',
+            }
+          },
+          boxShadow: {
+            'elegant': '0 10px 40px rgba(0, 0, 0, 0.05)',
+            'elegant-dark': '0 10px 40px rgba(0, 0, 0, 0.3)',
+            'lift': '0 20px 60px rgba(0, 0, 0, 0.08)',
+            'lift-dark': '0 20px 60px rgba(0, 0, 0, 0.35)',
+          },
+          animation: {
+            float: "float 3s ease-in-out infinite",
+            "fade-in": "fade-in .8s ease-out",
+            "fade-in-up": "fade-in-up 0.6s ease-out",
+          },
+          keyframes: {
+            float: {
+              "0%,100%": { transform: "translateY(0)" },
+              "50%": { transform: "translateY(-10px)" }
+            },
+            "fade-in": {
+              "0%": { opacity: 0 },
+              "100%": { opacity: 1 }
+            },
+            "fade-in-up": {
+              "0%": { transform: "translateY(10px)", opacity: 0 },
+              "100%": { transform: "translateY(0)", opacity: 1 }
+            }
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    /* Professional typography */
+    body {
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .heading {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      letter-spacing: -0.025em;
+      line-height: 1.2;
+    }
+
+    /* Header blur on scroll */
+    .header-scrolled {
+      backdrop-filter: blur(12px) !important;
+      -webkit-backdrop-filter: blur(12px) !important;
+      background: rgba(255, 255, 255, 0.95) !important;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      border: 1px solid rgba(0, 0, 0, 0.05) !important;
+    }
+
+    .dark .header-scrolled {
+      background: rgba(15, 23, 42, 0.95) !important;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+
+    /* Initial header state - transparent */
+    #headerBar {
+      background: rgba(255, 255, 255, 0.1) !important;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+
+    .dark #headerBar {
+      background: rgba(15, 23, 42, 0.2) !important;
+      border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+
+    /* Drawer animations */
+    .drawer-backdrop {
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .drawer-backdrop.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .drawer-panel {
+      transform: translateX(-100%);
+      transition: transform .3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .drawer-panel.open {
+      transform: translateX(0);
+    }
+
+    /* Background patterns */
+    .bg-pattern-subtle {
+      background-color: #f8fafc;
+    }
+
+    .dark .bg-pattern-subtle {
+      background-color: #0f172a;
+      background-image:
+        radial-gradient(circle at 15% 50%, rgba(148, 163, 184, 0.05) 0%, transparent 55%),
+        radial-gradient(circle at 85% 30%, rgba(45, 212, 191, 0.05) 0%, transparent 55%);
+    }
+
+    /* Professional gradients */
+    .gradient-bg {
+      background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    }
+
+    .dark .gradient-bg {
+      background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #3b82f6 0%, #14b8a6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .dark .gradient-text {
+      background: linear-gradient(135deg, #60a5fa 0%, #2dd4bf 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .accent-gradient {
+      background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
+    }
+
+    .dark .accent-gradient {
+      background: linear-gradient(135deg, #2dd4bf 0%, #0f766e 100%);
+    }
+
+    /* Professional card hover effects */
+    .card-hover {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .card-hover:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    }
+
+    .dark .card-hover:hover {
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+
+    .dark ::-webkit-scrollbar-track {
+      background: #1e293b;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #94a3b8;
+      border-radius: 5px;
+    }
+
+    .dark ::-webkit-scrollbar-thumb {
+      background: #475569;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #64748b;
+    }
+
+    .dark ::-webkit-scrollbar-thumb:hover {
+      background: #64748b;
+    }
+
+    /* Professional button styles */
+    .btn-primary {
+      background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+      color: white;
+      font-weight: 500;
+      padding: 12px 28px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+    }
+
+    .dark .btn-primary {
+      background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+      box-shadow: 0 4px 15px rgba(30, 64, 175, 0.3);
+    }
+
+    .btn-accent {
+      background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
+      color: white;
+      font-weight: 500;
+      padding: 12px 28px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(20, 184, 166, 0.2);
+    }
+
+    .btn-accent:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(20, 184, 166, 0.3);
+    }
+
+    .dark .btn-accent {
+      background: linear-gradient(135deg, #2dd4bf 0%, #0f766e 100%);
+      box-shadow: 0 4px 15px rgba(45, 212, 191, 0.3);
+    }
+
+    /* Section spacing */
+    section {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+
+    @media (min-width: 768px) {
+      section {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+      }
+    }
+
+    /* Smooth theme transitions */
+    * {
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+
+    /* Portfolio card styling */
+    .portfolio-card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .portfolio-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 0;
+      background: linear-gradient(to bottom, #14b8a6, #0d9488);
+      transition: height 0.3s ease;
+    }
+
+    .dark .portfolio-card::before {
+      background: linear-gradient(to bottom, #2dd4bf, #0f766e);
+    }
+
+    .portfolio-card:hover::before {
+      height: 100%;
+    }
+
+    /* Process steps styling */
+    .process-step {
+      position: relative;
+      padding-left: 40px;
+      margin-bottom: 30px;
+    }
+
+    .process-step::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 5px;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+    }
+
+    .dark .process-step::before {
+      background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+    }
+
+    .process-step:nth-child(1)::before {
+      content: '1';
+    }
+
+    .process-step:nth-child(2)::before {
+      content: '2';
+    }
+
+    .process-step:nth-child(3)::before {
+      content: '3';
+    }
+
+    .process-step:nth-child(4)::before {
+      content: '4';
+    }
+
+    /* Industry card styling */
+    .industry-card {
+      transition: all 0.3s ease;
+    }
+
+    .industry-card:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Project outcome styling */
+    .outcome-badge {
+      position: relative;
+      padding-left: 25px;
+    }
+
+    .outcome-badge::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: #14b8a6;
+    }
+
+    .dark .outcome-badge::before {
+      background: #2dd4bf;
+    }
+
+    /* Role card styling */
+    .role-card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .role-card:hover .role-icon {
+      transform: scale(1.1);
+    }
+
+    .role-icon {
+      transition: transform 0.3s ease;
+    }
+
+    /* Portfolio filter */
+    .portfolio-filter.active {
+      background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+      color: white;
+    }
+
+    .dark .portfolio-filter.active {
+      background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+    }
+  </style>
+</head>
+
+<body class="font-sans bg-white dark:bg-dark-900 text-gray-800 dark:text-dark-100">
+
+  <!-- =======================
+      MOBILE DRAWER
+  ======================== -->
+  <div id="drawerBackdrop" class="drawer-backdrop fixed inset-0 z-50 bg-black/40">
+    <aside id="drawerPanel"
+      class="drawer-panel absolute left-0 top-0 h-full w-[85%] max-w-sm bg-white dark:bg-dark-800 border-r border-gray-200 dark:border-dark-700 p-6 flex flex-col">
+      <div class="flex items-center justify-between mb-8">
+        <a href="index.html" class="flex items-center gap-3">
+          <div class="h-12 w-40 rounded-lg overflow-hidden">
+            <img src="Logo/QMCL-Logo.png" alt="QMCL Logo" class="h-full w-full object-contain">
+          </div>
+        </a>
+        <button id="drawerClose"
+          class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-dark-700 text-gray-700 dark:text-dark-300"
+          aria-label="Close menu">
+          <i class="fas fa-times text-lg"></i>
+        </button>
+      </div>
+
+      <nav class="space-y-2 flex-1">
+        <a class="flex items-center px-4 py-3 rounded-lg font-medium hover:bg-gray-100 dark:hover:bg-dark-700 text-gray-700 dark:text-dark-300 hover:text-accent-600 dark:hover:text-accent-400 transition-colors"
+          href="index.html">
+          <i class="fas fa-home mr-3 w-5"></i> Home
+        </a>
+        <a class="flex items-center px-4 py-3 rounded-lg font-medium hover:bg-gray-100 dark:hover:bg-dark-700 text-gray-700 dark:text-dark-300 hover:text-accent-600 dark:hover:text-accent-400 transition-colors"
+          href="about.html">
+          <i class="fas fa-building mr-3 w-5"></i> About Us
+        </a>
+        <a class="flex items-center px-4 py-3 rounded-lg font-medium hover:bg-gray-100 dark:hover:bg-dark-700 text-gray-700 dark:text-dark-300 hover:text-accent-600 dark:hover:text-accent-400 transition-colors"
+          href="services.html">
+          <i class="fas fa-cogs mr-3 w-5"></i> Services
+        </a>
+        <a class="flex items-center px-4 py-3 rounded-lg font-medium hover:bg-gray-100 dark:hover:bg-dark-700 text-gray-700 dark:text-dark-300 hover:text-accent-600 dark:hover:text-accent-400 transition-colors"
+          href="#">
+          <i class="fas fa-briefcase mr-3 w-5"></i> Portfolio
+        </a>
+        <a class="flex items-center px-4 py-3 rounded-lg font-medium hover:bg-gray-100 dark:hover:bg-dark-700 text-gray-700 dark:text-dark-300 hover:text-accent-600 dark:hover:text-accent-400 transition-colors"
+          href="contact.html">
+          <i class="fas fa-envelope mr-3 w-5"></i> Contact
+        </a>
+      </nav>
+
+      <div class="pt-4 border-t border-gray-200 dark:border-dark-700">
+        <a href="contact.html#contact-form" class="btn-accent block w-full text-center py-3 rounded-lg font-medium mb-3">
+          <i class="fas fa-calendar-check mr-2"></i> Get Quote
+        </a>
+        <p class="text-xs text-gray-500 dark:text-dark-400 text-center">
+          Strategic Communications • Measurable Impact
+        </p>
+      </div>
+    </aside>
+  </div>
+
+  <!-- ===============
+      HEADER 
+  ============== -->
+  <header id="siteHeader" class="fixed top-0 left-0 right-0 z-40">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div id="headerBar" class="mt-4 rounded-xl transition-all duration-300">
+        <div class="flex h-16 items-center justify-between px-4 sm:px-6 border border-transparent rounded-xl">
+          <!-- Logo -->
+          <a href="index.html" class="flex items-center">
+            <div class="h-12 w-40 rounded-lg overflow-hidden">
+              <img src="Logo/QMCL-Logo.png" alt="QMCL Logo" class="h-full w-full object-contain">
+            </div>
+          </a>
+
+          <!-- Desktop Navigation -->
+          <nav class="hidden lg:flex items-center space-x-1">
+            <a class="px-4 py-2 rounded-lg font-medium text-gray-700 dark:text-dark-300 hover:text-accent-600 dark:hover:text-accent-400 hover:bg-white/20 dark:hover:bg-dark-800/30 transition-colors"
+              href="index.html">Home</a>
+            <a class="px-4 py-2 rounded-lg font-medium text-gray-700 dark:text-dark-300 hover:text-accent-600 dark:hover:text-accent-400 hover:bg-white/20 dark:hover:bg-dark-800/30 transition-colors"
+              href="about.html">About</a>
+            <a class="px-4 py-2 rounded-lg font-medium text-gray-700 dark:text-dark-300 hover:text-accent-600 dark:hover:text-accent-400 hover:bg-white/20 dark:hover:bg-dark-800/30 transition-colors"
+              href="services.html">Services</a>
+            <a class="px-4 py-2 rounded-lg font-medium text-gray-700 dark:text-dark-300 hover:text-accent-600 dark:hover:text-accent-400 hover:bg-white/20 dark:hover:bg-dark-800/30 transition-colors"
+              href="#">Portfolio</a>
+            <a class="px-4 py-2 rounded-lg font-medium text-gray-700 dark:text-dark-300 hover:text-accent-600 dark:hover:text-accent-400 hover:bg-white/20 dark:hover:bg-dark-800/30 transition-colors"
+              href="contact.html" class="hidden xl:inline">Contact</a>
+          </nav>
+
+          <!-- Actions -->
+          <div class="flex items-center space-x-3">
+            <button id="themeToggle"
+              class="w-10 h-10 rounded-full bg-white/20 dark:bg-dark-800/30 flex items-center justify-center hover:bg-white/30 dark:hover:bg-dark-700/40 transition-colors backdrop-blur-sm"
+              aria-label="Toggle theme">
+              <i id="sunIcon" class="fas fa-sun text-yellow-500 text-lg hidden"></i>
+              <i id="moonIcon" class="fas fa-moon text-gray-600 dark:text-dark-400 text-lg"></i>
+            </button>
+
+            <button id="drawerOpen"
+              class="lg:hidden w-10 h-10 rounded-full bg-white/20 dark:bg-dark-800/30 flex items-center justify-center hover:bg-white/30 dark:hover:bg-dark-700/40 transition-colors backdrop-blur-sm"
+              aria-label="Open menu">
+              <i class="fas fa-bars text-gray-700 dark:text-dark-300"></i>
+            </button>
+
+            <a href="contact.html#contact-form"
+              class="hidden lg:inline-flex items-center justify-center btn-accent px-6 py-2.5 rounded-lg font-medium backdrop-blur-sm">
+              <i class="fas fa-paper-plane mr-2"></i> Get Quote
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Spacer for fixed header -->
+  <div class="h-20"></div>
+
+  <!-- =========================
+       MAIN CONTENT - PORTFOLIO
+  ========================== -->
+
+  <!-- HERO SECTION -->
+  <section class="relative overflow-hidden pt-20 pb-16 bg-gradient-to-br from-gray-50 to-white dark:from-dark-900 dark:to-dark-800">
+    <div
+      class="absolute top-40 left-10 w-48 h-48 bg-accent-300 dark:bg-accent-900 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl opacity-20">
+    </div>
+    <div
+      class="absolute bottom-20 right-10 w-72 h-72 bg-primary-300 dark:bg-primary-700 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl opacity-20">
+    </div>
+
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="max-w-4xl mx-auto text-center">
+        <div
+          class="inline-flex items-center px-4 py-2 rounded-full bg-accent-100 dark:bg-accent-900/30 text-accent-700 dark:text-accent-300 mb-6">
+          <span class="w-2 h-2 bg-accent-600 dark:bg-accent-400 rounded-full mr-2"></span>
+          <span class="text-sm font-medium">Case Studies & Success Stories</span>
+        </div>
+
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
+          Our <span class="gradient-text">Portfolio</span>
+        </h1>
+        <p class="text-xl text-gray-600 dark:text-dark-300 mb-8 max-w-3xl mx-auto">
+          At Qadr Media & Communications Ltd, we deliver communication solutions that are strategic, creative, and results-driven. Our portfolio reflects a range of projects across industries—each designed to solve real challenges, strengthen reputation, and create meaningful engagement.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="#featured-projects"
+            class="px-8 py-3 gradient-bg text-white rounded-lg hover:opacity-90 transition-all duration-300 font-medium shadow-lg hover:shadow-xl">
+            <i class="fas fa-chart-line mr-2"></i> View Featured Projects
+          </a>
+          <a href="#industries"
+            class="px-8 py-3 border border-gray-300 dark:border-dark-600 text-gray-700 dark:text-dark-300 rounded-lg hover:border-accent-600 dark:hover:border-accent-400 hover:text-accent-600 dark:hover:text-accent-400 transition-all duration-300 font-medium group">
+            <i class="fas fa-industry mr-2 group-hover:text-accent-600 dark:group-hover:text-accent-400"></i>
+            Explore Industries
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW WE CREATE IMPACT -->
+  <section class="bg-pattern-subtle">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+          <div
+            class="inline-flex items-center px-4 py-2 rounded-full bg-white dark:bg-dark-800 text-accent-600 dark:text-accent-400 mb-4 border border-gray-200 dark:border-dark-700">
+            <i class="fas fa-bullseye mr-2"></i>
+            <span class="text-sm font-medium">Our Methodology</span>
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            How We Create <span class="gradient-text">Impact</span>
+          </h2>
+          <p class="text-gray-600 dark:text-dark-300 max-w-2xl mx-auto text-lg">
+            Every project we undertake follows a structured, insight-led approach to ensure consistency, effectiveness, and long-term value.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Step 1 -->
+          <div class="process-step">
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Understanding Objectives</h3>
+            <p class="text-gray-600 dark:text-dark-300">
+              We begin by thoroughly understanding client objectives, audience needs, and market context through in-depth research and analysis.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="process-step">
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Strategic Development</h3>
+            <p class="text-gray-600 dark:text-dark-300">
+              We develop clear, targeted communication strategies aligned with business goals and designed to achieve measurable outcomes.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="process-step">
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Creative Execution</h3>
+            <p class="text-gray-600 dark:text-dark-300">
+              Our team executes creative solutions with precision, attention to detail, and a focus on delivering exceptional quality.
+            </p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="process-step">
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Performance Measurement</h3>
+            <p class="text-gray-600 dark:text-dark-300">
+              We continuously measure performance, analyze results, and optimize strategies to maximize impact and ROI.
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-12 text-center">
+          <div class="inline-flex items-center justify-center p-6 bg-white dark:bg-dark-800 rounded-2xl border border-gray-200 dark:border-dark-700 max-w-2xl mx-auto">
+            <div class="text-left">
+              <i class="fas fa-quote-left text-accent-600 dark:text-accent-400 text-2xl mb-4"></i>
+              <p class="text-gray-700 dark:text-dark-300 italic mb-4">
+                "From brand visibility campaigns to digital growth initiatives and high-impact events, our work demonstrates how thoughtful communication can drive measurable outcomes."
+              </p>
+              <div class="flex items-center">
+                <div class="w-10 h-10 rounded-full gradient-bg flex items-center justify-center mr-3">
+                  <i class="fas fa-check text-white"></i>
+                </div>
+                <span class="font-medium text-gray-900 dark:text-white">Structured Approach, Proven Results</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PROJECTS -->
+  <section id="featured-projects" class="bg-gradient-to-b from-white to-gray-50 dark:from-dark-900 dark:to-dark-800">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+          <div
+            class="inline-flex items-center px-4 py-2 rounded-full bg-white dark:bg-dark-800 text-accent-600 dark:text-accent-400 mb-4 border border-gray-200 dark:border-dark-700">
+            <i class="fas fa-star mr-2"></i>
+            <span class="text-sm font-medium">Case Studies</span>
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            Featured <span class="gradient-text">Projects</span>
+          </h2>
+          <p class="text-gray-600 dark:text-dark-300 max-w-2xl mx-auto text-lg">
+            Explore our selection of successful communication projects across different industries and objectives.
+          </p>
+        </div>
+
+        <!-- Project Filter -->
+        <div class="mb-12">
+          <div class="flex flex-wrap justify-center gap-3 mb-8">
+            <button class="portfolio-filter px-5 py-3 rounded-lg font-medium border border-gray-300 dark:border-dark-600 text-gray-700 dark:text-dark-300 hover:border-accent-600 dark:hover:border-accent-400 hover:text-accent-600 dark:hover:text-accent-400 transition-all duration-300 active" data-category="all">
+              All Projects
+            </button>
+            <button class="portfolio-filter px-5 py-3 rounded-lg font-medium border border-gray-300 dark:border-dark-600 text-gray-700 dark:text-dark-300 hover:border-accent-600 dark:hover:border-accent-400 hover:text-accent-600 dark:hover:text-accent-400 transition-all duration-300" data-category="pr">
+              PR & Branding
+            </button>
+            <button class="portfolio-filter px-5 py-3 rounded-lg font-medium border border-gray-300 dark:border-dark-600 text-gray-700 dark:text-dark-300 hover:border-accent-600 dark:hover:border-accent-400 hover:text-accent-600 dark:hover:text-accent-400 transition-all duration-300" data-category="digital">
+              Digital Growth
+            </button>
+            <button class="portfolio-filter px-5 py-3 rounded-lg font-medium border border-gray-300 dark:border-dark-600 text-gray-700 dark:text-dark-300 hover:border-accent-600 dark:hover:border-accent-400 hover:text-accent-600 dark:hover:text-accent-400 transition-all duration-300" data-category="event">
+              Event Management
+            </button>
+            <button class="portfolio-filter px-5 py-3 rounded-lg font-medium border border-gray-300 dark:border-dark-600 text-gray-700 dark:text-dark-300 hover:border-accent-600 dark:hover:border-accent-400 hover:text-accent-600 dark:hover:text-accent-400 transition-all duration-300" data-category="crisis">
+              Crisis Communication
+            </button>
+          </div>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="grid lg:grid-cols-2 gap-8">
+          <!-- Project 1: Brand Visibility & PR Campaign -->
+          <div class="portfolio-card bg-white dark:bg-dark-800 rounded-2xl overflow-hidden border border-gray-200 dark:border-dark-700 card-hover" data-category="pr">
+            <div class="h-48 overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Brand Visibility Campaign" class="w-full h-full object-cover">
+            </div>
+            <div class="p-8">
+              <div class="flex items-center justify-between mb-4">
+                <span
+                  class="text-sm font-medium px-3 py-1 rounded-full bg-accent-100 dark:bg-accent-900/30 text-accent-600 dark:text-accent-400">PR & Branding</span>
+                <span class="text-sm text-gray-500 dark:text-dark-400">Corporate Client</span>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Brand Visibility & Public Relations Campaign</h3>
+              
+              <div class="mb-6">
+                <h4 class="font-bold text-gray-900 dark:text-white mb-2 flex items-center">
+                  <i class="fas fa-bullseye text-primary-600 dark:text-primary-400 mr-2"></i> Objective
+                </h4>
+                <p class="text-gray-600 dark:text-dark-300 mb-4">
+                  Increase brand awareness, media presence, and public credibility for a corporate client in the technology sector.
+                </p>
+              </div>
+
+              <div class="mb-6">
+                <h4 class="font-bold text-gray-900 dark:text-white mb-2 flex items-center">
+                  <i class="fas fa-chess-knight text-accent-600 dark:text-accent-400 mr-2"></i> Strategy
+                </h4>
+                <ul class="space-y-2 text-gray-600 dark:text-dark-300">
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle text-accent-600 dark:text-accent-400 mt-1 mr-2 text-sm"></i>
+                    <span>Developed a targeted PR and media engagement strategy</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle text-accent-600 dark:text-accent-400 mt-1 mr-2 text-sm"></i>
+                    <span>Refined brand messaging and positioning</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle text-accent-600 dark:text-accent-400 mt-1 mr-2 text-sm"></i>
+                    <span>Coordinated press releases and media outreach</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="mb-6">
+                <h4 class="font-bold text-gray-900 dark:text-white mb-2 flex items-center">
+                  <i class="fas fa-chart-line text-green-600 dark:text-green-400 mr-2"></i> Outcome
+                </h4>
+                <div class="space-y-2">
+                  <div class="outcome-badge text-gray-700 dark:text-dark-300">
+                    Improved media coverage and brand visibility
+                  </div>
+                  <div class="outcome-badge text-gray-700 dark:text-dark-300">
+                    Stronger public perception and stakeholder confidence
+                  </div>
+                  <div class="outcome-badge text-gray-700 dark:text-dark-300">
+                    40% increase in positive media mentions
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: Digital Growth & Audience Engagement -->
+          <div class="portfolio-card bg-white dark:bg-dark-800 rounded-2xl overflow-hidden border border-gray-200 dark:border-dark-700 card-hover" data-category="digital">
+            <div class="h-48 overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Digital Growth Project" class="w-full h-full object-cover">
+            </div>
+            <div class="p-8">
+              <div class="flex items-center justify-between mb-4">
+                <span
+                  class="text-sm font-medium px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400">Digital Growth</span>
+                <span class="text-sm text-gray-500 dark:text-dark-400">E-commerce Brand</span>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Digital Growth & Audience Engagement Project</h3>
+              
+              <div class="mb-6">
+                <h4 class="font-bold text-gray-900 dark:text-white mb-2 flex items-center">
+                  <i class="fas fa-bullseye text-primary-600 dark:text-primary-400 mr-2"></i> Objective
+                </h4>
+                <p class="text-gray-600 dark:text-dark-300 mb-4">
+                  Strengthen online presence and increase digital engagement for an e-commerce fashion brand.
+                </p>
+              </div>
+
+              <div class="mb-6">
+                <h4 class="font-bold text-gray-900 dark:text-white mb-2 flex items-center">
+                  <i class="fas fa-chess-knight text-accent-600 dark:text-accent-400 mr-2"></i> Strategy
+                </h4>
+                <ul class="space-y-2 text-gray-600 dark:text-dark-300">
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle text-accent-600 dark:text-accent-400 mt-1 mr-2 text-sm"></i>
+                    <span>Created audience-focused content strategy</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle text-accent-600 dark:text-accent-400 mt-1 mr-2 text-sm"></i>
+                    <span>Executed targeted social media and digital campaigns</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle text-accent-600 dark:text-accent-400 mt-1 mr-2 text-sm"></i>
+                    <span>Optimized performance using analytics and insights</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="mb-6">
+                <h4 class="font-bold text-gray-900 dark:text-white mb-2 flex items-center">
+                  <i class="fas fa-chart-line text-green-600 dark:text-green-400 mr-2"></i> Outcome
+                </h4>
+                <div class="space-y-2">
+                  <div class="outcome-badge text-gray-700 dark:text-dark-300">
+                    Increased social media engagement by 150%
+                  </div>
+                  <div class="outcome-badge text-gray-700 dark:text-dark-300">
+                    Growth in website traffic and digital visibility
+                  </div>
+                  <div class="outcome-badge text-gray-700 dark:text-dark-300">
+                    75% increase in online sales conversion
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: Branding & Identity Development -->
+          <div class="portfolio-card bg-white dark:bg-dark-800 rounded-2xl overflow-hidden border border-gray-200 dark:border-dark-700 card-hover" data-category="pr">
+            <div class="h-48 overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Brand Identity Development" class="w-full h-full object-cover">
+            </div>
+            <div class="p-8">
+              <div class="flex items-center justify-between mb-4">
+                <span
+                  class="text-sm font-medium px-3 py-1 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400">Branding</span>
+                <span class="text-sm text-gray-500 dark:text-dark-400">Healthcare Startup</span>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Branding & Identity Development</h3>
+              
+              <div class="mb-6">
+                <h4 class="font-bold text-gray-900 dark:text-white mb-2 flex items-center">
+                  <i class="fas fa-bullseye text-primary-600 dark:text-primary-400 mr-2"></i> Objective
+                </h4>
+                <p class="text-gray-600 dark:text-dark-300 mb-4">
+                  Create a clear, consistent brand identity aligned with organizational values for a healthcare technology startup.
+                </p>
+              </div>
+
+              <div class="mb-6">
+                <h4 class="font-bold text-gray-900 dark:text-white mb-2 flex items-center">
+                  <i class="fas fa-chess-knight text-accent-600 dark:text-accent-400 mr-2"></i> Strategy
+                </h4>
+                <ul class="space-y-2 text-gray-600 dark:text-dark-300">
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle text-accent-600 dark:text-accent-400 mt-1 mr-2 text-sm"></i>
+                    <span>Conducted brand discovery and positioning workshops</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle text-accent-600 dark:text-accent-400 mt-1 mr-2 text-sm"></i>
+                    <span>Designed visual identity and brand guidelines</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle text-accent-600 dark:text-accent-400 mt-1 mr-2 text-sm"></i>
+                    <span>Developed marketing and communication assets</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="mb-6">
+                <h4 class="font-bold text-gray-900 dark:text-white mb-2 flex items-center">
+                  <i class="fas fa-chart-line text-green-600 dark:text-green-400 mr-2"></i> Outcome
+                </h4>
+                <div class="space-y-2">
+                  <div class="outcome-badge text-gray-700 dark:text-dark-300">
+                    Stronger brand recognition in target market
+                  </div>
+                  <div class="outcome-badge text-gray-700 dark:text-dark-300">
+                    Consistent messaging across all platforms
+                  </div>
+                  <div class="outcome-badge text-gray-700 dark:text-dark-300">
+                    Enhanced investor confidence and brand equity
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: Event & Launch Management -->
+          <div class="portfolio-card bg-white dark:bg-dark-800 rounded-2xl overflow-hidden border border-gray-200 dark:border-dark-700 card-hover" data-category="event">
+            <div class="h-48 overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Event Management" class="w-full h-full object-cover">
+            </div>
+            <div class="p-8">
+              <div class="flex items-center justify-between mb-4">
+                <span
+                  class="text-sm font-medium px-3 py-1 rounded-full bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400">Event Management</span>
+                <span class="text-sm text-gray-500 dark:text-dark-400">Financial Institution</span>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Event & Launch Management</h3>
+              
+              <div class="mb-6">
+                <h4 class="font-bold text-gray-900 dark:text-white mb-2 flex items-center">
+                  <i class="fas fa-bullseye text-primary-600 dark:text-primary-400 mr-2"></i> Objective
+                </h4>
+                <p class="text-gray-600 dark:text-dark-300 mb-4">
+                  Plan and execute a high-impact corporate launch event for a new financial product introduction.
+                </p>
+              </div>
+
+              <div class="mb-6">
+                <h4 class="font-bold text-gray-900 dark:text-white mb-2 flex items-center">
+                  <i class="fas fa-chess-knight text-accent-600 dark:text-accent-400 mr-2"></i> Strategy
+                </h4>
+                <ul class="space-y-2 text-gray-600 dark:text-dark-300">
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle text-accent-600 dark:text-accent-400 mt-1 mr-2 text-sm"></i>
+                    <span>End-to-end event planning and coordination</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle text-accent-600 dark:text-accent-400 mt-1 mr-2 text-sm"></i>
+                    <span>Media engagement and stakeholder communication</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle text-accent-600 dark:text-accent-400 mt-1 mr-2 text-sm"></i>
+                    <span>On-site execution and post-event follow-up</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="mb-6">
+                <h4 class="font-bold text-gray-900 dark:text-white mb-2 flex items-center">
+                  <i class="fas fa-chart-line text-green-600 dark:text-green-400 mr-2"></i> Outcome
+                </h4>
+                <div class="space-y-2">
+                  <div class="outcome-badge text-gray-700 dark:text-dark-300">
+                    Successful event delivery with 200+ attendees
+                  </div>
+                  <div class="outcome-badge text-gray-700 dark:text-dark-300">
+                    High audience engagement and positive feedback
+                  </div>
+                  <div class="outcome-badge text-gray-700 dark:text-dark-300">
+                    Significant media coverage and social media buzz
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INDUSTRIES WE'VE WORKED WITH -->
+  <section id="industries" class="bg-pattern-subtle">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+          <div
+            class="inline-flex items-center px-4 py-2 rounded-full bg-white dark:bg-dark-800 text-accent-600 dark:text-accent-400 mb-4 border border-gray-200 dark:border-dark-700">
+            <i class="fas fa-industry mr-2"></i>
+            <span class="text-sm font-medium">Sector Expertise</span>
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            Industries We've <span class="gradient-text">Worked With</span>
+          </h2>
+          <p class="text-gray-600 dark:text-dark-300 max-w-2xl mx-auto text-lg">
+            Our portfolio spans diverse sectors, each with unique communication challenges and opportunities.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Corporate -->
+          <div class="industry-card bg-white dark:bg-dark-800 rounded-xl p-6 border border-gray-200 dark:border-dark-700 text-center">
+            <div class="w-16 h-16 rounded-full gradient-bg flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-building text-white text-xl"></i>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Corporate & Business Organizations</h3>
+            <p class="text-gray-600 dark:text-dark-300 text-sm">
+              Strategic communication solutions for corporations across finance, technology, manufacturing, and retail sectors.
+            </p>
+          </div>
+
+          <!-- NGOs -->
+          <div class="industry-card bg-white dark:bg-dark-800 rounded-xl p-6 border border-gray-200 dark:border-dark-700 text-center">
+            <div class="w-16 h-16 rounded-full accent-gradient flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-hands-helping text-white text-xl"></i>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">NGOs & Development Agencies</h3>
+            <p class="text-gray-600 dark:text-dark-300 text-sm">
+              Mission-driven communication strategies for non-profits, humanitarian organizations, and development initiatives.
+            </p>
+          </div>
+
+          <!-- Government -->
+          <div class="industry-card bg-white dark:bg-dark-800 rounded-xl p-6 border border-gray-200 dark:border-dark-700 text-center">
+            <div class="w-16 h-16 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-landmark text-blue-600 dark:text-blue-400 text-xl"></i>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Government & Public Institutions</h3>
+            <p class="text-gray-600 dark:text-dark-300 text-sm">
+              Public communication and stakeholder engagement for government agencies and public sector organizations.
+            </p>
+          </div>
+
+          <!-- Startups -->
+          <div class="industry-card bg-white dark:bg-dark-800 rounded-xl p-6 border border-gray-200 dark:border-dark-700 text-center">
+            <div class="w-16 h-16 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-rocket text-green-600 dark:text-green-400 text-xl"></i>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Startups & Entrepreneurs</h3>
+            <p class="text-gray-600 dark:text-dark-300 text-sm">
+              Brand building and growth communication for innovative startups and entrepreneurial ventures.
+            </p>
+          </div>
+
+          <!-- Executives -->
+          <div class="industry-card bg-white dark:bg-dark-800 rounded-xl p-6 border border-gray-200 dark:border-dark-700 text-center">
+            <div class="w-16 h-16 rounded-full bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-user-tie text-purple-600 dark:text-purple-400 text-xl"></i>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Executives & Public Figures</h3>
+            <p class="text-gray-600 dark:text-dark-300 text-sm">
+              Personal branding and media relations for corporate leaders, public figures, and industry influencers.
+            </p>
+          </div>
+
+          <!-- Education -->
+          <div class="industry-card bg-white dark:bg-dark-800 rounded-xl p-6 border border-gray-200 dark:border-dark-700 text-center">
+            <div class="w-16 h-16 rounded-full bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-graduation-cap text-orange-600 dark:text-orange-400 text-xl"></i>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Education & Research Institutions</h3>
+            <p class="text-gray-600 dark:text-dark-300 text-sm">
+              Academic communication and institutional branding for universities, colleges, and research centers.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR ROLE & WHAT OUR WORK REFLECTS -->
+  <section class="bg-gradient-to-b from-white to-gray-50 dark:from-dark-900 dark:to-dark-800">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-12">
+          <!-- Our Role -->
+          <div>
+            <div
+              class="inline-flex items-center px-4 py-2 rounded-full bg-white dark:bg-dark-800 text-accent-600 dark:text-accent-400 mb-4 border border-gray-200 dark:border-dark-700">
+              <i class="fas fa-user-tie mr-2"></i>
+              <span class="text-sm font-medium">Our Partnership Approach</span>
+            </div>
+            <h3 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-6">
+              Our Role in <span class="gradient-text">Every Project</span>
+            </h3>
+            <p class="text-gray-600 dark:text-dark-300 mb-6">
+              Depending on client needs, we adapt our role to deliver the greatest impact and value throughout the project lifecycle.
+            </p>
+            
+            <div class="space-y-6">
+              <div class="role-card bg-white dark:bg-dark-800 rounded-xl p-6 border border-gray-200 dark:border-dark-700">
+                <div class="flex items-start">
+                  <div class="role-icon w-12 h-12 rounded-lg gradient-bg flex items-center justify-center mr-4">
+                    <i class="fas fa-chess text-white text-lg"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-gray-900 dark:text-white mb-2">Strategic Communication Partner</h4>
+                    <p class="text-gray-600 dark:text-dark-300 text-sm">
+                      Providing strategic counsel, planning, and direction for comprehensive communication initiatives.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="role-card bg-white dark:bg-dark-800 rounded-xl p-6 border border-gray-200 dark:border-dark-700">
+                <div class="flex items-start">
+                  <div class="role-icon w-12 h-12 rounded-lg accent-gradient flex items-center justify-center mr-4">
+                    <i class="fas fa-paint-brush text-white text-lg"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-gray-900 dark:text-white mb-2">Creative Content & Media Team</h4>
+                    <p class="text-gray-600 dark:text-dark-300 text-sm">
+                      Developing compelling content, creative assets, and managing media relations and distribution.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="role-card bg-white dark:bg-dark-800 rounded-xl p-6 border border-gray-200 dark:border-dark-700">
+                <div class="flex items-start">
+                  <div class="role-icon w-12 h-12 rounded-lg bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center mr-4">
+                    <i class="fas fa-chart-line text-blue-600 dark:text-blue-400 text-lg"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-gray-900 dark:text-white mb-2">Digital Growth Partner</h4>
+                    <p class="text-gray-600 dark:text-dark-300 text-sm">
+                      Driving online presence, engagement, and growth through data-driven digital strategies.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- What Our Work Reflects -->
+          <div>
+            <div
+              class="inline-flex items-center px-4 py-2 rounded-full bg-white dark:bg-dark-800 text-primary-600 dark:text-primary-400 mb-4 border border-gray-200 dark:border-dark-700">
+              <i class="fas fa-eye mr-2"></i>
+              <span class="text-sm font-medium">Our Work Philosophy</span>
+            </div>
+            <h3 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-6">
+              What Our Work <span class="gradient-text">Reflects</span>
+            </h3>
+            <p class="text-gray-600 dark:text-dark-300 mb-6">
+              Our portfolio demonstrates core principles that guide every project we undertake, ensuring quality, effectiveness, and client satisfaction.
+            </p>
+            
+            <div class="space-y-4">
+              <div class="flex items-start">
+                <div class="w-10 h-10 rounded-full bg-accent-100 dark:bg-accent-900/30 flex items-center justify-center mr-4 mt-1">
+                  <i class="fas fa-chess-knight text-accent-600 dark:text-accent-400"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-gray-900 dark:text-white mb-1">Strategy-Led Communication</h4>
+                  <p class="text-gray-600 dark:text-dark-300 text-sm">
+                    Every initiative begins with thorough research, clear objectives, and a strategic roadmap for success.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div class="w-10 h-10 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center mr-4 mt-1">
+                  <i class="fas fa-comments text-primary-600 dark:text-primary-400"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-gray-900 dark:text-white mb-1">Clear, Consistent Messaging</h4>
+                  <p class="text-gray-600 dark:text-dark-300 text-sm">
+                    We ensure brand messages are clear, consistent, and resonate with target audiences across all channels.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div class="w-10 h-10 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center mr-4 mt-1">
+                  <i class="fas fa-lightbulb text-green-600 dark:text-green-400"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-gray-900 dark:text-white mb-1">Creative Execution Backed by Insight</h4>
+                  <p class="text-gray-600 dark:text-dark-300 text-sm">
+                    Our creative work is always informed by market insights, audience understanding, and strategic objectives.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div class="w-10 h-10 rounded-full bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center mr-4 mt-1">
+                  <i class="fas fa-chart-bar text-purple-600 dark:text-purple-400"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-gray-900 dark:text-white mb-1">Measurable Outcomes & Accountability</h4>
+                  <p class="text-gray-600 dark:text-dark-300 text-sm">
+                    We establish clear metrics, track performance, and take responsibility for delivering results that matter.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-8 bg-gradient-to-r from-primary-50 to-accent-50 dark:from-dark-800 dark:to-accent-900/20 rounded-xl p-6 border border-gray-200 dark:border-dark-700">
+              <div class="flex items-start">
+                <i class="fas fa-quote-right text-accent-600 dark:text-accent-400 text-2xl mr-4 mt-1"></i>
+                <div>
+                  <p class="text-gray-700 dark:text-dark-300 italic mb-2">
+                    "Our portfolio is more than a collection of projects—it's a testament to our commitment to excellence, innovation, and measurable impact in every communication challenge we undertake."
+                  </p>
+                  <div class="flex items-center">
+                    <div class="w-8 h-8 rounded-full gradient-bg flex items-center justify-center mr-2">
+                      <i class="fas fa-award text-white text-xs"></i>
+                    </div>
+                    <span class="text-sm font-medium text-gray-900 dark:text-white">Quality-First Approach</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALL TO ACTION -->
+  <section class="relative overflow-hidden bg-gradient-to-r from-primary-600 to-accent-600 dark:from-primary-700 dark:to-accent-700">
+    <div class="absolute inset-0 bg-black/10"></div>
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="max-w-4xl mx-auto text-center py-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+          Let's Create Your Next Success Story
+        </h2>
+        <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+          Every organization has a story worth telling. We help you tell it with purpose, clarity, and impact.
+        </p>
+        <div class="flex flex-wrap justify-center gap-6">
+          <a href="contact.html"
+            class="px-8 py-3 bg-white text-primary-600 dark:text-primary-700 font-bold rounded-lg hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl">
+            <i class="fas fa-envelope mr-2"></i> Contact Us
+          </a>
+          <a href="#"
+            class="px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white/10 transition-all duration-300 font-medium">
+            <i class="fas fa-calendar-alt mr-2"></i> Request a Consultation
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark-900 text-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="py-12">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+          <div>
+            <div class="mb-6">
+              <div class="h-12 w-48 rounded-lg overflow-hidden">
+                <img src="Logo/QMCL-Logo.png" alt="QMCL Logo" class="h-full w-full object-contain">
+              </div>
+            </div>
+            <p class="text-dark-400 text-sm leading-relaxed mb-4">
+              Leading strategic communications agency delivering measurable impact through innovative digital solutions,
+              web development, and creative services.
+            </p>
+            <div class="flex space-x-3">
+              <a href="#"
+                class="w-9 h-9 rounded-full bg-dark-800 hover:bg-accent-600 flex items-center justify-center transition-colors">
+                <i class="fab fa-linkedin-in text-sm"></i>
+              </a>
+              <a href="#"
+                class="w-9 h-9 rounded-full bg-dark-800 hover:bg-blue-500 flex items-center justify-center transition-colors">
+                <i class="fab fa-twitter text-sm"></i>
+              </a>
+              <a href="#"
+                class="w-9 h-9 rounded-full bg-dark-800 hover:bg-blue-700 flex items-center justify-center transition-colors">
+                <i class="fab fa-facebook-f text-sm"></i>
+              </a>
+              <a href="#"
+                class="w-9 h-9 rounded-full bg-dark-800 hover:bg-pink-600 flex items-center justify-center transition-colors">
+                <i class="fab fa-instagram text-sm"></i>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-lg mb-4">Services</h4>
+            <ul class="space-y-2">
+              <li><a href="services.html" class="text-dark-400 hover:text-white transition-colors text-sm">Website Design &
+                  Development</a></li>
+              <li><a href="services.html" class="text-dark-400 hover:text-white transition-colors text-sm">Digital
+                  Marketing</a></li>
+              <li><a href="services.html" class="text-dark-400 hover:text-white transition-colors text-sm">Software & Mobile
+                  Apps</a></li>
+              <li><a href="services.html" class="text-dark-400 hover:text-white transition-colors text-sm">Social Media
+                  Marketing</a></li>
+              <li><a href="services.html" class="text-dark-400 hover:text-white transition-colors text-sm">Video
+                  Services</a></li>
+              <li><a href="services.html" class="text-dark-400 hover:text-white transition-colors text-sm">Graphics & UI/UX
+                  Design</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-lg mb-4">Quick Links</h4>
+            <ul class="space-y-2">
+              <li><a href="index.html" class="text-dark-400 hover:text-white transition-colors text-sm">Home</a></li>
+              <li><a href="about.html" class="text-dark-400 hover:text-white transition-colors text-sm">About Us</a></li>
+              <li><a href="services.html" class="text-dark-400 hover:text-white transition-colors text-sm">Services</a></li>
+              <li><a href="#" class="text-dark-400 hover:text-white transition-colors text-sm">Portfolio</a>
+              </li>
+              <li><a href="index.html#clients" class="text-dark-400 hover:text-white transition-colors text-sm">Our Clients</a>
+              </li>
+              <li><a href="contact.html" class="text-dark-400 hover:text-white transition-colors text-sm">Contact</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-lg mb-4">Contact Info</h4>
+            <ul class="space-y-3 text-dark-400 text-sm">
+              <li class="flex items-start">
+                <i class="fas fa-map-marker-alt mt-1 mr-3 text-accent-400"></i>
+                <span>Razzak Plaza, 8th Floor<br>Dhaka-1217, Bangladesh</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-phone mr-3 text-accent-400"></i>
+                <span>+880 22222 5916–7</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-envelope mr-3 text-accent-400"></i>
+                <span>info@qadrmcl.com</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-t border-dark-800 pt-8">
+          <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-dark-400 text-sm">© 2024 Qadr Media & Communications Ltd. All rights reserved.</p>
+            <div class="flex space-x-6 text-sm text-dark-400">
+              <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+              <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+              <a href="#" class="hover:text-white transition-colors">Cookie Policy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =======================
+      JAVASCRIPT
+  ======================== -->
+  <script>
+    // DOM Elements
+    const htmlEl = document.documentElement;
+    const themeToggle = document.getElementById("themeToggle");
+    const sunIcon = document.getElementById("sunIcon");
+    const moonIcon = document.getElementById("moonIcon");
+
+    const drawerBackdrop = document.getElementById("drawerBackdrop");
+    const drawerPanel = document.getElementById("drawerPanel");
+    const drawerOpen = document.getElementById("drawerOpen");
+    const drawerClose = document.getElementById("drawerClose");
+
+    const headerBar = document.getElementById("headerBar");
+    const portfolioFilters = document.querySelectorAll('.portfolio-filter');
+    const portfolioCards = document.querySelectorAll('.portfolio-card');
+
+    // Theme Management
+    function setTheme(mode) {
+      const isDark = mode === "dark";
+      htmlEl.classList.toggle("dark", isDark);
+
+      // Toggle icons
+      if (isDark) {
+        sunIcon.classList.remove("hidden");
+        moonIcon.classList.add("hidden");
+      } else {
+        sunIcon.classList.add("hidden");
+        moonIcon.classList.remove("hidden");
+      }
+
+      localStorage.setItem("theme", mode);
+    }
+
+    // Initialize theme
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+      setTheme(savedTheme);
+    } else {
+      // Check user preference
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      setTheme(prefersDark ? "dark" : "light");
+    }
+
+    // Theme toggle event
+    themeToggle.addEventListener("click", () => {
+      setTheme(htmlEl.classList.contains("dark") ? "light" : "dark");
+    });
+
+    // Header scroll effect
+    function onScroll() {
+      const scrolled = window.scrollY > 20;
+      headerBar.classList.toggle("header-scrolled", scrolled);
+    }
+    window.addEventListener("scroll", onScroll);
+    onScroll();
+
+    // Drawer functionality
+    function openDrawer() {
+      drawerBackdrop.classList.add("open");
+      drawerPanel.classList.add("open");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeDrawer() {
+      drawerBackdrop.classList.remove("open");
+      drawerPanel.classList.remove("open");
+      document.body.style.overflow = "";
+    }
+
+    drawerOpen?.addEventListener("click", openDrawer);
+    drawerClose?.addEventListener("click", closeDrawer);
+
+    drawerBackdrop.addEventListener("click", (e) => {
+      if (e.target === drawerBackdrop) closeDrawer();
+    });
+
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeDrawer();
+    });
+
+    drawerPanel.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener("click", closeDrawer));
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // Portfolio filtering functionality
+    portfolioFilters.forEach(filter => {
+      filter.addEventListener('click', function() {
+        // Remove active class from all filters
+        portfolioFilters.forEach(f => f.classList.remove('active', 'text-white'));
+        portfolioFilters.forEach(f => {
+          f.classList.add('text-gray-700', 'dark:text-dark-300');
+          f.classList.remove('text-white');
+        });
+        
+        // Add active class to clicked filter
+        this.classList.add('active', 'text-white');
+        this.classList.remove('text-gray-700', 'dark:text-dark-300');
+        
+        const category = this.getAttribute('data-category');
+        
+        // Show/hide portfolio cards based on category
+        portfolioCards.forEach(card => {
+          if (category === 'all' || card.getAttribute('data-category') === category) {
+            card.style.display = 'block';
+            setTimeout(() => {
+              card.style.opacity = '1';
+              card.style.transform = 'translateY(0)';
+            }, 10);
+          } else {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            setTimeout(() => {
+              card.style.display = 'none';
+            }, 300);
+          }
+        });
+      });
+    });
+
+    // Consultation request
+    const consultationBtn = document.querySelector('a[href="#"]');
+    if (consultationBtn && consultationBtn.textContent.includes('Consultation')) {
+      consultationBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        alert('Thank you for your interest! Please contact us via email at info@qadrmcl.com or call +880 22222 5916–7 to schedule a consultation about your next project.');
+      });
+    }
+
+    // Animate elements on scroll
+    function animateOnScroll() {
+      const elements = document.querySelectorAll('.portfolio-card, .industry-card, .role-card, .process-step');
+
+      elements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (elementTop < windowHeight - 100) {
+          element.style.opacity = '1';
+          element.style.transform = 'translateY(0)';
+        }
+      });
+    }
+
+    // Initialize animations
+    document.addEventListener('DOMContentLoaded', () => {
+      animateOnScroll();
+      // Add animation class to elements
+      document.querySelectorAll('.portfolio-card, .industry-card, .role-card, .process-step').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      });
+    });
+
+    window.addEventListener('scroll', animateOnScroll);
+  </script>
+</body>
+
+</html>

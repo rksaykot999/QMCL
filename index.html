@@ -31,52 +31,53 @@
           fontFamily: {
             sans: ["Inter", "ui-sans-serif", "system-ui"],
             heading: ["Poppins", "Inter", "sans-serif"],
-            body: ["Inter", "ui-sans-serif", "system-ui"],
-            ui: ["Source Sans Pro", "Inter", "sans-serif"]
           },
           colors: {
-            brand: {
-              50: "#f0f9ff",
-              100: "#e0f2fe",
-              200: "#bae6fd",
-              300: "#7dd3fc",
-              400: "#38bdf8",
-              500: "#0ea5e9",
-              600: "#0284c7",
-              700: "#0369a1",
-              800: "#075985",
-              900: "#0c4a6e"
+            // Dark mode optimized colors
+            dark: {
+              50: '#f8fafc',
+              100: '#f1f5f9',
+              200: '#e2e8f0',
+              300: '#cbd5e1',
+              400: '#94a3b8',
+              500: '#64748b',
+              600: '#475569',
+              700: '#334155',
+              800: '#1e293b',
+              900: '#0f172a',
             },
+            // Primary brand colors (optimized for dark mode)
             primary: {
-              50: "#f8fafc",
-              100: "#f1f5f9",
-              200: "#e2e8f0",
-              300: "#cbd5e1",
-              400: "#94a3b8",
-              500: "#64748b",
-              600: "#475569",
-              700: "#334155",
-              800: "#1e293b",
-              900: "#0f172a"
+              50: '#eff6ff',
+              100: '#dbeafe',
+              200: '#bfdbfe',
+              300: '#93c5fd',
+              400: '#60a5fa',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e40af',
+              900: '#1e3a8a',
             },
+            // Accent colors (teal - works well in dark mode)
             accent: {
-              50: "#fef2f2",
-              100: "#fee2e2",
-              200: "#fecaca",
-              300: "#fca5a5",
-              400: "#f87171",
-              500: "#ef4444",
-              600: "#dc2626",
-              700: "#b91c1c",
-              800: "#991b1b",
-              900: "#7f1d1d"
+              50: '#f0fdfa',
+              100: '#ccfbf1',
+              200: '#99f6e4',
+              300: '#5eead4',
+              400: '#2dd4bf',
+              500: '#14b8a6',
+              600: '#0d9488',
+              700: '#0f766e',
+              800: '#115e59',
+              900: '#134e4a',
             }
           },
           boxShadow: {
             'elegant': '0 10px 40px rgba(0, 0, 0, 0.05)',
-            'elegant-dark': '0 10px 40px rgba(0, 0, 0, 0.2)',
+            'elegant-dark': '0 10px 40px rgba(0, 0, 0, 0.3)',
             'lift': '0 20px 60px rgba(0, 0, 0, 0.08)',
-            'lift-dark': '0 20px 60px rgba(0, 0, 0, 0.25)',
+            'lift-dark': '0 20px 60px rgba(0, 0, 0, 0.35)',
           },
           animation: {
             float: "float 3s ease-in-out infinite",
@@ -116,48 +117,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
   <style>
-    :root {
-      color-scheme: light;
-      --primary-color: #0f172a;
-      --accent-color: #dc2626;
-      --text-primary: #1f2937;
-      --text-secondary: #6b7280;
-      --bg-primary: #ffffff;
-      --bg-secondary: #f8fafc;
-    }
-
-    html.dark {
-      color-scheme: dark;
-      --primary-color: #f8fafc;
-      --accent-color: #f87171;
-      --text-primary: #f3f4f6;
-      --text-secondary: #d1d5db;
-      --bg-primary: #0f172a;
-      --bg-secondary: #1e293b;
-    }
-
-    /* Smooth theme transitions */
-    body,
-    header,
-    section,
-    footer,
-    .card,
-    .btn,
-    .chip {
-      transition: background-color .3s cubic-bezier(0.4, 0, 0.2, 1),
-        color .3s cubic-bezier(0.4, 0, 0.2, 1),
-        border-color .3s cubic-bezier(0.4, 0, 0.2, 1),
-        box-shadow .3s cubic-bezier(0.4, 0, 0.2, 1),
-        transform .3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
     /* Professional typography */
     body {
       font-family: 'Inter', sans-serif;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       text-rendering: optimizeLegibility;
-      font-feature-settings: "kern" 1, "liga" 1;
     }
 
     h1,
@@ -173,10 +138,6 @@
       line-height: 1.2;
     }
 
-    .ui-text {
-      font-family: 'Source Sans Pro', sans-serif;
-    }
-
     /* Header blur on scroll */
     .header-scrolled {
       backdrop-filter: blur(12px) !important;
@@ -188,8 +149,8 @@
 
     .dark .header-scrolled {
       background: rgba(15, 23, 42, 0.95) !important;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
-      border: 1px solid rgba(255, 255, 255, 0.05) !important;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.1) !important;
     }
 
     /* Initial header state - transparent */
@@ -201,8 +162,8 @@
     }
 
     .dark #headerBar {
-      background: rgba(15, 23, 42, 0.1) !important;
-      border: 1px solid rgba(255, 255, 255, 0.05) !important;
+      background: rgba(15, 23, 42, 0.2) !important;
+      border: 1px solid rgba(255, 255, 255, 0.1) !important;
     }
 
     /* Drawer animations */
@@ -228,48 +189,45 @@
 
     /* Background patterns */
     .bg-pattern-subtle {
-      background-color: var(--bg-secondary);
-      background-image:
-        radial-gradient(circle at 15% 50%, rgba(100, 116, 139, 0.05) 0%, transparent 55%),
-        radial-gradient(circle at 85% 30%, rgba(220, 38, 38, 0.05) 0%, transparent 55%);
+      background-color: #f8fafc;
     }
 
     .dark .bg-pattern-subtle {
-      background-color: var(--bg-secondary);
+      background-color: #0f172a;
       background-image:
-        radial-gradient(circle at 15% 50%, rgba(148, 163, 184, 0.08) 0%, transparent 55%),
-        radial-gradient(circle at 85% 30%, rgba(248, 113, 113, 0.08) 0%, transparent 55%);
+        radial-gradient(circle at 15% 50%, rgba(148, 163, 184, 0.05) 0%, transparent 55%),
+        radial-gradient(circle at 85% 30%, rgba(45, 212, 191, 0.05) 0%, transparent 55%);
     }
 
     /* Professional gradients */
     .gradient-bg {
-      background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
+      background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
     }
 
     .dark .gradient-bg {
-      background: linear-gradient(135deg, #1e293b 0%, #475569 100%);
+      background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
     }
 
     .gradient-text {
-      background: linear-gradient(135deg, #0f172a 0%, #dc2626 100%);
+      background: linear-gradient(135deg, #3b82f6 0%, #14b8a6 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
 
     .dark .gradient-text {
-      background: linear-gradient(135deg, #f8fafc 0%, #f87171 100%);
+      background: linear-gradient(135deg, #60a5fa 0%, #2dd4bf 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
 
     .accent-gradient {
-      background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+      background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
     }
 
     .dark .accent-gradient {
-      background: linear-gradient(135deg, #f87171 0%, #b91c1c 100%);
+      background: linear-gradient(135deg, #2dd4bf 0%, #0f766e 100%);
     }
 
     /* Professional card hover effects */
@@ -283,7 +241,7 @@
     }
 
     .dark .card-hover:hover {
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
     }
 
     /* Smooth scrolling */
@@ -297,57 +255,69 @@
     }
 
     ::-webkit-scrollbar-track {
-      background: var(--bg-secondary);
+      background: #f1f5f9;
+    }
+
+    .dark ::-webkit-scrollbar-track {
+      background: #1e293b;
     }
 
     ::-webkit-scrollbar-thumb {
-      background: var(--primary-color);
+      background: #94a3b8;
       border-radius: 5px;
     }
 
+    .dark ::-webkit-scrollbar-thumb {
+      background: #475569;
+    }
+
     ::-webkit-scrollbar-thumb:hover {
-      background: var(--accent-color);
+      background: #64748b;
+    }
+
+    .dark ::-webkit-scrollbar-thumb:hover {
+      background: #64748b;
     }
 
     /* Professional button styles */
     .btn-primary {
-      background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
+      background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
       color: white;
       font-weight: 500;
       padding: 12px 28px;
       border-radius: 8px;
       transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(15, 23, 42, 0.15);
+      box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);
     }
 
     .btn-primary:hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(15, 23, 42, 0.2);
+      box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
     }
 
     .dark .btn-primary {
-      background: linear-gradient(135deg, #1e293b 0%, #475569 100%);
-      box-shadow: 0 4px 15px rgba(15, 23, 42, 0.3);
+      background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+      box-shadow: 0 4px 15px rgba(30, 64, 175, 0.3);
     }
 
     .btn-accent {
-      background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+      background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
       color: white;
       font-weight: 500;
       padding: 12px 28px;
       border-radius: 8px;
       transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(220, 38, 38, 0.2);
+      box-shadow: 0 4px 15px rgba(20, 184, 166, 0.2);
     }
 
     .btn-accent:hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(220, 38, 38, 0.3);
+      box-shadow: 0 8px 25px rgba(20, 184, 166, 0.3);
     }
 
     .dark .btn-accent {
-      background: linear-gradient(135deg, #f87171 0%, #b91c1c 100%);
-      box-shadow: 0 4px 15px rgba(248, 113, 113, 0.3);
+      background: linear-gradient(135deg, #2dd4bf 0%, #0f766e 100%);
+      box-shadow: 0 4px 15px rgba(45, 212, 191, 0.3);
     }
 
     /* Section spacing */
@@ -363,28 +333,21 @@
       }
     }
 
-    /* Client logo styling */
-    .client-logo {
-      filter: grayscale(100%);
-      opacity: 0.7;
-      transition: all 0.3s ease;
-    }
-
-    .client-logo:hover {
-      filter: grayscale(0%);
-      opacity: 1;
+    /* Smooth theme transitions */
+    * {
+      transition: background-color 0.3s ease, border-color 0.3s ease;
     }
   </style>
 </head>
 
-<body class="font-body bg-white dark:bg-primary-900 text-gray-800 dark:text-gray-200">
+<body class="font-sans bg-white dark:bg-dark-900 text-gray-800 dark:text-dark-100">
 
   <!-- =======================
       MOBILE DRAWER
   ======================== -->
   <div id="drawerBackdrop" class="drawer-backdrop fixed inset-0 z-50 bg-black/40">
     <aside id="drawerPanel"
-      class="drawer-panel absolute left-0 top-0 h-full w-[85%] max-w-sm bg-white dark:bg-primary-800 border-r border-gray-200 dark:border-primary-700 p-6 flex flex-col">
+      class="drawer-panel absolute left-0 top-0 h-full w-[85%] max-w-sm bg-white dark:bg-dark-800 border-r border-gray-200 dark:border-dark-700 p-6 flex flex-col">
       <div class="flex items-center justify-between mb-8">
         <a href="#home" class="flex items-center gap-3">
           <div class="h-12 w-40 rounded-lg overflow-hidden">
@@ -392,44 +355,40 @@
           </div>
         </a>
         <button id="drawerClose"
-          class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-primary-700 text-gray-700 dark:text-gray-300"
+          class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-dark-700 text-gray-700 dark:text-dark-300"
           aria-label="Close menu">
           <i class="fas fa-times text-lg"></i>
         </button>
       </div>
 
       <nav class="space-y-2 flex-1">
-        <a class="flex items-center px-4 py-3 rounded-lg font-medium hover:bg-gray-100 dark:hover:bg-primary-700 text-gray-700 dark:text-gray-300 hover:text-accent-600 dark:hover:text-accent-400 transition-colors"
+        <a class="flex items-center px-4 py-3 rounded-lg font-medium hover:bg-gray-100 dark:hover:bg-dark-700 text-gray-700 dark:text-dark-300 hover:text-accent-600 dark:hover:text-accent-400 transition-colors"
           href="#home">
           <i class="fas fa-home mr-3 w-5"></i> Home
         </a>
-        <a class="flex items-center px-4 py-3 rounded-lg font-medium hover:bg-gray-100 dark:hover:bg-primary-700 text-gray-700 dark:text-gray-300 hover:text-accent-600 dark:hover:text-accent-400 transition-colors"
-          href="#about">
+        <a class="flex items-center px-4 py-3 rounded-lg font-medium hover:bg-gray-100 dark:hover:bg-dark-700 text-gray-700 dark:text-dark-300 hover:text-accent-600 dark:hover:text-accent-400 transition-colors"
+          href="about.html">
           <i class="fas fa-building mr-3 w-5"></i> About Us
         </a>
-        <a class="flex items-center px-4 py-3 rounded-lg font-medium hover:bg-gray-100 dark:hover:bg-primary-700 text-gray-700 dark:text-gray-300 hover:text-accent-600 dark:hover:text-accent-400 transition-colors"
-          href="#services">
+        <a class="flex items-center px-4 py-3 rounded-lg font-medium hover:bg-gray-100 dark:hover:bg-dark-700 text-gray-700 dark:text-dark-300 hover:text-accent-600 dark:hover:text-accent-400 transition-colors"
+          href="services.html">
           <i class="fas fa-cogs mr-3 w-5"></i> Services
         </a>
-        <a class="flex items-center px-4 py-3 rounded-lg font-medium hover:bg-gray-100 dark:hover:bg-primary-700 text-gray-700 dark:text-gray-300 hover:text-accent-600 dark:hover:text-accent-400 transition-colors"
-          href="#portfolio">
+        <a class="flex items-center px-4 py-3 rounded-lg font-medium hover:bg-gray-100 dark:hover:bg-dark-700 text-gray-700 dark:text-dark-300 hover:text-accent-600 dark:hover:text-accent-400 transition-colors"
+          href="portfolio.html">
           <i class="fas fa-briefcase mr-3 w-5"></i> Portfolio
         </a>
-        <a class="flex items-center px-4 py-3 rounded-lg font-medium hover:bg-gray-100 dark:hover:bg-primary-700 text-gray-700 dark:text-gray-300 hover:text-accent-600 dark:hover:text-accent-400 transition-colors"
-          href="#clients">
-          <i class="fas fa-users mr-3 w-5"></i> Our Clients
-        </a>
-        <a class="flex items-center px-4 py-3 rounded-lg font-medium hover:bg-gray-100 dark:hover:bg-primary-700 text-gray-700 dark:text-gray-300 hover:text-accent-600 dark:hover:text-accent-400 transition-colors"
-          href="#contact">
+        <a class="flex items-center px-4 py-3 rounded-lg font-medium hover:bg-gray-100 dark:hover:bg-dark-700 text-gray-700 dark:text-dark-300 hover:text-accent-600 dark:hover:text-accent-400 transition-colors"
+          href="contact.html">
           <i class="fas fa-envelope mr-3 w-5"></i> Contact
         </a>
       </nav>
 
-      <div class="pt-4 border-t border-gray-200 dark:border-primary-700">
-        <a href="#contact" class="btn-accent block w-full text-center py-3 rounded-lg font-medium mb-3">
+      <div class="pt-4 border-t border-gray-200 dark:border-dark-700">
+        <a href="contact.html#contact-form" class="btn-accent block w-full text-center py-3 rounded-lg font-medium mb-3">
           <i class="fas fa-calendar-check mr-2"></i> Get Quote
         </a>
-        <p class="text-xs text-gray-500 dark:text-gray-400 text-center">
+        <p class="text-xs text-gray-500 dark:text-dark-400 text-center">
           Strategic Communications • Measurable Impact
         </p>
       </div>
@@ -452,36 +411,34 @@
 
           <!-- Desktop Navigation -->
           <nav class="hidden lg:flex items-center space-x-1">
-            <a class="px-4 py-2 rounded-lg font-medium text-gray-700 dark:text-gray-300 hover:text-accent-600 dark:hover:text-accent-400 hover:bg-white/20 dark:hover:bg-primary-800/30 transition-colors"
+            <a class="px-4 py-2 rounded-lg font-medium text-gray-700 dark:text-dark-300 hover:text-accent-600 dark:hover:text-accent-400 hover:bg-white/20 dark:hover:bg-dark-800/30 transition-colors"
               href="#home">Home</a>
-            <a class="px-4 py-2 rounded-lg font-medium text-gray-700 dark:text-gray-300 hover:text-accent-600 dark:hover:text-accent-400 hover:bg-white/20 dark:hover:bg-primary-800/30 transition-colors"
-              href="#about">About</a>
-            <a class="px-4 py-2 rounded-lg font-medium text-gray-700 dark:text-gray-300 hover:text-accent-600 dark:hover:text-accent-400 hover:bg-white/20 dark:hover:bg-primary-800/30 transition-colors"
-              href="#services">Services</a>
-            <a class="px-4 py-2 rounded-lg font-medium text-gray-700 dark:text-gray-300 hover:text-accent-600 dark:hover:text-accent-400 hover:bg-white/20 dark:hover:bg-primary-800/30 transition-colors"
-              href="#portfolio">Portfolio</a>
-            <a class="px-4 py-2 rounded-lg font-medium text-gray-700 dark:text-gray-300 hover:text-accent-600 dark:hover:text-accent-400 hover:bg-white/20 dark:hover:bg-primary-800/30 transition-colors"
-              href="#clients">Clients</a>
-            <a class="px-4 py-2 rounded-lg font-medium text-gray-700 dark:text-gray-300 hover:text-accent-600 dark:hover:text-accent-400 hover:bg-white/20 dark:hover:bg-primary-800/30 transition-colors"
-              href="#contact" class="hidden xl:inline">Contact</a>
+            <a class="px-4 py-2 rounded-lg font-medium text-gray-700 dark:text-dark-300 hover:text-accent-600 dark:hover:text-accent-400 hover:bg-white/20 dark:hover:bg-dark-800/30 transition-colors"
+              href="about.html">About</a>
+            <a class="px-4 py-2 rounded-lg font-medium text-gray-700 dark:text-dark-300 hover:text-accent-600 dark:hover:text-accent-400 hover:bg-white/20 dark:hover:bg-dark-800/30 transition-colors"
+              href="services.html">Services</a>
+            <a class="px-4 py-2 rounded-lg font-medium text-gray-700 dark:text-dark-300 hover:text-accent-600 dark:hover:text-accent-400 hover:bg-white/20 dark:hover:bg-dark-800/30 transition-colors"
+              href="portfolio.html">Portfolio</a>
+            <a class="px-4 py-2 rounded-lg font-medium text-gray-700 dark:text-dark-300 hover:text-accent-600 dark:hover:text-accent-400 hover:bg-white/20 dark:hover:bg-dark-800/30 transition-colors"
+              href="contact.html" class="hidden xl:inline">Contact</a>
           </nav>
 
           <!-- Actions -->
           <div class="flex items-center space-x-3">
             <button id="themeToggle"
-              class="w-10 h-10 rounded-full bg-white/20 dark:bg-primary-800/30 flex items-center justify-center hover:bg-white/30 dark:hover:bg-primary-700/40 transition-colors backdrop-blur-sm"
+              class="w-10 h-10 rounded-full bg-white/20 dark:bg-dark-800/30 flex items-center justify-center hover:bg-white/30 dark:hover:bg-dark-700/40 transition-colors backdrop-blur-sm"
               aria-label="Toggle theme">
               <i id="sunIcon" class="fas fa-sun text-yellow-500 text-lg hidden"></i>
-              <i id="moonIcon" class="fas fa-moon text-gray-600 dark:text-gray-400 text-lg"></i>
+              <i id="moonIcon" class="fas fa-moon text-gray-600 dark:text-dark-400 text-lg"></i>
             </button>
 
             <button id="drawerOpen"
-              class="lg:hidden w-10 h-10 rounded-full bg-white/20 dark:bg-primary-800/30 flex items-center justify-center hover:bg-white/30 dark:hover:bg-primary-700/40 transition-colors backdrop-blur-sm"
+              class="lg:hidden w-10 h-10 rounded-full bg-white/20 dark:bg-dark-800/30 flex items-center justify-center hover:bg-white/30 dark:hover:bg-dark-700/40 transition-colors backdrop-blur-sm"
               aria-label="Open menu">
-              <i class="fas fa-bars text-gray-700 dark:text-gray-300"></i>
+              <i class="fas fa-bars text-gray-700 dark:text-dark-300"></i>
             </button>
 
-            <a href="#contact"
+            <a href="contact.html#contact-form"
               class="hidden lg:inline-flex items-center justify-center btn-accent px-6 py-2.5 rounded-lg font-medium backdrop-blur-sm">
               <i class="fas fa-paper-plane mr-2"></i> Get Quote
             </a>
@@ -499,7 +456,8 @@
   ========================== -->
 
   <!-- HERO SECTION -->
-  <section id="home" class="relative overflow-hidden pt-16 md:pt-20 bg-gradient-to-br from-primary-50 to-white dark:from-primary-900 dark:to-primary-800">
+  <section id="home"
+    class="relative overflow-hidden pt-16 md:pt-20 bg-gradient-to-br from-gray-50 to-white dark:from-dark-900 dark:to-dark-800">
     <!-- Animated background elements -->
     <div
       class="absolute top-40 left-10 w-48 h-48 bg-accent-300 dark:bg-accent-900 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl opacity-20 animate-pulse-glow">
@@ -523,7 +481,7 @@
             <br><span class="gradient-text text-4xl">Powerful Communication</span><br>
             Measurable Impact
           </h1>
-          <p class="text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-lg">
+          <p class="text-lg text-gray-600 dark:text-dark-300 mb-8 max-w-lg">
             Qadr Media and Communication Ltd is a full-service media communications agency helping brands, institutions,
             and leaders communicate with clarity, creativity, and purpose. We combine strategic insight, compelling
             storytelling, and digital innovation to transform communication into a powerful competitive advantage.
@@ -534,26 +492,26 @@
               <i class="fas fa-rocket mr-2"></i> Get Started
             </button>
             <button id="viewPortfolioBtn"
-              class="px-8 py-3 border border-gray-300 dark:border-primary-600 text-gray-700 dark:text-gray-300 rounded-lg hover:border-accent-600 dark:hover:border-accent-400 hover:text-accent-600 dark:hover:text-accent-400 transition-all duration-300 font-medium group">
+              class="px-8 py-3 border border-gray-300 dark:border-dark-600 text-gray-700 dark:text-dark-300 rounded-lg hover:border-accent-600 dark:hover:border-accent-400 hover:text-accent-600 dark:hover:text-accent-400 transition-all duration-300 font-medium group">
               <i class="fas fa-eye mr-2 group-hover:text-accent-600 dark:group-hover:text-accent-400"></i>
               View Portfolio
             </button>
           </div>
 
-          <div class="mt-12 flex items-center space-x-8">
+          <div class="mt-12 flex items-center space-x-6">
             <div>
               <div class="text-3xl font-bold text-gray-900 dark:text-white">200+</div>
-              <div class="text-gray-600 dark:text-gray-400">Projects Delivered</div>
+              <div class="text-gray-600 dark:text-dark-400">Projects Delivered</div>
             </div>
-            <div class="h-12 w-px bg-gray-300 dark:bg-primary-700"></div>
+            <div class="h-12 w-px bg-gray-300 dark:bg-dark-700"></div>
             <div>
               <div class="text-3xl font-bold text-gray-900 dark:text-white">95%</div>
-              <div class="text-gray-600 dark:text-gray-400">Client Satisfaction</div>
+              <div class="text-gray-600 dark:text-dark-400">Client Satisfaction</div>
             </div>
-            <div class="h-12 w-px bg-gray-300 dark:bg-primary-700"></div>
+            <div class="h-12 w-px bg-gray-300 dark:bg-dark-700"></div>
             <div>
               <div class="text-3xl font-bold text-gray-900 dark:text-white">24/7</div>
-              <div class="text-gray-600 dark:text-gray-400">Support Available</div>
+              <div class="text-gray-600 dark:text-dark-400">Support Available</div>
             </div>
           </div>
         </div>
@@ -567,19 +525,19 @@
 
           <!-- Floating elements -->
           <div
-            class="absolute -bottom-6 -left-6 bg-white dark:bg-primary-800 p-6 rounded-xl shadow-2xl max-w-xs card-hover animate-float">
+            class="absolute -bottom-6 -left-6 bg-white dark:bg-dark-800 p-6 rounded-xl shadow-2xl max-w-xs card-hover animate-float">
             <div class="flex items-center space-x-3 mb-3">
               <div class="w-12 h-12 rounded-full gradient-bg flex items-center justify-center">
                 <i class="fas fa-trophy text-white"></i>
               </div>
               <h3 class="font-bold text-gray-900 dark:text-white">Award Winning</h3>
             </div>
-            <p class="text-sm text-gray-600 dark:text-gray-400">Recognized for excellence in innovation and
+            <p class="text-sm text-gray-600 dark:text-dark-400">Recognized for excellence in innovation and
               design</p>
           </div>
 
           <div
-            class="absolute -top-6 -right-2 bg-white dark:bg-primary-800 p-6 rounded-xl shadow-2xl max-w-xs card-hover animate-float"
+            class="absolute -top-6 -right-2 bg-white dark:bg-dark-800 p-6 rounded-xl shadow-2xl max-w-xs card-hover animate-float"
             style="animation-delay: 1s;">
             <div class="flex items-center space-x-3 mb-3">
               <div class="w-12 h-12 rounded-full bg-accent-100 dark:bg-accent-900/30 flex items-center justify-center">
@@ -587,7 +545,7 @@
               </div>
               <h3 class="font-bold text-gray-900 dark:text-white">Expert Team</h3>
             </div>
-            <p class="text-sm text-gray-600 dark:text-gray-400">50+ industry specialists ready to help</p>
+            <p class="text-sm text-gray-600 dark:text-dark-400">50+ industry specialists ready to help</p>
           </div>
         </div>
       </div>
@@ -600,45 +558,51 @@
       <div class="grid lg:grid-cols-2 gap-12 items-center">
         <div>
           <div
-            class="inline-flex items-center px-4 py-2 rounded-full bg-white dark:bg-primary-800 text-accent-600 dark:text-accent-400 mb-4 border border-gray-200 dark:border-primary-700">
+            class="inline-flex items-center px-4 py-2 rounded-full bg-white dark:bg-dark-800 text-accent-600 dark:text-accent-400 mb-4 border border-gray-200 dark:border-dark-700">
             <i class="fas fa-building mr-2"></i>
-            <span class="text-sm font-medium ui-text">About Our Agency</span>
+            <span class="text-sm font-medium">About Our Agency</span>
           </div>
           <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
             Driving <span class="gradient-text">Digital Transformation</span> Through Innovation
           </h2>
-          <p class="text-gray-600 dark:text-gray-300 mb-6 text-lg leading-relaxed">
-            Qadr Media & Communications Ltd is a premier digital agency that combines creativity with technology to deliver exceptional results. With over 200 successful projects across multiple industries, we've established ourselves as a trusted partner for businesses seeking digital excellence.
+          <p class="text-gray-600 dark:text-dark-300 mb-6 text-lg leading-relaxed">
+            Qadr Media & Communications Ltd is a premier digital agency that combines creativity with technology to
+            deliver exceptional results. With over 200 successful projects across multiple industries, we've established
+            ourselves as a trusted partner for businesses seeking digital excellence.
           </p>
-          <p class="text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Our team of 50+ specialists brings together diverse expertise in web development, digital marketing, software solutions, and creative design. We believe in building lasting partnerships with our clients, focusing on measurable results and sustainable growth.
+          <p class="text-gray-600 dark:text-dark-300 mb-8 leading-relaxed">
+            Our team of 50+ specialists brings together diverse expertise in web development, digital marketing,
+            software solutions, and creative design. We believe in building lasting partnerships with our clients,
+            focusing on measurable results and sustainable growth.
           </p>
           <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
             <div class="text-center">
               <div class="text-3xl font-bold text-accent-600 dark:text-accent-400 mb-2">200+</div>
-              <div class="text-gray-600 dark:text-gray-400">Projects Completed</div>
+              <div class="text-gray-600 dark:text-dark-400">Projects Completed</div>
             </div>
             <div class="text-center">
               <div class="text-3xl font-bold text-accent-600 dark:text-accent-400 mb-2">50+</div>
-              <div class="text-gray-600 dark:text-gray-400">Expert Team Members</div>
+              <div class="text-gray-600 dark:text-dark-400">Expert Team Members</div>
             </div>
             <div class="text-center">
               <div class="text-3xl font-bold text-accent-600 dark:text-accent-400 mb-2">10+</div>
-              <div class="text-gray-600 dark:text-gray-400">Countries Served</div>
+              <div class="text-gray-600 dark:text-dark-400">Countries Served</div>
             </div>
           </div>
         </div>
         <div class="relative">
-          <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
-               alt="Our Team" class="rounded-2xl shadow-2xl">
-          <div class="absolute -bottom-6 -right-6 bg-white dark:bg-primary-800 p-6 rounded-xl shadow-2xl max-w-xs">
+          <img
+            src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+            alt="Our Team" class="rounded-2xl shadow-2xl">
+          <div class="absolute -bottom-6 -right-6 bg-white dark:bg-dark-800 p-6 rounded-xl shadow-2xl max-w-xs">
             <div class="flex items-center space-x-3 mb-3">
               <div class="w-12 h-12 rounded-full accent-gradient flex items-center justify-center">
                 <i class="fas fa-medal text-white"></i>
               </div>
               <h3 class="font-bold text-gray-900 dark:text-white">Quality First</h3>
             </div>
-            <p class="text-sm text-gray-600 dark:text-gray-400">ISO certified processes ensuring excellence in every project</p>
+            <p class="text-sm text-gray-600 dark:text-dark-400">ISO certified processes ensuring excellence in every
+              project</p>
           </div>
         </div>
       </div>
@@ -646,76 +610,79 @@
   </section>
 
   <!-- SERVICES SECTION -->
-  <section id="services" class="bg-gradient-to-b from-white to-primary-50 dark:from-primary-900 dark:to-primary-800">
+  <section id="services" class="bg-gradient-to-b from-white to-gray-50 dark:from-dark-900 dark:to-dark-800">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
         <div
-          class="inline-flex items-center px-4 py-2 rounded-full bg-white dark:bg-primary-800 text-accent-600 dark:text-accent-400 mb-4 border border-gray-200 dark:border-primary-700">
+          class="inline-flex items-center px-4 py-2 rounded-full bg-white dark:bg-dark-800 text-accent-600 dark:text-accent-400 mb-4 border border-gray-200 dark:border-dark-700">
           <i class="fas fa-cogs mr-2"></i>
-          <span class="text-sm font-medium ui-text">Our Expertise</span>
+          <span class="text-sm font-medium">Our Expertise</span>
         </div>
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
           Comprehensive <span class="gradient-text">Services</span>
         </h2>
-        <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-lg">
-          End-to-end digital solutions designed to elevate your brand, drive engagement, and deliver measurable business impact.
+        <p class="text-gray-600 dark:text-dark-300 max-w-2xl mx-auto text-lg">
+          End-to-end digital solutions designed to elevate your brand, drive engagement, and deliver measurable business
+          impact.
         </p>
       </div>
 
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Service 1 -->
         <div
-          class="bg-white/90 dark:bg-primary-800/90 p-8 rounded-2xl card-hover border border-gray-200 dark:border-primary-700 backdrop-blur-sm">
+          class="bg-white/90 dark:bg-dark-800/90 p-8 rounded-2xl card-hover border border-gray-200 dark:border-dark-700 backdrop-blur-sm">
           <div class="w-16 h-16 rounded-xl gradient-bg flex items-center justify-center mb-6">
             <i class="fas fa-laptop-code text-white text-2xl"></i>
           </div>
           <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Website Design & Development</h3>
-          <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-            Custom website design and development with responsive layouts, user-friendly interfaces, and optimal performance across all devices.
+          <p class="text-gray-600 dark:text-dark-300 mb-6 leading-relaxed">
+            Custom website design and development with responsive layouts, user-friendly interfaces, and optimal
+            performance across all devices.
           </p>
           <div class="flex items-center justify-between">
-            <a href="#contact"
-              class="text-accent-600 dark:text-accent-400 font-medium inline-flex items-center group">
+            <a href="contact.html" class="text-accent-600 dark:text-accent-400 font-medium inline-flex items-center group">
               Learn More <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
             </a>
             <span
-              class="text-xs font-medium px-3 py-1 rounded-full bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400">Core Service</span>
+              class="text-xs font-medium px-3 py-1 rounded-full bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400">Core
+              Service</span>
           </div>
         </div>
 
         <!-- Service 2 -->
         <div
-          class="bg-white/90 dark:bg-primary-800/90 p-8 rounded-2xl card-hover border border-gray-200 dark:border-primary-700 backdrop-blur-sm">
+          class="bg-white/90 dark:bg-dark-800/90 p-8 rounded-2xl card-hover border border-gray-200 dark:border-dark-700 backdrop-blur-sm">
           <div class="w-16 h-16 rounded-xl accent-gradient flex items-center justify-center mb-6">
             <i class="fas fa-chart-line text-white text-2xl"></i>
           </div>
           <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Digital Marketing</h3>
-          <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-            Comprehensive digital marketing strategies including SEO, PPC, email marketing, and conversion optimization to drive growth.
+          <p class="text-gray-600 dark:text-dark-300 mb-6 leading-relaxed">
+            Comprehensive digital marketing strategies including SEO, PPC, email marketing, and conversion optimization
+            to drive growth.
           </p>
           <div class="flex items-center justify-between">
-            <a href="#contact"
-              class="text-accent-600 dark:text-accent-400 font-medium inline-flex items-center group">
+            <a href="contact.html" class="text-accent-600 dark:text-accent-400 font-medium inline-flex items-center group">
               Learn More <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
             </a>
             <span
-              class="text-xs font-medium px-3 py-1 rounded-full bg-accent-100 dark:bg-accent-900/30 text-accent-600 dark:text-accent-400">High Demand</span>
+              class="text-xs font-medium px-3 py-1 rounded-full bg-accent-100 dark:bg-accent-900/30 text-accent-600 dark:text-accent-400">High
+              Demand</span>
           </div>
         </div>
 
         <!-- Service 3 -->
         <div
-          class="bg-white/90 dark:bg-primary-800/90 p-8 rounded-2xl card-hover border border-gray-200 dark:border-primary-700 backdrop-blur-sm">
+          class="bg-white/90 dark:bg-dark-800/90 p-8 rounded-2xl card-hover border border-gray-200 dark:border-dark-700 backdrop-blur-sm">
           <div class="w-16 h-16 rounded-xl bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center mb-6">
             <i class="fas fa-mobile-alt text-blue-600 dark:text-blue-400 text-2xl"></i>
           </div>
           <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Software & Mobile Apps Development</h3>
-          <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-            Custom software solutions and mobile applications for iOS and Android platforms, built with cutting-edge technologies.
+          <p class="text-gray-600 dark:text-dark-300 mb-6 leading-relaxed">
+            Custom software solutions and mobile applications for iOS and Android platforms, built with cutting-edge
+            technologies.
           </p>
           <div class="flex items-center justify-between">
-            <a href="#contact"
-              class="text-accent-600 dark:text-accent-400 font-medium inline-flex items-center group">
+            <a href="contact.html" class="text-accent-600 dark:text-accent-400 font-medium inline-flex items-center group">
               Learn More <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
             </a>
             <span
@@ -725,17 +692,17 @@
 
         <!-- Service 4 -->
         <div
-          class="bg-white/90 dark:bg-primary-800/90 p-8 rounded-2xl card-hover border border-gray-200 dark:border-primary-700 backdrop-blur-sm">
+          class="bg-white/90 dark:bg-dark-800/90 p-8 rounded-2xl card-hover border border-gray-200 dark:border-dark-700 backdrop-blur-sm">
           <div class="w-16 h-16 rounded-xl bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center mb-6">
             <i class="fab fa-facebook-square text-purple-600 dark:text-purple-400 text-2xl"></i>
           </div>
           <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Social Media Marketing</h3>
-          <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-            Strategic social media management, content creation, community engagement, and paid social advertising across all platforms.
+          <p class="text-gray-600 dark:text-dark-300 mb-6 leading-relaxed">
+            Strategic social media management, content creation, community engagement, and paid social advertising
+            across all platforms.
           </p>
           <div class="flex items-center justify-between">
-            <a href="#contact"
-              class="text-accent-600 dark:text-accent-400 font-medium inline-flex items-center group">
+            <a href="contact.html" class="text-accent-600 dark:text-accent-400 font-medium inline-flex items-center group">
               Learn More <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
             </a>
             <span
@@ -745,17 +712,17 @@
 
         <!-- Service 5 -->
         <div
-          class="bg-white/90 dark:bg-primary-800/90 p-8 rounded-2xl card-hover border border-gray-200 dark:border-primary-700 backdrop-blur-sm">
+          class="bg-white/90 dark:bg-dark-800/90 p-8 rounded-2xl card-hover border border-gray-200 dark:border-dark-700 backdrop-blur-sm">
           <div class="w-16 h-16 rounded-xl bg-green-100 dark:bg-green-900/30 flex items-center justify-center mb-6">
             <i class="fas fa-video text-green-600 dark:text-green-400 text-2xl"></i>
           </div>
           <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Video Services</h3>
-          <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-            Professional video production, videography, video editing, and studio services for commercials, corporate videos, and social content.
+          <p class="text-gray-600 dark:text-dark-300 mb-6 leading-relaxed">
+            Professional video production, videography, video editing, and studio services for commercials, corporate
+            videos, and social content.
           </p>
           <div class="flex items-center justify-between">
-            <a href="#contact"
-              class="text-accent-600 dark:text-accent-400 font-medium inline-flex items-center group">
+            <a href="contact.html" class="text-accent-600 dark:text-accent-400 font-medium inline-flex items-center group">
               Learn More <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
             </a>
             <span
@@ -765,17 +732,17 @@
 
         <!-- Service 6 -->
         <div
-          class="bg-white/90 dark:bg-primary-800/90 p-8 rounded-2xl card-hover border border-gray-200 dark:border-primary-700 backdrop-blur-sm">
+          class="bg-white/90 dark:bg-dark-800/90 p-8 rounded-2xl card-hover border border-gray-200 dark:border-dark-700 backdrop-blur-sm">
           <div class="w-16 h-16 rounded-xl bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center mb-6">
             <i class="fas fa-paint-brush text-orange-600 dark:text-orange-400 text-2xl"></i>
           </div>
           <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Graphics & UI/UX Design</h3>
-          <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-            Professional graphic design, UI/UX design, website graphics, and branding materials that create memorable visual experiences.
+          <p class="text-gray-600 dark:text-dark-300 mb-6 leading-relaxed">
+            Professional graphic design, UI/UX design, website graphics, and branding materials that create memorable
+            visual experiences.
           </p>
           <div class="flex items-center justify-between">
-            <a href="#contact"
-              class="text-accent-600 dark:text-accent-400 font-medium inline-flex items-center group">
+            <a href="contact.html" class="text-accent-600 dark:text-accent-400 font-medium inline-flex items-center group">
               Learn More <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
             </a>
             <span
@@ -785,7 +752,7 @@
       </div>
 
       <div class="text-center mt-12">
-        <a href="#contact" class="inline-flex items-center justify-center btn-accent px-8 py-3 rounded-lg">
+        <a href="contact.html" class="inline-flex items-center justify-center btn-accent px-8 py-3 rounded-lg">
           <i class="fas fa-list-alt mr-3"></i> View All Services
         </a>
       </div>
@@ -797,32 +764,37 @@
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
         <div
-          class="inline-flex items-center px-4 py-2 rounded-full bg-white dark:bg-primary-800 text-accent-600 dark:text-accent-400 mb-4 border border-gray-200 dark:border-primary-700">
+          class="inline-flex items-center px-4 py-2 rounded-full bg-white dark:bg-dark-800 text-accent-600 dark:text-accent-400 mb-4 border border-gray-200 dark:border-dark-700">
           <i class="fas fa-briefcase mr-2"></i>
-          <span class="text-sm font-medium ui-text">Our Work</span>
+          <span class="text-sm font-medium">Our Work</span>
         </div>
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
           Featured <span class="gradient-text">Portfolio</span>
         </h2>
-        <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-lg">
+        <p class="text-gray-600 dark:text-dark-300 max-w-2xl mx-auto text-lg">
           Showcasing our most impactful projects that demonstrate our expertise and commitment to excellence.
         </p>
       </div>
 
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Portfolio Item 1 -->
-        <div class="bg-white dark:bg-primary-800 rounded-2xl overflow-hidden card-hover border border-gray-200 dark:border-primary-700">
+        <div
+          class="bg-white dark:bg-dark-800 rounded-2xl overflow-hidden card-hover border border-gray-200 dark:border-dark-700">
           <div class="h-48 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                 alt="E-commerce Website" class="w-full h-full object-cover">
+            <img
+              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="E-commerce Website" class="w-full h-full object-cover">
           </div>
           <div class="p-6">
             <div class="flex items-center justify-between mb-3">
-              <span class="text-sm font-medium px-3 py-1 rounded-full bg-accent-100 dark:bg-accent-900/30 text-accent-600 dark:text-accent-400">Web Development</span>
-              <span class="text-sm text-gray-500 dark:text-gray-400">2024</span>
+              <span
+                class="text-sm font-medium px-3 py-1 rounded-full bg-accent-100 dark:bg-accent-900/30 text-accent-600 dark:text-accent-400">Web
+                Development</span>
+              <span class="text-sm text-gray-500 dark:text-dark-400">2024</span>
             </div>
             <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">E-commerce Platform</h3>
-            <p class="text-gray-600 dark:text-gray-300 mb-4">Custom e-commerce solution with advanced features and seamless user experience.</p>
+            <p class="text-gray-600 dark:text-dark-300 mb-4">Custom e-commerce solution with advanced features and
+              seamless user experience.</p>
             <a href="#" class="text-accent-600 dark:text-accent-400 font-medium inline-flex items-center group">
               View Project <i class="fas fa-external-link-alt ml-2 group-hover:translate-x-1 transition-transform"></i>
             </a>
@@ -830,18 +802,23 @@
         </div>
 
         <!-- Portfolio Item 2 -->
-        <div class="bg-white dark:bg-primary-800 rounded-2xl overflow-hidden card-hover border border-gray-200 dark:border-primary-700">
+        <div
+          class="bg-white dark:bg-dark-800 rounded-2xl overflow-hidden card-hover border border-gray-200 dark:border-dark-700">
           <div class="h-48 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                 alt="Mobile App" class="w-full h-full object-cover">
+            <img
+              src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="Mobile App" class="w-full h-full object-cover">
           </div>
           <div class="p-6">
             <div class="flex items-center justify-between mb-3">
-              <span class="text-sm font-medium px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400">Mobile App</span>
-              <span class="text-sm text-gray-500 dark:text-gray-400">2024</span>
+              <span
+                class="text-sm font-medium px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400">Mobile
+                App</span>
+              <span class="text-sm text-gray-500 dark:text-dark-400">2024</span>
             </div>
             <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Health & Fitness App</h3>
-            <p class="text-gray-600 dark:text-gray-300 mb-4">Cross-platform mobile application with real-time tracking and analytics.</p>
+            <p class="text-gray-600 dark:text-dark-300 mb-4">Cross-platform mobile application with real-time tracking
+              and analytics.</p>
             <a href="#" class="text-accent-600 dark:text-accent-400 font-medium inline-flex items-center group">
               View Project <i class="fas fa-external-link-alt ml-2 group-hover:translate-x-1 transition-transform"></i>
             </a>
@@ -849,18 +826,23 @@
         </div>
 
         <!-- Portfolio Item 3 -->
-        <div class="bg-white dark:bg-primary-800 rounded-2xl overflow-hidden card-hover border border-gray-200 dark:border-primary-700">
+        <div
+          class="bg-white dark:bg-dark-800 rounded-2xl overflow-hidden card-hover border border-gray-200 dark:border-dark-700">
           <div class="h-48 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                 alt="Digital Marketing" class="w-full h-full object-cover">
+            <img
+              src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="Digital Marketing" class="w-full h-full object-cover">
           </div>
           <div class="p-6">
             <div class="flex items-center justify-between mb-3">
-              <span class="text-sm font-medium px-3 py-1 rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400">Digital Marketing</span>
-              <span class="text-sm text-gray-500 dark:text-gray-400">2023</span>
+              <span
+                class="text-sm font-medium px-3 py-1 rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400">Digital
+                Marketing</span>
+              <span class="text-sm text-gray-500 dark:text-dark-400">2023</span>
             </div>
             <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Brand Awareness Campaign</h3>
-            <p class="text-gray-600 dark:text-gray-300 mb-4">Multi-channel digital marketing campaign increasing brand visibility by 300%.</p>
+            <p class="text-gray-600 dark:text-dark-300 mb-4">Multi-channel digital marketing campaign increasing brand
+              visibility by 300%.</p>
             <a href="#" class="text-accent-600 dark:text-accent-400 font-medium inline-flex items-center group">
               View Project <i class="fas fa-external-link-alt ml-2 group-hover:translate-x-1 transition-transform"></i>
             </a>
@@ -877,18 +859,18 @@
   </section>
 
   <!-- CLIENTS SECTION -->
-  <section id="clients" class="bg-gradient-to-b from-primary-50 to-white dark:from-primary-900 dark:to-primary-800">
+  <section id="clients" class="bg-gradient-to-b from-gray-50 to-white dark:from-dark-900 dark:to-dark-800">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
         <div
-          class="inline-flex items-center px-4 py-2 rounded-full bg-white dark:bg-primary-800 text-accent-600 dark:text-accent-400 mb-4 border border-gray-200 dark:border-primary-700">
+          class="inline-flex items-center px-4 py-2 rounded-full bg-white dark:bg-dark-800 text-accent-600 dark:text-accent-400 mb-4 border border-gray-200 dark:border-dark-700">
           <i class="fas fa-users mr-2"></i>
-          <span class="text-sm font-medium ui-text">Trusted By</span>
+          <span class="text-sm font-medium">Trusted By</span>
         </div>
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
           Our <span class="gradient-text">Clients</span>
         </h2>
-        <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-lg">
+        <p class="text-gray-600 dark:text-dark-300 max-w-2xl mx-auto text-lg">
           We've had the privilege of working with amazing companies from around the world.
         </p>
       </div>
@@ -898,63 +880,72 @@
         <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">Domestic Clients</h3>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Client 1 -->
-          <div class="bg-white dark:bg-primary-800 rounded-2xl p-6 card-hover border border-gray-200 dark:border-primary-700">
+          <div
+            class="bg-white dark:bg-dark-800 rounded-2xl p-6 card-hover border border-gray-200 dark:border-dark-700">
             <div class="flex items-center mb-4">
               <div class="w-16 h-16 rounded-lg overflow-hidden mr-4">
-                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
-                     alt="weDevs Ltd" class="w-full h-full object-cover">
+                <img
+                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+                  alt="weDevs Ltd" class="w-full h-full object-cover">
               </div>
               <div>
                 <h4 class="font-bold text-gray-900 dark:text-white">weDevs Ltd</h4>
                 <span class="text-sm text-accent-600 dark:text-accent-400">SEO & Content Marketing</span>
               </div>
             </div>
-            <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
-              Full SEO optimization and organic content marketing to increase website traffic and sales through strategic digital campaigns.
+            <p class="text-gray-600 dark:text-dark-300 text-sm mb-4">
+              Full SEO optimization and organic content marketing to increase website traffic and sales through
+              strategic digital campaigns.
             </p>
-            <div class="flex items-center text-sm text-gray-500 dark:text-gray-400">
+            <div class="flex items-center text-sm text-gray-500 dark:text-dark-400">
               <i class="fas fa-map-marker-alt mr-2"></i>
               <span>Dhaka, Bangladesh</span>
             </div>
           </div>
 
           <!-- Client 2 -->
-          <div class="bg-white dark:bg-primary-800 rounded-2xl p-6 card-hover border border-gray-200 dark:border-primary-700">
+          <div
+            class="bg-white dark:bg-dark-800 rounded-2xl p-6 card-hover border border-gray-200 dark:border-dark-700">
             <div class="flex items-center mb-4">
               <div class="w-16 h-16 rounded-lg overflow-hidden mr-4">
-                <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
-                     alt="Webappick Ltd" class="w-full h-full object-cover">
+                <img
+                  src="https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+                  alt="Webappick Ltd" class="w-full h-full object-cover">
               </div>
               <div>
                 <h4 class="font-bold text-gray-900 dark:text-white">Webappick Ltd.</h4>
                 <span class="text-sm text-accent-600 dark:text-accent-400">Digital Marketing</span>
               </div>
             </div>
-            <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
-              Comprehensive digital marketing including organic marketing, email campaigns, and paid promotions to boost sales and revenue.
+            <p class="text-gray-600 dark:text-dark-300 text-sm mb-4">
+              Comprehensive digital marketing including organic marketing, email campaigns, and paid promotions to boost
+              sales and revenue.
             </p>
-            <div class="flex items-center text-sm text-gray-500 dark:text-gray-400">
+            <div class="flex items-center text-sm text-gray-500 dark:text-dark-400">
               <i class="fas fa-map-marker-alt mr-2"></i>
               <span>Dhaka, Bangladesh</span>
             </div>
           </div>
 
           <!-- Client 3 -->
-          <div class="bg-white dark:bg-primary-800 rounded-2xl p-6 card-hover border border-gray-200 dark:border-primary-700">
+          <div
+            class="bg-white dark:bg-dark-800 rounded-2xl p-6 card-hover border border-gray-200 dark:border-dark-700">
             <div class="flex items-center mb-4">
               <div class="w-16 h-16 rounded-lg overflow-hidden mr-4">
-                <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
-                     alt="Twinbit Ltd" class="w-full h-full object-cover">
+                <img
+                  src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+                  alt="Twinbit Ltd" class="w-full h-full object-cover">
               </div>
               <div>
                 <h4 class="font-bold text-gray-900 dark:text-white">Twinbit Ltd.</h4>
                 <span class="text-sm text-accent-600 dark:text-accent-400">Mobile App Marketing</span>
               </div>
             </div>
-            <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
-              Strategic mobile app marketing with Facebook ads and content marketing to drive downloads and increase sales.
+            <p class="text-gray-600 dark:text-dark-300 text-sm mb-4">
+              Strategic mobile app marketing with Facebook ads and content marketing to drive downloads and increase
+              sales.
             </p>
-            <div class="flex items-center text-sm text-gray-500 dark:text-gray-400">
+            <div class="flex items-center text-sm text-gray-500 dark:text-dark-400">
               <i class="fas fa-map-marker-alt mr-2"></i>
               <span>Dhaka, Bangladesh</span>
             </div>
@@ -967,63 +958,72 @@
         <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">International Clients</h3>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Client 1 -->
-          <div class="bg-white dark:bg-primary-800 rounded-2xl p-6 card-hover border border-gray-200 dark:border-primary-700">
+          <div
+            class="bg-white dark:bg-dark-800 rounded-2xl p-6 card-hover border border-gray-200 dark:border-dark-700">
             <div class="flex items-center mb-4">
               <div class="w-16 h-16 rounded-lg overflow-hidden mr-4">
-                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
-                     alt="RestorIT AB" class="w-full h-full object-cover">
+                <img
+                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+                  alt="RestorIT AB" class="w-full h-full object-cover">
               </div>
               <div>
                 <h4 class="font-bold text-gray-900 dark:text-white">RestorIT AB</h4>
                 <span class="text-sm text-accent-600 dark:text-accent-400">Website Development</span>
               </div>
             </div>
-            <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
-              Magento e-commerce website development for a Sweden-based company, featuring custom modules and seamless integration.
+            <p class="text-gray-600 dark:text-dark-300 text-sm mb-4">
+              Magento e-commerce website development for a Sweden-based company, featuring custom modules and seamless
+              integration.
             </p>
-            <div class="flex items-center text-sm text-gray-500 dark:text-gray-400">
+            <div class="flex items-center text-sm text-gray-500 dark:text-dark-400">
               <i class="fas fa-map-marker-alt mr-2"></i>
               <span>Stockholm, Sweden</span>
             </div>
           </div>
 
           <!-- Client 2 -->
-          <div class="bg-white dark:bg-primary-800 rounded-2xl p-6 card-hover border border-gray-200 dark:border-primary-700">
+          <div
+            class="bg-white dark:bg-dark-800 rounded-2xl p-6 card-hover border border-gray-200 dark:border-dark-700">
             <div class="flex items-center mb-4">
               <div class="w-16 h-16 rounded-lg overflow-hidden mr-4">
-                <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
-                     alt="Kontorstole" class="w-full h-full object-cover">
+                <img
+                  src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+                  alt="Kontorstole" class="w-full h-full object-cover">
               </div>
               <div>
                 <h4 class="font-bold text-gray-900 dark:text-white">Kontorstole</h4>
                 <span class="text-sm text-accent-600 dark:text-accent-400">Website & SEO</span>
               </div>
             </div>
-            <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
-              WordPress affiliate website development with comprehensive SEO strategy for product ranking and visibility.
+            <p class="text-gray-600 dark:text-dark-300 text-sm mb-4">
+              WordPress affiliate website development with comprehensive SEO strategy for product ranking and
+              visibility.
             </p>
-            <div class="flex items-center text-sm text-gray-500 dark:text-gray-400">
+            <div class="flex items-center text-sm text-gray-500 dark:text-dark-400">
               <i class="fas fa-map-marker-alt mr-2"></i>
               <span>Europe</span>
             </div>
           </div>
 
           <!-- Client 3 -->
-          <div class="bg-white dark:bg-primary-800 rounded-2xl p-6 card-hover border border-gray-200 dark:border-primary-700">
+          <div
+            class="bg-white dark:bg-dark-800 rounded-2xl p-6 card-hover border border-gray-200 dark:border-dark-700">
             <div class="flex items-center mb-4">
               <div class="w-16 h-16 rounded-lg overflow-hidden mr-4">
-                <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
-                     alt="Liberate Labs" class="w-full h-full object-cover">
+                <img
+                  src="https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+                  alt="Liberate Labs" class="w-full h-full object-cover">
               </div>
               <div>
                 <h4 class="font-bold text-gray-900 dark:text-white">Liberate Labs</h4>
                 <span class="text-sm text-accent-600 dark:text-accent-400">SEO & Content Strategy</span>
               </div>
             </div>
-            <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
-              Complete SEO package including technical SEO, on-page optimization, off-page strategies, and paid advertising campaigns.
+            <p class="text-gray-600 dark:text-dark-300 text-sm mb-4">
+              Complete SEO package including technical SEO, on-page optimization, off-page strategies, and paid
+              advertising campaigns.
             </p>
-            <div class="flex items-center text-sm text-gray-500 dark:text-gray-400">
+            <div class="flex items-center text-sm text-gray-500 dark:text-dark-400">
               <i class="fas fa-map-marker-alt mr-2"></i>
               <span>USA</span>
             </div>
@@ -1032,7 +1032,7 @@
       </div>
 
       <div class="text-center mt-12">
-        <a href="#contact" class="inline-flex items-center justify-center btn-accent px-8 py-3 rounded-lg">
+        <a href="contact.html" class="inline-flex items-center justify-center btn-accent px-8 py-3 rounded-lg">
           <i class="fas fa-handshake mr-3"></i> Become Our Client
         </a>
       </div>
@@ -1045,14 +1045,14 @@
       <div class="max-w-6xl mx-auto">
         <div class="text-center mb-16">
           <div
-            class="inline-flex items-center px-4 py-2 rounded-full bg-white dark:bg-primary-800 text-accent-600 dark:text-accent-400 mb-4 border border-gray-200 dark:border-primary-700">
+            class="inline-flex items-center px-4 py-2 rounded-full bg-white dark:bg-dark-800 text-accent-600 dark:text-accent-400 mb-4 border border-gray-200 dark:border-dark-700">
             <i class="fas fa-envelope mr-2"></i>
-            <span class="text-sm font-medium ui-text">Get in Touch</span>
+            <span class="text-sm font-medium">Get in Touch</span>
           </div>
           <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Let's Start Your <span class="gradient-text">Success Story</span>
           </h2>
-          <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-lg">
+          <p class="text-gray-600 dark:text-dark-300 max-w-2xl mx-auto text-lg">
             Share your vision with us. Our team will craft a customized communications strategy to help you achieve your
             goals.
           </p>
@@ -1061,7 +1061,7 @@
         <div class="grid lg:grid-cols-2 gap-12">
           <div>
             <div
-              class="bg-white/90 dark:bg-primary-800/90 rounded-2xl p-8 border border-gray-200 dark:border-primary-700 backdrop-blur-sm mb-8">
+              class="bg-white/90 dark:bg-dark-800/90 rounded-2xl p-8 border border-gray-200 dark:border-dark-700 backdrop-blur-sm mb-8">
               <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-6">Office Information</h3>
               <div class="space-y-6">
                 <div class="flex items-start">
@@ -1071,7 +1071,7 @@
                   </div>
                   <div>
                     <h4 class="font-medium text-gray-900 dark:text-white mb-1">Our Headquarters</h4>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm">
+                    <p class="text-gray-600 dark:text-dark-300 text-sm">
                       Razzak Plaza (8th Floor), 1 New Eskaton Road<br>
                       Moghbazar Circle, Dhaka-1217<br>
                       Bangladesh
@@ -1086,7 +1086,7 @@
                   </div>
                   <div>
                     <h4 class="font-medium text-gray-900 dark:text-white mb-1">Contact Numbers</h4>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm">
+                    <p class="text-gray-600 dark:text-dark-300 text-sm">
                       +880 22222 5916–7<br>
                       +880 96 1111 1000
                     </p>
@@ -1100,26 +1100,26 @@
                   </div>
                   <div>
                     <h4 class="font-medium text-gray-900 dark:text-white mb-1">Email Address</h4>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm">info@qadrmcl.com</p>
+                    <p class="text-gray-600 dark:text-dark-300 text-sm">info@qadrmcl.com</p>
                   </div>
                 </div>
               </div>
             </div>
 
             <div
-              class="bg-gradient-to-r from-primary-50 to-accent-50 dark:from-primary-800 dark:to-accent-900/20 rounded-2xl p-8 border border-gray-200 dark:border-primary-700">
+              class="bg-gradient-to-r from-primary-50 to-accent-50 dark:from-dark-800 dark:to-accent-900/20 rounded-2xl p-8 border border-gray-200 dark:border-dark-700">
               <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Business Hours</h3>
               <div class="space-y-3">
                 <div class="flex justify-between items-center">
-                  <span class="text-gray-600 dark:text-gray-300">Monday - Thursday</span>
+                  <span class="text-gray-600 dark:text-dark-300">Monday - Thursday</span>
                   <span class="font-medium text-gray-900 dark:text-white">9:00 AM - 6:00 PM</span>
                 </div>
                 <div class="flex justify-between items-center">
-                  <span class="text-gray-600 dark:text-gray-300">Friday</span>
+                  <span class="text-gray-600 dark:text-dark-300">Friday</span>
                   <span class="font-medium text-gray-900 dark:text-white">9:00 AM - 5:00 PM</span>
                 </div>
                 <div class="flex justify-between items-center">
-                  <span class="text-gray-600 dark:text-gray-300">Saturday - Sunday</span>
+                  <span class="text-gray-600 dark:text-dark-300">Saturday - Sunday</span>
                   <span class="font-medium text-gray-900 dark:text-white">By Appointment</span>
                 </div>
               </div>
@@ -1127,40 +1127,41 @@
           </div>
 
           <div
-            class="bg-white/90 dark:bg-primary-800/90 rounded-2xl p-8 border border-gray-200 dark:border-primary-700 backdrop-blur-sm">
+            class="bg-white/90 dark:bg-dark-800/90 rounded-2xl p-8 border border-gray-200 dark:border-dark-700 backdrop-blur-sm">
             <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-6">Send Us a Message</h3>
             <form class="space-y-6">
               <div class="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">First Name *</label>
+                  <label class="block text-sm font-medium text-gray-700 dark:text-dark-300 mb-2">First Name *</label>
                   <input type="text" required
-                    class="w-full px-4 py-3 border border-gray-300 dark:border-primary-600 rounded-lg focus:ring-2 focus:ring-accent-500 focus:border-transparent outline-none transition bg-white dark:bg-primary-700 text-gray-900 dark:text-gray-200">
+                    class="w-full px-4 py-3 border border-gray-300 dark:border-dark-600 rounded-lg focus:ring-2 focus:ring-accent-500 focus:border-transparent outline-none transition bg-white dark:bg-dark-700 text-gray-900 dark:text-dark-200">
                 </div>
                 <div>
-                  <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Last Name</label>
+                  <label class="block text-sm font-medium text-gray-700 dark:text-dark-300 mb-2">Last Name</label>
                   <input type="text"
-                    class="w-full px-4 py-3 border border-gray-300 dark:border-primary-600 rounded-lg focus:ring-2 focus:ring-accent-500 focus:border-transparent outline-none transition bg-white dark:bg-primary-700 text-gray-900 dark:text-gray-200">
+                    class="w-full px-4 py-3 border border-gray-300 dark:border-dark-600 rounded-lg focus:ring-2 focus:ring-accent-500 focus:border-transparent outline-none transition bg-white dark:bg-dark-700 text-gray-900 dark:text-dark-200">
                 </div>
               </div>
 
               <div>
-                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email Address *</label>
+                <label class="block text-sm font-medium text-gray-700 dark:text-dark-300 mb-2">Email Address *</label>
                 <input type="email" required
-                  class="w-full px-4 py-3 border border-gray-300 dark:border-primary-600 rounded-lg focus:ring-2 focus:ring-accent-500 focus:border-transparent outline-none transition bg-white dark:bg-primary-700 text-gray-900 dark:text-gray-200"
+                  class="w-full px-4 py-3 border border-gray-300 dark:border-dark-600 rounded-lg focus:ring-2 focus:ring-accent-500 focus:border-transparent outline-none transition bg-white dark:bg-dark-700 text-gray-900 dark:text-dark-200"
                   placeholder="you@company.com">
               </div>
 
               <div>
-                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Company</label>
+                <label class="block text-sm font-medium text-gray-700 dark:text-dark-300 mb-2">Company</label>
                 <input type="text"
-                  class="w-full px-4 py-3 border border-gray-300 dark:border-primary-600 rounded-lg focus:ring-2 focus:ring-accent-500 focus:border-transparent outline-none transition bg-white dark:bg-primary-700 text-gray-900 dark:text-gray-200"
+                  class="w-full px-4 py-3 border border-gray-300 dark:border-dark-600 rounded-lg focus:ring-2 focus:ring-accent-500 focus:border-transparent outline-none transition bg-white dark:bg-dark-700 text-gray-900 dark:text-dark-200"
                   placeholder="Your company name">
               </div>
 
               <div>
-                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Service Interested In</label>
+                <label class="block text-sm font-medium text-gray-700 dark:text-dark-300 mb-2">Service Interested
+                  In</label>
                 <select
-                  class="w-full px-4 py-3 border border-gray-300 dark:border-primary-600 rounded-lg focus:ring-2 focus:ring-accent-500 focus:border-transparent outline-none transition bg-white dark:bg-primary-700 text-gray-900 dark:text-gray-200">
+                  class="w-full px-4 py-3 border border-gray-300 dark:border-dark-600 rounded-lg focus:ring-2 focus:ring-accent-500 focus:border-transparent outline-none transition bg-white dark:bg-dark-700 text-gray-900 dark:text-dark-200">
                   <option value="">Select a service</option>
                   <option value="web">Website Design & Development</option>
                   <option value="digital">Digital Marketing</option>
@@ -1172,10 +1173,10 @@
               </div>
 
               <div>
-                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">How can we help you?
+                <label class="block text-sm font-medium text-gray-700 dark:text-dark-300 mb-2">How can we help you?
                   *</label>
                 <textarea rows="4" required
-                  class="w-full px-4 py-3 border border-gray-300 dark:border-primary-600 rounded-lg focus:ring-2 focus:ring-accent-500 focus:border-transparent outline-none transition bg-white dark:bg-primary-700 text-gray-900 dark:text-gray-200"
+                  class="w-full px-4 py-3 border border-gray-300 dark:border-dark-600 rounded-lg focus:ring-2 focus:ring-accent-500 focus:border-transparent outline-none transition bg-white dark:bg-dark-700 text-gray-900 dark:text-dark-200"
                   placeholder="Tell us about your project requirements..."></textarea>
               </div>
 
@@ -1190,7 +1191,7 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="bg-primary-900 text-white">
+  <footer class="bg-dark-900 text-white">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       <div class="py-12">
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
@@ -1200,24 +1201,25 @@
                 <img src="Logo/QMCL-Logo.png" alt="QMCL Logo" class="h-full w-full object-contain">
               </div>
             </div>
-            <p class="text-gray-400 text-sm leading-relaxed mb-4">
-              Leading strategic communications agency delivering measurable impact through innovative digital solutions, web development, and creative services.
+            <p class="text-dark-400 text-sm leading-relaxed mb-4">
+              Leading strategic communications agency delivering measurable impact through innovative digital solutions,
+              web development, and creative services.
             </p>
             <div class="flex space-x-3">
               <a href="#"
-                class="w-9 h-9 rounded-full bg-primary-800 hover:bg-accent-600 flex items-center justify-center transition-colors">
+                class="w-9 h-9 rounded-full bg-dark-800 hover:bg-accent-600 flex items-center justify-center transition-colors">
                 <i class="fab fa-linkedin-in text-sm"></i>
               </a>
               <a href="#"
-                class="w-9 h-9 rounded-full bg-primary-800 hover:bg-blue-500 flex items-center justify-center transition-colors">
+                class="w-9 h-9 rounded-full bg-dark-800 hover:bg-blue-500 flex items-center justify-center transition-colors">
                 <i class="fab fa-twitter text-sm"></i>
               </a>
               <a href="#"
-                class="w-9 h-9 rounded-full bg-primary-800 hover:bg-blue-700 flex items-center justify-center transition-colors">
+                class="w-9 h-9 rounded-full bg-dark-800 hover:bg-blue-700 flex items-center justify-center transition-colors">
                 <i class="fab fa-facebook-f text-sm"></i>
               </a>
               <a href="#"
-                class="w-9 h-9 rounded-full bg-primary-800 hover:bg-pink-600 flex items-center justify-center transition-colors">
+                class="w-9 h-9 rounded-full bg-dark-800 hover:bg-pink-600 flex items-center justify-center transition-colors">
                 <i class="fab fa-instagram text-sm"></i>
               </a>
             </div>
@@ -1226,30 +1228,38 @@
           <div>
             <h4 class="font-bold text-lg mb-4">Services</h4>
             <ul class="space-y-2">
-              <li><a href="#services" class="text-gray-400 hover:text-white transition-colors text-sm">Website Design & Development</a></li>
-              <li><a href="#services" class="text-gray-400 hover:text-white transition-colors text-sm">Digital Marketing</a></li>
-              <li><a href="#services" class="text-gray-400 hover:text-white transition-colors text-sm">Software & Mobile Apps</a></li>
-              <li><a href="#services" class="text-gray-400 hover:text-white transition-colors text-sm">Social Media Marketing</a></li>
-              <li><a href="#services" class="text-gray-400 hover:text-white transition-colors text-sm">Video Services</a></li>
-              <li><a href="#services" class="text-gray-400 hover:text-white transition-colors text-sm">Graphics & UI/UX Design</a></li>
+              <li><a href="services.html" class="text-dark-400 hover:text-white transition-colors text-sm">Website Design &
+                  Development</a></li>
+              <li><a href="services.html" class="text-dark-400 hover:text-white transition-colors text-sm">Digital
+                  Marketing</a></li>
+              <li><a href="services.html" class="text-dark-400 hover:text-white transition-colors text-sm">Software & Mobile
+                  Apps</a></li>
+              <li><a href="services.html" class="text-dark-400 hover:text-white transition-colors text-sm">Social Media
+                  Marketing</a></li>
+              <li><a href="services.html" class="text-dark-400 hover:text-white transition-colors text-sm">Video
+                  Services</a></li>
+              <li><a href="services.html" class="text-dark-400 hover:text-white transition-colors text-sm">Graphics & UI/UX
+                  Design</a></li>
             </ul>
           </div>
 
           <div>
             <h4 class="font-bold text-lg mb-4">Quick Links</h4>
             <ul class="space-y-2">
-              <li><a href="#home" class="text-gray-400 hover:text-white transition-colors text-sm">Home</a></li>
-              <li><a href="#about" class="text-gray-400 hover:text-white transition-colors text-sm">About Us</a></li>
-              <li><a href="#services" class="text-gray-400 hover:text-white transition-colors text-sm">Services</a></li>
-              <li><a href="#portfolio" class="text-gray-400 hover:text-white transition-colors text-sm">Portfolio</a></li>
-              <li><a href="#clients" class="text-gray-400 hover:text-white transition-colors text-sm">Our Clients</a></li>
-              <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors text-sm">Contact</a></li>
+              <li><a href="#home" class="text-dark-400 hover:text-white transition-colors text-sm">Home</a></li>
+              <li><a href="about.html" class="text-dark-400 hover:text-white transition-colors text-sm">About Us</a></li>
+              <li><a href="services.html" class="text-dark-400 hover:text-white transition-colors text-sm">Services</a></li>
+              <li><a href="portfolio.html" class="text-dark-400 hover:text-white transition-colors text-sm">Portfolio</a>
+              </li>
+              <li><a href="#clients" class="text-dark-400 hover:text-white transition-colors text-sm">Our Clients</a>
+              </li>
+              <li><a href="contact.html" class="text-dark-400 hover:text-white transition-colors text-sm">Contact</a></li>
             </ul>
           </div>
 
           <div>
             <h4 class="font-bold text-lg mb-4">Contact Info</h4>
-            <ul class="space-y-3 text-gray-400 text-sm">
+            <ul class="space-y-3 text-dark-400 text-sm">
               <li class="flex items-start">
                 <i class="fas fa-map-marker-alt mt-1 mr-3 text-accent-400"></i>
                 <span>Razzak Plaza, 8th Floor<br>Dhaka-1217, Bangladesh</span>
@@ -1266,10 +1276,10 @@
           </div>
         </div>
 
-        <div class="border-t border-primary-800 pt-8">
+        <div class="border-t border-dark-800 pt-8">
           <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p class="text-gray-400 text-sm">© 2024 Qadr Media & Communications Ltd. All rights reserved.</p>
-            <div class="flex space-x-6 text-sm text-gray-400">
+            <p class="text-dark-400 text-sm">© 2024 Qadr Media & Communications Ltd. All rights reserved.</p>
+            <div class="flex space-x-6 text-sm text-dark-400">
               <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
               <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
               <a href="#" class="hover:text-white transition-colors">Cookie Policy</a>
@@ -1416,7 +1426,7 @@
           // In a real application, you would send this data to your server
           const submitBtn = contactForm.querySelector('button[type="submit"]');
           const originalText = submitBtn.innerHTML;
-          
+
           submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Sending...';
           submitBtn.disabled = true;
 

@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html lang="en" class="light scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Services | Qadr Media & Communications Ltd</title>
+
+  <!-- Meta tags for SEO and professionalism -->
+  <meta name="description"
+    content="Complete digital, creative, and technology-driven services to help brands grow, engage audiences, and stand out in the digital world.">
+  <meta name="keywords"
+    content="digital services, web development, digital marketing, mobile apps, social media marketing, video production">
+  <meta name="author" content="Qadr Media & Communications Ltd">
+
+  <!-- Professional Fonts: Poppins for headings, Inter for body -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="shortcut icon" href="Logo/Logo(Transparent).png" type="image/x-icon">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["Inter", "ui-sans-serif", "system-ui"],
+            heading: ["Poppins", "Inter", "sans-serif"],
+          },
+          colors: {
+            // Dark mode optimized colors
+            dark: {
+              50: '#f8fafc',
+              100: '#f1f5f9',
+              200: '#e2e8f0',
+              300: '#cbd5e1',
+              400: '#94a3b8',
+              500: '#64748b',
+              600: '#475569',
+              700: '#334155',
+              800: '#1e293b',
+              900: '#0f172a',
+            },
+            // Primary brand colors
+            primary: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              200: '#bfdbfe',
+              300: '#93c5fd',
+              400: '#60a5fa',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e40af',
+              900: '#1e3a8a',
+            },
+            // Accent colors (teal)
+            accent: {
+              50: '#f0fdfa',
+              100: '#ccfbf1',
+              200: '#99f6e4',
+              300: '#5eead4',
+              400: '#2dd4bf',
+              500: '#14b8a6',
+              600: '#0d9488',
+              700: '#0f766e',
+              800: '#115e59',
+              900: '#134e4a',
+            }
+          },
+          boxShadow: {
+            'elegant': '0 10px 40px rgba(0, 0, 0, 0.05)',
+            'elegant-dark': '0 10px 40px rgba(0, 0, 0, 0.3)',
+            'lift': '0 20px 60px rgba(0, 0, 0, 0.08)',
+            'lift-dark': '0 20px 60px rgba(0, 0, 0, 0.35)',
+          },
+          animation: {
+            float: "float 3s ease-in-out infinite",
+            "fade-in": "fade-in .8s ease-out",
+            "fade-in-up": "fade-in-up 0.6s ease-out",
+          },
+          keyframes: {
+            float: {
+              "0%,100%": { transform: "translateY(0)" },
+              "50%": { transform: "translateY(-10px)" }
+            },
+            "fade-in": {
+              "0%": { opacity: 0 },
+              "100%": { opacity: 1 }
+            },
+            "fade-in-up": {
+              "0%": { transform: "translateY(10px)", opacity: 0 },
+              "100%": { transform: "translateY(0)", opacity: 1 }
+            }
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    /* Professional typography */
+    body {
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .heading {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      letter-spacing: -0.025em;
+      line-height: 1.2;
+    }
+
+    /* Header blur on scroll */
+    .header-scrolled {
+      backdrop-filter: blur(12px) !important;
+      -webkit-backdrop-filter: blur(12px) !important;
+      background: rgba(255, 255, 255, 0.95) !important;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      border: 1px solid rgba(0, 0, 0, 0.05) !important;
+    }
+
+    .dark .header-scrolled {
+      background: rgba(15, 23, 42, 0.95) !important;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+
+    /* Initial header state - transparent */
+    #headerBar {
+      background: rgba(255, 255, 255, 0.1) !important;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+
+    .dark #headerBar {
+      background: rgba(15, 23, 42, 0.2) !important;
+      border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+
+    /* Drawer animations */
+    .drawer-backdrop {
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .drawer-backdrop.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .drawer-panel {
+      transform: translateX(-100%);
+      transition: transform .3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .drawer-panel.open {
+      transform: translateX(0);
+    }
+
+    /* Background patterns */
+    .bg-pattern-subtle {
+      background-color: #f8fafc;
+    }
+
+    .dark .bg-pattern-subtle {
+      background-color: #0f172a;
+      background-image:
+        radial-gradient(circle at 15% 50%, rgba(148, 163, 184, 0.05) 0%, transparent 55%),
+        radial-gradient(circle at 85% 30%, rgba(45, 212, 191, 0.05) 0%, transparent 55%);
+    }
+
+    /* Professional gradients */
+    .gradient-bg {
+      background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    }
+
+    .dark .gradient-bg {
+      background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #3b82f6 0%, #14b8a6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .dark .gradient-text {
+      background: linear-gradient(135deg, #60a5fa 0%, #2dd4bf 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .accent-gradient {
+      background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
+    }
+
+    .dark .accent-gradient {
+      background: linear-gradient(135deg, #2dd4bf 0%, #0f766e 100%);
+    }
+
+    /* Professional card hover effects */
+    .card-hover {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .card-hover:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    }
+
+    .dark .card-hover:hover {
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+
+    .dark ::-webkit-scrollbar-track {
+      background: #1e293b;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #94a3b8;
+      border-radius: 5px;
+    }
+
+    .dark ::-webkit-scrollbar-thumb {
+      background: #475569;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #64748b;
+    }
+
+    .dark ::-webkit-scrollbar-thumb:hover {
+      background: #64748b;
+    }
+
+    /* Professional button styles */
+    .btn-primary {
+      background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+      color: white;
+      font-weight: 500;
+      padding: 12px 28px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+    }
+
+    .dark .btn-primary {
+      background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+      box-shadow: 0 4px 15px rgba(30, 64, 175, 0.3);
+    }
+
+    .btn-accent {
+      background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
+      color: white;
+      font-weight: 500;
+      padding: 12px 28px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(20, 184, 166, 0.2);
+    }
+
+    .btn-accent:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(20, 184, 166, 0.3);
+    }
+
+    .dark .btn-accent {
+      background: linear-gradient(135deg, #2dd4bf 0%, #0f766e 100%);
+      box-shadow: 0 4px 15px rgba(45, 212, 191, 0.3);
+    }
+
+    /* Section spacing */
+    section {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+
+    @media (min-width: 768px) {
+      section {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+      }
+    }
+
+    /* Smooth theme transitions */
+    * {
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+
+    /* Service card styling */
+    .service-card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 0;
+      background: linear-gradient(to bottom, #14b8a6, #0d9488);
+      transition: height 0.3s ease;
+    }
+
+    .dark .service-card::before {
+      background: linear-gradient(to bottom, #2dd4bf, #0f766e);
+    }
+
+    .service-card:hover::before {
+      height: 100%;
+    }
+
+    /* Process steps styling */
+    .process-step {
+      position: relative;
+      counter-increment: step-counter;
+    }
+
+    .process-step::before {
+      content: counter(step-counter);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .dark .process-step::before {
+      background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+    }
+
+    /* Client category styling */
+    .client-category {
+      transition: all 0.3s ease;
+    }
+
+    .client-category:hover {
+      transform: scale(1.05);
+    }
+
+    /* Active service tab */
+    .service-tab.active {
+      background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+      color: white;
+    }
+
+    .dark .service-tab.active {
+      background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+    }
+  </style>
+</head>
+
+<body class="font-sans bg-white dark:bg-dark-900 text-gray-800 dark:text-dark-100">
+
+  <!-- =======================
+      MOBILE DRAWER
+  ======================== -->
+  <div id="drawerBackdrop" class="drawer-backdrop fixed inset-0 z-50 bg-black/40">
+    <aside id="drawerPanel"
+      class="drawer-panel absolute left-0 top-0 h-full w-[85%] max-w-sm bg-white dark:bg-dark-800 border-r border-gray-200 dark:border-dark-700 p-6 flex flex-col">
+      <div class="flex items-center justify-between mb-8">
+        <a href="" class="flex items-center gap-3">
+          <div class="h-12 w-40 rounded-lg overflow-hidden">
+            <img src="Logo/QMCL-Logo.png" alt="QMCL Logo" class="h-full w-full object-contain">
+          </div>
+        </a>
+        <button id="drawerClose"
+          class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-dark-700 text-gray-700 dark:text-dark-300"
+          aria-label="Close menu">
+          <i class="fas fa-times text-lg"></i>
+        </button>
+      </div>
+
+      <nav class="space-y-2 flex-1">
+        <a class="flex items-center px-4 py-3 rounded-lg font-medium hover:bg-gray-100 dark:hover:bg-dark-700 text-gray-700 dark:text-dark-300 hover:text-accent-600 dark:hover:text-accent-400 transition-colors"
+          href="index.html">
+          <i class="fas fa-home mr-3 w-5"></i> Home
+        </a>
+        <a class="flex items-center px-4 py-3 rounded-lg font-medium hover:bg-gray-100 dark:hover:bg-dark-700 text-gray-700 dark:text-dark-300 hover:text-accent-600 dark:hover:text-accent-400 transition-colors"
+          href="about.html">
+          <i class="fas fa-building mr-3 w-5"></i> About Us
+        </a>
+        <a class="flex items-center px-4 py-3 rounded-lg font-medium hover:bg-gray-100 dark:hover:bg-dark-700 text-gray-700 dark:text-dark-300 hover:text-accent-600 dark:hover:text-accent-400 transition-colors"
+          href="#">
+          <i class="fas fa-cogs mr-3 w-5"></i> Services
+        </a>
+        <a class="flex items-center px-4 py-3 rounded-lg font-medium hover:bg-gray-100 dark:hover:bg-dark-700 text-gray-700 dark:text-dark-300 hover:text-accent-600 dark:hover:text-accent-400 transition-colors"
+          href="portfolio.html">
+          <i class="fas fa-briefcase mr-3 w-5"></i> Portfolio
+        </a>
+        <a class="flex items-center px-4 py-3 rounded-lg font-medium hover:bg-gray-100 dark:hover:bg-dark-700 text-gray-700 dark:text-dark-300 hover:text-accent-600 dark:hover:text-accent-400 transition-colors"
+          href="contact.html">
+          <i class="fas fa-envelope mr-3 w-5"></i> Contact
+        </a>
+      </nav>
+
+      <div class="pt-4 border-t border-gray-200 dark:border-dark-700">
+        <a href="contact.html#contact-form" class="btn-accent block w-full text-center py-3 rounded-lg font-medium mb-3">
+          <i class="fas fa-calendar-check mr-2"></i> Get Quote
+        </a>
+        <p class="text-xs text-gray-500 dark:text-dark-400 text-center">
+          Strategic Communications • Measurable Impact
+        </p>
+      </div>
+    </aside>
+  </div>
+
+  <!-- ===============
+      HEADER 
+  ============== -->
+  <header id="siteHeader" class="fixed top-0 left-0 right-0 z-40">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div id="headerBar" class="mt-4 rounded-xl transition-all duration-300">
+        <div class="flex h-16 items-center justify-between px-4 sm:px-6 border border-transparent rounded-xl">
+          <!-- Logo -->
+          <a href="" class="flex items-center">
+            <div class="h-12 w-40 rounded-lg overflow-hidden">
+              <img src="Logo/QMCL-Logo.png" alt="QMCL Logo" class="h-full w-full object-contain">
+            </div>
+          </a>
+
+          <!-- Desktop Navigation -->
+          <nav class="hidden lg:flex items-center space-x-1">
+            <a class="px-4 py-2 rounded-lg font-medium text-gray-700 dark:text-dark-300 hover:text-accent-600 dark:hover:text-accent-400 hover:bg-white/20 dark:hover:bg-dark-800/30 transition-colors"
+              href="index.html">Home</a>
+            <a class="px-4 py-2 rounded-lg font-medium text-gray-700 dark:text-dark-300 hover:text-accent-600 dark:hover:text-accent-400 hover:bg-white/20 dark:hover:bg-dark-800/30 transition-colors"
+              href="about.html">About</a>
+            <a class="px-4 py-2 rounded-lg font-medium text-gray-700 dark:text-dark-300 hover:text-accent-600 dark:hover:text-accent-400 hover:bg-white/20 dark:hover:bg-dark-800/30 transition-colors"
+              href="#">Services</a>
+            <a class="px-4 py-2 rounded-lg font-medium text-gray-700 dark:text-dark-300 hover:text-accent-600 dark:hover:text-accent-400 hover:bg-white/20 dark:hover:bg-dark-800/30 transition-colors"
+              href="portfolio.html">Portfolio</a>
+            <a class="px-4 py-2 rounded-lg font-medium text-gray-700 dark:text-dark-300 hover:text-accent-600 dark:hover:text-accent-400 hover:bg-white/20 dark:hover:bg-dark-800/30 transition-colors"
+              href="contact.html" class="hidden xl:inline">Contact</a>
+          </nav>
+
+          <!-- Actions -->
+          <div class="flex items-center space-x-3">
+            <button id="themeToggle"
+              class="w-10 h-10 rounded-full bg-white/20 dark:bg-dark-800/30 flex items-center justify-center hover:bg-white/30 dark:hover:bg-dark-700/40 transition-colors backdrop-blur-sm"
+              aria-label="Toggle theme">
+              <i id="sunIcon" class="fas fa-sun text-yellow-500 text-lg hidden"></i>
+              <i id="moonIcon" class="fas fa-moon text-gray-600 dark:text-dark-400 text-lg"></i>
+            </button>
+
+            <button id="drawerOpen"
+              class="lg:hidden w-10 h-10 rounded-full bg-white/20 dark:bg-dark-800/30 flex items-center justify-center hover:bg-white/30 dark:hover:bg-dark-700/40 transition-colors backdrop-blur-sm"
+              aria-label="Open menu">
+              <i class="fas fa-bars text-gray-700 dark:text-dark-300"></i>
+            </button>
+
+            <a href="contact.html#contact-form"
+              class="hidden lg:inline-flex items-center justify-center btn-accent px-6 py-2.5 rounded-lg font-medium backdrop-blur-sm">
+              <i class="fas fa-paper-plane mr-2"></i> Get Quote
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Spacer for fixed header -->
+  <div class="h-20"></div>
+
+  <!-- =========================
+       MAIN CONTENT - SERVICES
+  ========================== -->
+
+  <!-- HERO SECTION -->
+  <section class="relative overflow-hidden pt-20 pb-16 bg-gradient-to-br from-gray-50 to-white dark:from-dark-900 dark:to-dark-800">
+    <div
+      class="absolute top-40 left-10 w-48 h-48 bg-accent-300 dark:bg-accent-900 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl opacity-20">
+    </div>
+    <div
+      class="absolute bottom-20 right-10 w-72 h-72 bg-primary-300 dark:bg-primary-700 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl opacity-20">
+    </div>
+
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="max-w-4xl mx-auto text-center">
+        <div
+          class="inline-flex items-center px-4 py-2 rounded-full bg-accent-100 dark:bg-accent-900/30 text-accent-700 dark:text-accent-300 mb-6">
+          <span class="w-2 h-2 bg-accent-600 dark:bg-accent-400 rounded-full mr-2"></span>
+          <span class="text-sm font-medium">Complete Digital Solutions</span>
+        </div>
+
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
+          Our <span class="gradient-text">Services</span>
+        </h1>
+        <p class="text-xl text-gray-600 dark:text-dark-300 mb-8 max-w-3xl mx-auto">
+          Smart Digital Solutions That Power Your Brand. We provide complete digital, creative, and technology-driven services to help brands grow, engage audiences, and stand out in the digital world.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="#service-list"
+            class="px-8 py-3 gradient-bg text-white rounded-lg hover:opacity-90 transition-all duration-300 font-medium shadow-lg hover:shadow-xl">
+            <i class="fas fa-list-alt mr-2"></i> View All Services
+          </a>
+          <a href="contact.html-us"
+            class="px-8 py-3 border border-gray-300 dark:border-dark-600 text-gray-700 dark:text-dark-300 rounded-lg hover:border-accent-600 dark:hover:border-accent-400 hover:text-accent-600 dark:hover:text-accent-400 transition-all duration-300 font-medium group">
+            <i class="fas fa-calendar-alt mr-2 group-hover:text-accent-600 dark:group-hover:text-accent-400"></i>
+            Request Consultation
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES OVERVIEW -->
+  <section class="bg-pattern-subtle">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+          <div
+            class="inline-flex items-center px-4 py-2 rounded-full bg-white dark:bg-dark-800 text-accent-600 dark:text-accent-400 mb-4 border border-gray-200 dark:border-dark-700">
+            <i class="fas fa-bullseye mr-2"></i>
+            <span class="text-sm font-medium">What We Deliver</span>
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            From Strategy to <span class="gradient-text">Execution</span>
+          </h2>
+          <p class="text-gray-600 dark:text-dark-300 max-w-2xl mx-auto text-lg">
+            Our services combine strategy, creativity, and technology to deliver impactful and measurable results. From building powerful websites to creating engaging visual content and digital campaigns—we help businesses turn ideas into experiences.
+          </p>
+        </div>
+
+        <!-- Service Categories Navigation -->
+        <div class="mb-12">
+          <div class="flex flex-wrap justify-center gap-3 mb-8">
+            <button class="service-tab px-5 py-3 rounded-lg font-medium border border-gray-300 dark:border-dark-600 text-gray-700 dark:text-dark-300 hover:border-accent-600 dark:hover:border-accent-400 hover:text-accent-600 dark:hover:text-accent-400 transition-all duration-300 active" data-category="all">
+              All Services
+            </button>
+            <button class="service-tab px-5 py-3 rounded-lg font-medium border border-gray-300 dark:border-dark-600 text-gray-700 dark:text-dark-300 hover:border-accent-600 dark:hover:border-accent-400 hover:text-accent-600 dark:hover:text-accent-400 transition-all duration-300" data-category="web">
+              Web Development
+            </button>
+            <button class="service-tab px-5 py-3 rounded-lg font-medium border border-gray-300 dark:border-dark-600 text-gray-700 dark:text-dark-300 hover:border-accent-600 dark:hover:border-accent-400 hover:text-accent-600 dark:hover:text-accent-400 transition-all duration-300" data-category="digital">
+              Digital Marketing
+            </button>
+            <button class="service-tab px-5 py-3 rounded-lg font-medium border border-gray-300 dark:border-dark-600 text-gray-700 dark:text-dark-300 hover:border-accent-600 dark:hover:border-accent-400 hover:text-accent-600 dark:hover:text-accent-400 transition-all duration-300" data-category="creative">
+              Creative Services
+            </button>
+          </div>
+        </div>
+
+        <!-- Services Grid -->
+        <div id="service-list" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Service 1: Website Design & Development -->
+          <div class="service-card bg-white dark:bg-dark-800 rounded-2xl p-8 border border-gray-200 dark:border-dark-700 card-hover" data-category="web">
+            <div class="w-16 h-16 rounded-xl gradient-bg flex items-center justify-center mb-6">
+              <i class="fas fa-laptop-code text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Website Design & Development</h3>
+            <p class="text-gray-600 dark:text-dark-300 mb-6">
+              Websites That Look Great and Perform Better. We design and develop modern, responsive, and user-friendly websites tailored to your business goals.
+            </p>
+            <div class="mb-6">
+              <h4 class="font-medium text-gray-900 dark:text-white mb-3">Includes:</h4>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-accent-600 dark:text-accent-400 mt-1 mr-3 text-sm"></i>
+                  <span class="text-gray-600 dark:text-dark-300 text-sm">Custom website design</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-accent-600 dark:text-accent-400 mt-1 mr-3 text-sm"></i>
+                  <span class="text-gray-600 dark:text-dark-300 text-sm">Responsive & mobile-friendly layouts</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-accent-600 dark:text-accent-400 mt-1 mr-3 text-sm"></i>
+                  <span class="text-gray-600 dark:text-dark-300 text-sm">WordPress & custom CMS development</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-accent-600 dark:text-accent-400 mt-1 mr-3 text-sm"></i>
+                  <span class="text-gray-600 dark:text-dark-300 text-sm">Website speed & performance optimization</span>
+                </li>
+              </ul>
+            </div>
+            <div class="flex items-center justify-between">
+              <a href="contact.html-us" class="text-accent-600 dark:text-accent-400 font-medium inline-flex items-center group">
+                Get Started <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+              </a>
+              <span
+                class="text-xs font-medium px-3 py-1 rounded-full bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400">Development</span>
+            </div>
+          </div>
+
+          <!-- Service 2: Digital Marketing -->
+          <div class="service-card bg-white dark:bg-dark-800 rounded-2xl p-8 border border-gray-200 dark:border-dark-700 card-hover" data-category="digital">
+            <div class="w-16 h-16 rounded-xl accent-gradient flex items-center justify-center mb-6">
+              <i class="fas fa-chart-line text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Digital Marketing</h3>
+            <p class="text-gray-600 dark:text-dark-300 mb-6">
+              Data-Driven Strategies for Real Growth. Our digital marketing solutions help you reach the right audience, increase visibility, and convert engagement into results.
+            </p>
+            <div class="mb-6">
+              <h4 class="font-medium text-gray-900 dark:text-white mb-3">Includes:</h4>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-accent-600 dark:text-accent-400 mt-1 mr-3 text-sm"></i>
+                  <span class="text-gray-600 dark:text-dark-300 text-sm">Search Engine Optimization (SEO)</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-accent-600 dark:text-accent-400 mt-1 mr-3 text-sm"></i>
+                  <span class="text-gray-600 dark:text-dark-300 text-sm">Google Ads & paid campaigns</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-accent-600 dark:text-accent-400 mt-1 mr-3 text-sm"></i>
+                  <span class="text-gray-600 dark:text-dark-300 text-sm">Email marketing & automation</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-accent-600 dark:text-accent-400 mt-1 mr-3 text-sm"></i>
+                  <span class="text-gray-600 dark:text-dark-300 text-sm">Campaign planning & analytics</span>
+                </li>
+              </ul>
+            </div>
+            <div class="flex items-center justify-between">
+              <a href="contact.html-us" class="text-accent-600 dark:text-accent-400 font-medium inline-flex items-center group">
+                Get Started <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+              </a>
+              <span
+                class="text-xs font-medium px-3 py-1 rounded-full bg-accent-100 dark:bg-accent-900/30 text-accent-600 dark:text-accent-400">Marketing</span>
+            </div>
+          </div>
+
+          <!-- Service 3: Software & Mobile App Development -->
+          <div class="service-card bg-white dark:bg-dark-800 rounded-2xl p-8 border border-gray-200 dark:border-dark-700 card-hover" data-category="web">
+            <div class="w-16 h-16 rounded-xl bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center mb-6">
+              <i class="fas fa-mobile-alt text-blue-600 dark:text-blue-400 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Software & Mobile App Development</h3>
+            <p class="text-gray-600 dark:text-dark-300 mb-6">
+              Smart Technology Built for Your Business. We develop reliable software solutions and mobile applications that streamline operations and enhance user experience.
+            </p>
+            <div class="mb-6">
+              <h4 class="font-medium text-gray-900 dark:text-white mb-3">Includes:</h4>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-accent-600 dark:text-accent-400 mt-1 mr-3 text-sm"></i>
+                  <span class="text-gray-600 dark:text-dark-300 text-sm">Custom software solutions</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-accent-600 dark:text-accent-400 mt-1 mr-3 text-sm"></i>
+                  <span class="text-gray-600 dark:text-dark-300 text-sm">Android & iOS mobile app development</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-accent-600 dark:text-accent-400 mt-1 mr-3 text-sm"></i>
+                  <span class="text-gray-600 dark:text-dark-300 text-sm">Web-based applications</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-accent-600 dark:text-accent-400 mt-1 mr-3 text-sm"></i>
+                  <span class="text-gray-600 dark:text-dark-300 text-sm">System integration & API solutions</span>
+                </li>
+              </ul>
+            </div>
+            <div class="flex items-center justify-between">
+              <a href="contact.html-us" class="text-accent-600 dark:text-accent-400 font-medium inline-flex items-center group">
+                Get Started <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+              </a>
+              <span
+                class="text-xs font-medium px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400">Technical</span>
+            </div>
+          </div>
+
+          <!-- Service 4: Social Media Marketing -->
+          <div class="service-card bg-white dark:bg-dark-800 rounded-2xl p-8 border border-gray-200 dark:border-dark-700 card-hover" data-category="digital">
+            <div class="w-16 h-16 rounded-xl bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center mb-6">
+              <i class="fab fa-facebook-square text-purple-600 dark:text-purple-400 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Social Media Marketing</h3>
+            <p class="text-gray-600 dark:text-dark-300 mb-6">
+              Building Brands Where People Engage. We help brands grow, connect, and engage across social media platforms with creative content and strategic planning.
+            </p>
+            <div class="mb-6">
+              <h4 class="font-medium text-gray-900 dark:text-white mb-3">Includes:</h4>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-accent-600 dark:text-accent-400 mt-1 mr-3 text-sm"></i>
+                  <span class="text-gray-600 dark:text-dark-300 text-sm">Social media page management</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-accent-600 dark:text-accent-400 mt-1 mr-3 text-sm"></i>
+                  <span class="text-gray-600 dark:text-dark-300 text-sm">Content planning & posting</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-accent-600 dark:text-accent-400 mt-1 mr-3 text-sm"></i>
+                  <span class="text-gray-600 dark:text-dark-300 text-sm">Paid social media advertising</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-accent-600 dark:text-accent-400 mt-1 mr-3 text-sm"></i>
+                  <span class="text-gray-600 dark:text-dark-300 text-sm">Audience growth & engagement strategy</span>
+                </li>
+              </ul>
+            </div>
+            <div class="flex items-center justify-between">
+              <a href="contact.html-us" class="text-accent-600 dark:text-accent-400 font-medium inline-flex items-center group">
+                Get Started <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+              </a>
+              <span
+                class="text-xs font-medium px-3 py-1 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400">Social Media</span>
+            </div>
+          </div>
+
+          <!-- Service 5: Video Services -->
+          <div class="service-card bg-white dark:bg-dark-800 rounded-2xl p-8 border border-gray-200 dark:border-dark-700 card-hover" data-category="creative">
+            <div class="w-16 h-16 rounded-xl bg-green-100 dark:bg-green-900/30 flex items-center justify-center mb-6">
+              <i class="fas fa-video text-green-600 dark:text-green-400 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Video Services</h3>
+            <p class="text-gray-600 dark:text-dark-300 mb-6">
+              Visual Stories That Capture Attention. We produce high-quality video content designed to inform, engage, and inspire your audience across platforms.
+            </p>
+            <div class="mb-6">
+              <h4 class="font-medium text-gray-900 dark:text-white mb-3">Includes:</h4>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-accent-600 dark:text-accent-400 mt-1 mr-3 text-sm"></i>
+                  <span class="text-gray-600 dark:text-dark-300 text-sm">Promotional & brand videos</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-accent-600 dark:text-accent-400 mt-1 mr-3 text-sm"></i>
+                  <span class="text-gray-600 dark:text-dark-300 text-sm">Corporate & explainer videos</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-accent-600 dark:text-accent-400 mt-1 mr-3 text-sm"></i>
+                  <span class="text-gray-600 dark:text-dark-300 text-sm">Social media video content</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-accent-600 dark:text-accent-400 mt-1 mr-3 text-sm"></i>
+                  <span class="text-gray-600 dark:text-dark-300 text-sm">Scriptwriting & creative concepts</span>
+                </li>
+              </ul>
+            </div>
+            <div class="flex items-center justify-between">
+              <a href="contact.html-us" class="text-accent-600 dark:text-accent-400 font-medium inline-flex items-center group">
+                Get Started <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+              </a>
+              <span
+                class="text-xs font-medium px-3 py-1 rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400">Video</span>
+            </div>
+          </div>
+
+          <!-- Service 6: Graphics & UI/UX Design -->
+          <div class="service-card bg-white dark:bg-dark-800 rounded-2xl p-8 border border-gray-200 dark:border-dark-700 card-hover" data-category="creative">
+            <div class="w-16 h-16 rounded-xl bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center mb-6">
+              <i class="fas fa-paint-brush text-orange-600 dark:text-orange-400 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Graphics & UI/UX Design</h3>
+            <p class="text-gray-600 dark:text-dark-300 mb-6">
+              Design That Looks Good and Works Better. We create visually compelling designs that enhance user experience and strengthen brand identity.
+            </p>
+            <div class="mb-6">
+              <h4 class="font-medium text-gray-900 dark:text-white mb-3">Includes:</h4>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-accent-600 dark:text-accent-400 mt-1 mr-3 text-sm"></i>
+                  <span class="text-gray-600 dark:text-dark-300 text-sm">UI/UX design for web & apps</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-accent-600 dark:text-accent-400 mt-1 mr-3 text-sm"></i>
+                  <span class="text-gray-600 dark:text-dark-300 text-sm">Branding & visual identity design</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-accent-600 dark:text-accent-400 mt-1 mr-3 text-sm"></i>
+                  <span class="text-gray-600 dark:text-dark-300 text-sm">Marketing creatives & banners</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-accent-600 dark:text-accent-400 mt-1 mr-3 text-sm"></i>
+                  <span class="text-gray-600 dark:text-dark-300 text-sm">Website graphics & layouts</span>
+                </li>
+              </ul>
+            </div>
+            <div class="flex items-center justify-between">
+              <a href="contact.html-us" class="text-accent-600 dark:text-accent-400 font-medium inline-flex items-center group">
+                Get Started <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+              </a>
+              <span
+                class="text-xs font-medium px-3 py-1 rounded-full bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400">Design</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Additional Creative Services -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+          <!-- Photography -->
+          <div class="service-card bg-white dark:bg-dark-800 rounded-xl p-6 border border-gray-200 dark:border-dark-700 card-hover" data-category="creative">
+            <div class="w-12 h-12 rounded-lg bg-indigo-100 dark:bg-indigo-900/30 flex items-center justify-center mb-4">
+              <i class="fas fa-camera text-indigo-600 dark:text-indigo-400 text-xl"></i>
+            </div>
+            <h4 class="font-bold text-gray-900 dark:text-white mb-2">Photography</h4>
+            <p class="text-gray-600 dark:text-dark-300 text-sm mb-4">
+              Capturing moments that tell your story with professional product, corporate, and event photography.
+            </p>
+            <a href="contact.html-us" class="text-accent-600 dark:text-accent-400 text-sm font-medium inline-flex items-center group">
+              Learn More <i class="fas fa-arrow-right ml-1 group-hover:translate-x-1 transition-transform"></i>
+            </a>
+          </div>
+
+          <!-- Videography -->
+          <div class="service-card bg-white dark:bg-dark-800 rounded-xl p-6 border border-gray-200 dark:border-dark-700 card-hover" data-category="creative">
+            <div class="w-12 h-12 rounded-lg bg-red-100 dark:bg-red-900/30 flex items-center justify-center mb-4">
+              <i class="fas fa-video text-red-600 dark:text-red-400 text-xl"></i>
+            </div>
+            <h4 class="font-bold text-gray-900 dark:text-white mb-2">Videography</h4>
+            <p class="text-gray-600 dark:text-dark-300 text-sm mb-4">
+              Professional video production from start to finish including corporate, commercial, and event videography.
+            </p>
+            <a href="contact.html-us" class="text-accent-600 dark:text-accent-400 text-sm font-medium inline-flex items-center group">
+              Learn More <i class="fas fa-arrow-right ml-1 group-hover:translate-x-1 transition-transform"></i>
+            </a>
+          </div>
+
+          <!-- Video Editing -->
+          <div class="service-card bg-white dark:bg-dark-800 rounded-xl p-6 border border-gray-200 dark:border-dark-700 card-hover" data-category="creative">
+            <div class="w-12 h-12 rounded-lg bg-pink-100 dark:bg-pink-900/30 flex items-center justify-center mb-4">
+              <i class="fas fa-film text-pink-600 dark:text-pink-400 text-xl"></i>
+            </div>
+            <h4 class="font-bold text-gray-900 dark:text-white mb-2">Video Editing</h4>
+            <p class="text-gray-600 dark:text-dark-300 text-sm mb-4">
+              Polished videos with professional impact including motion graphics, color correction, and sound design.
+            </p>
+            <a href="contact.html-us" class="text-accent-600 dark:text-accent-400 text-sm font-medium inline-flex items-center group">
+              Learn More <i class="fas fa-arrow-right ml-1 group-hover:translate-x-1 transition-transform"></i>
+            </a>
+          </div>
+
+          <!-- Studio Service -->
+          <div class="service-card bg-white dark:bg-dark-800 rounded-xl p-6 border border-gray-200 dark:border-dark-700 card-hover" data-category="creative">
+            <div class="w-12 h-12 rounded-lg bg-teal-100 dark:bg-teal-900/30 flex items-center justify-center mb-4">
+              <i class="fas fa-photo-video text-teal-600 dark:text-teal-400 text-xl"></i>
+            </div>
+            <h4 class="font-bold text-gray-900 dark:text-white mb-2">Studio Service</h4>
+            <p class="text-gray-600 dark:text-dark-300 text-sm mb-4">
+              A creative space for professional production with photography & video studio setup and equipment support.
+            </p>
+            <a href="contact.html-us" class="text-accent-600 dark:text-accent-400 text-sm font-medium inline-flex items-center group">
+              Learn More <i class="fas fa-arrow-right ml-1 group-hover:translate-x-1 transition-transform"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE APPROACH -->
+  <section class="bg-gradient-to-b from-white to-gray-50 dark:from-dark-900 dark:to-dark-800">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+          <div
+            class="inline-flex items-center px-4 py-2 rounded-full bg-white dark:bg-dark-800 text-accent-600 dark:text-accent-400 mb-4 border border-gray-200 dark:border-dark-700">
+            <i class="fas fa-road mr-2"></i>
+            <span class="text-sm font-medium">Our Process</span>
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            Our Service <span class="gradient-text">Approach</span>
+          </h2>
+          <p class="text-gray-600 dark:text-dark-300 max-w-2xl mx-auto text-lg">
+            A Simple Process. Powerful Results. How we turn your vision into reality.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
+          <!-- Step 1 -->
+          <div class="text-center">
+            <div class="relative mb-6">
+              <div class="w-20 h-20 rounded-full gradient-bg flex items-center justify-center mx-auto">
+                <i class="fas fa-search text-white text-2xl"></i>
+              </div>
+              <div class="absolute -right-4 top-8 hidden lg:block">
+                <i class="fas fa-arrow-right text-gray-400 dark:text-dark-500 text-xl"></i>
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Discovery & Planning</h3>
+            <p class="text-gray-600 dark:text-dark-300 text-sm">
+              Understanding your goals, audience, and vision through detailed analysis and research.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="text-center">
+            <div class="relative mb-6">
+              <div class="w-20 h-20 rounded-full accent-gradient flex items-center justify-center mx-auto">
+                <i class="fas fa-lightbulb text-white text-2xl"></i>
+              </div>
+              <div class="absolute -right-4 top-8 hidden lg:block">
+                <i class="fas fa-arrow-right text-gray-400 dark:text-dark-500 text-xl"></i>
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Strategy & Design</h3>
+            <p class="text-gray-600 dark:text-dark-300 text-sm">
+              Creating tailored digital and creative solutions with strategic planning and innovative design.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="text-center">
+            <div class="relative mb-6">
+              <div class="w-20 h-20 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center mx-auto">
+                <i class="fas fa-code text-blue-600 dark:text-blue-400 text-2xl"></i>
+              </div>
+              <div class="absolute -right-4 top-8 hidden lg:block">
+                <i class="fas fa-arrow-right text-gray-400 dark:text-dark-500 text-xl"></i>
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Development & Production</h3>
+            <p class="text-gray-600 dark:text-dark-300 text-sm">
+              Building, designing, and producing with quality, attention to detail, and technical excellence.
+            </p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="text-center">
+            <div class="relative mb-6">
+              <div class="w-20 h-20 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center mx-auto">
+                <i class="fas fa-rocket text-green-600 dark:text-green-400 text-2xl"></i>
+              </div>
+              <div class="absolute -right-4 top-8 hidden lg:block">
+                <i class="fas fa-arrow-right text-gray-400 dark:text-dark-500 text-xl"></i>
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Launch & Promotion</h3>
+            <p class="text-gray-600 dark:text-dark-300 text-sm">
+              Delivering across the right platforms with strategic promotion and audience engagement.
+            </p>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="text-center">
+            <div class="relative mb-6">
+              <div class="w-20 h-20 rounded-full bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center mx-auto">
+                <i class="fas fa-chart-line text-purple-600 dark:text-purple-400 text-2xl"></i>
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Support & Optimization</h3>
+            <p class="text-gray-600 dark:text-dark-300 text-sm">
+              Monitoring, improving, and scaling results with ongoing support and performance optimization.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO WE WORK WITH -->
+  <section class="bg-pattern-subtle">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+          <div
+            class="inline-flex items-center px-4 py-2 rounded-full bg-white dark:bg-dark-800 text-accent-600 dark:text-accent-400 mb-4 border border-gray-200 dark:border-dark-700">
+            <i class="fas fa-handshake mr-2"></i>
+            <span class="text-sm font-medium">Our Partners</span>
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            Who We <span class="gradient-text">Work With</span>
+          </h2>
+          <p class="text-gray-600 dark:text-dark-300 max-w-2xl mx-auto text-lg">
+            We proudly serve diverse clients across industries with our comprehensive digital solutions.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+          <!-- Business -->
+          <div class="client-category bg-white dark:bg-dark-800 rounded-2xl p-8 border border-gray-200 dark:border-dark-700 text-center">
+            <div class="w-16 h-16 rounded-full gradient-bg flex items-center justify-center mx-auto mb-6">
+              <i class="fas fa-building text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Businesses & Corporate Brands</h3>
+            <p class="text-gray-600 dark:text-dark-300 text-sm">
+              From startups to enterprises, we help businesses establish and grow their digital presence.
+            </p>
+          </div>
+
+          <!-- Startups -->
+          <div class="client-category bg-white dark:bg-dark-800 rounded-2xl p-8 border border-gray-200 dark:border-dark-700 text-center">
+            <div class="w-16 h-16 rounded-full accent-gradient flex items-center justify-center mx-auto mb-6">
+              <i class="fas fa-rocket text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Startups & Entrepreneurs</h3>
+            <p class="text-gray-600 dark:text-dark-300 text-sm">
+              Helping innovative startups build their brand and scale with strategic digital solutions.
+            </p>
+          </div>
+
+          <!-- NGOs -->
+          <div class="client-category bg-white dark:bg-dark-800 rounded-2xl p-8 border border-gray-200 dark:border-dark-700 text-center">
+            <div class="w-16 h-16 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center mx-auto mb-6">
+              <i class="fas fa-hands-helping text-green-600 dark:text-green-400 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">NGOs & Organizations</h3>
+            <p class="text-gray-600 dark:text-dark-300 text-sm">
+              Supporting mission-driven organizations with impactful digital communication strategies.
+            </p>
+          </div>
+
+          <!-- Personal Brands -->
+          <div class="client-category bg-white dark:bg-dark-800 rounded-2xl p-8 border border-gray-200 dark:border-dark-700 text-center">
+            <div class="w-16 h-16 rounded-full bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center mx-auto mb-6">
+              <i class="fas fa-user-tie text-purple-600 dark:text-purple-400 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Personal Brands & Creators</h3>
+            <p class="text-gray-600 dark:text-dark-300 text-sm">
+              Empowering individuals and creators to build their digital identity and audience.
+            </p>
+          </div>
+
+          <!-- Agencies -->
+          <div class="client-category bg-white dark:bg-dark-800 rounded-2xl p-8 border border-gray-200 dark:border-dark-700 text-center">
+            <div class="w-16 h-16 rounded-full bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center mx-auto mb-6">
+              <i class="fas fa-users-cog text-orange-600 dark:text-orange-400 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Agencies & Institutions</h3>
+            <p class="text-gray-600 dark:text-dark-300 text-sm">
+              Partnering with agencies and institutions for specialized digital and creative services.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALL TO ACTION -->
+  <section id="contact-us" class="relative overflow-hidden bg-gradient-to-r from-primary-600 to-accent-600 dark:from-primary-700 dark:to-accent-700">
+    <div class="absolute inset-0 bg-black/10"></div>
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="max-w-4xl mx-auto text-center py-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+          Ready to Build, Grow, and Create?
+        </h2>
+        <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+          Whether you need a powerful website, creative content, or digital marketing solutions, Qadr Media & Communications Ltd is here to help you move forward with confidence.
+        </p>
+        <div class="flex flex-wrap justify-center gap-6">
+          <a href="contact.html"
+            class="px-8 py-3 bg-white text-primary-600 dark:text-primary-700 font-bold rounded-lg hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl">
+            <i class="fas fa-envelope mr-2"></i> Contact Us
+          </a>
+          <a href="#"
+            class="px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white/10 transition-all duration-300 font-medium">
+            <i class="fas fa-calendar-alt mr-2"></i> Request a Consultation
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark-900 text-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="py-12">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+          <div>
+            <div class="mb-6">
+              <div class="h-12 w-48 rounded-lg overflow-hidden">
+                <img src="Logo/QMCL-Logo.png" alt="QMCL Logo" class="h-full w-full object-contain">
+              </div>
+            </div>
+            <p class="text-dark-400 text-sm leading-relaxed mb-4">
+              Leading strategic communications agency delivering measurable impact through innovative digital solutions,
+              web development, and creative services.
+            </p>
+            <div class="flex space-x-3">
+              <a href="#"
+                class="w-9 h-9 rounded-full bg-dark-800 hover:bg-accent-600 flex items-center justify-center transition-colors">
+                <i class="fab fa-linkedin-in text-sm"></i>
+              </a>
+              <a href="#"
+                class="w-9 h-9 rounded-full bg-dark-800 hover:bg-blue-500 flex items-center justify-center transition-colors">
+                <i class="fab fa-twitter text-sm"></i>
+              </a>
+              <a href="#"
+                class="w-9 h-9 rounded-full bg-dark-800 hover:bg-blue-700 flex items-center justify-center transition-colors">
+                <i class="fab fa-facebook-f text-sm"></i>
+              </a>
+              <a href="#"
+                class="w-9 h-9 rounded-full bg-dark-800 hover:bg-pink-600 flex items-center justify-center transition-colors">
+                <i class="fab fa-instagram text-sm"></i>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-lg mb-4">Services</h4>
+            <ul class="space-y-2">
+              <li><a href="#" class="text-dark-400 hover:text-white transition-colors text-sm">Website Design &
+                  Development</a></li>
+              <li><a href="#" class="text-dark-400 hover:text-white transition-colors text-sm">Digital
+                  Marketing</a></li>
+              <li><a href="#" class="text-dark-400 hover:text-white transition-colors text-sm">Software & Mobile
+                  Apps</a></li>
+              <li><a href="#" class="text-dark-400 hover:text-white transition-colors text-sm">Social Media
+                  Marketing</a></li>
+              <li><a href="#" class="text-dark-400 hover:text-white transition-colors text-sm">Video
+                  Services</a></li>
+              <li><a href="#" class="text-dark-400 hover:text-white transition-colors text-sm">Graphics & UI/UX
+                  Design</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-lg mb-4">Quick Links</h4>
+            <ul class="space-y-2">
+              <li><a href="" class="text-dark-400 hover:text-white transition-colors text-sm">Home</a></li>
+              <li><a href="about.html" class="text-dark-400 hover:text-white transition-colors text-sm">About Us</a></li>
+              <li><a href="#" class="text-dark-400 hover:text-white transition-colors text-sm">Services</a></li>
+              <li><a href="portfolio.html" class="text-dark-400 hover:text-white transition-colors text-sm">Portfolio</a>
+              </li>
+              <li><a href="index.html#clients" class="text-dark-400 hover:text-white transition-colors text-sm">Our Clients</a>
+              </li>
+              <li><a href="contact.html" class="text-dark-400 hover:text-white transition-colors text-sm">Contact</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-lg mb-4">Contact Info</h4>
+            <ul class="space-y-3 text-dark-400 text-sm">
+              <li class="flex items-start">
+                <i class="fas fa-map-marker-alt mt-1 mr-3 text-accent-400"></i>
+                <span>Razzak Plaza, 8th Floor<br>Dhaka-1217, Bangladesh</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-phone mr-3 text-accent-400"></i>
+                <span>+880 22222 5916–7</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-envelope mr-3 text-accent-400"></i>
+                <span>info@qadrmcl.com</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-t border-dark-800 pt-8">
+          <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-dark-400 text-sm">© 2024 Qadr Media & Communications Ltd. All rights reserved.</p>
+            <div class="flex space-x-6 text-sm text-dark-400">
+              <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+              <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+              <a href="#" class="hover:text-white transition-colors">Cookie Policy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =======================
+      JAVASCRIPT
+  ======================== -->
+  <script>
+    // DOM Elements
+    const htmlEl = document.documentElement;
+    const themeToggle = document.getElementById("themeToggle");
+    const sunIcon = document.getElementById("sunIcon");
+    const moonIcon = document.getElementById("moonIcon");
+
+    const drawerBackdrop = document.getElementById("drawerBackdrop");
+    const drawerPanel = document.getElementById("drawerPanel");
+    const drawerOpen = document.getElementById("drawerOpen");
+    const drawerClose = document.getElementById("drawerClose");
+
+    const headerBar = document.getElementById("headerBar");
+    const serviceTabs = document.querySelectorAll('.service-tab');
+    const serviceCards = document.querySelectorAll('.service-card');
+
+    // Theme Management
+    function setTheme(mode) {
+      const isDark = mode === "dark";
+      htmlEl.classList.toggle("dark", isDark);
+
+      // Toggle icons
+      if (isDark) {
+        sunIcon.classList.remove("hidden");
+        moonIcon.classList.add("hidden");
+      } else {
+        sunIcon.classList.add("hidden");
+        moonIcon.classList.remove("hidden");
+      }
+
+      localStorage.setItem("theme", mode);
+    }
+
+    // Initialize theme
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+      setTheme(savedTheme);
+    } else {
+      // Check user preference
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      setTheme(prefersDark ? "dark" : "light");
+    }
+
+    // Theme toggle event
+    themeToggle.addEventListener("click", () => {
+      setTheme(htmlEl.classList.contains("dark") ? "light" : "dark");
+    });
+
+    // Header scroll effect
+    function onScroll() {
+      const scrolled = window.scrollY > 20;
+      headerBar.classList.toggle("header-scrolled", scrolled);
+    }
+    window.addEventListener("scroll", onScroll);
+    onScroll();
+
+    // Drawer functionality
+    function openDrawer() {
+      drawerBackdrop.classList.add("open");
+      drawerPanel.classList.add("open");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeDrawer() {
+      drawerBackdrop.classList.remove("open");
+      drawerPanel.classList.remove("open");
+      document.body.style.overflow = "";
+    }
+
+    drawerOpen?.addEventListener("click", openDrawer);
+    drawerClose?.addEventListener("click", closeDrawer);
+
+    drawerBackdrop.addEventListener("click", (e) => {
+      if (e.target === drawerBackdrop) closeDrawer();
+    });
+
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeDrawer();
+    });
+
+    drawerPanel.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener("click", closeDrawer));
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // Service filtering functionality
+    serviceTabs.forEach(tab => {
+      tab.addEventListener('click', function() {
+        // Remove active class from all tabs
+        serviceTabs.forEach(t => t.classList.remove('active', 'text-white'));
+        serviceTabs.forEach(t => {
+          t.classList.add('text-gray-700', 'dark:text-dark-300');
+          t.classList.remove('text-white');
+        });
+        
+        // Add active class to clicked tab
+        this.classList.add('active', 'text-white');
+        this.classList.remove('text-gray-700', 'dark:text-dark-300');
+        
+        const category = this.getAttribute('data-category');
+        
+        // Show/hide service cards based on category
+        serviceCards.forEach(card => {
+          if (category === 'all' || card.getAttribute('data-category') === category) {
+            card.style.display = 'block';
+            setTimeout(() => {
+              card.style.opacity = '1';
+              card.style.transform = 'translateY(0)';
+            }, 10);
+          } else {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            setTimeout(() => {
+              card.style.display = 'none';
+            }, 300);
+          }
+        });
+      });
+    });
+
+    // Consultation request form
+    const consultationBtn = document.querySelector('a[href="#"]');
+    if (consultationBtn && consultationBtn.textContent.includes('Consultation')) {
+      consultationBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        // In a real implementation, this would open a modal or redirect to a contact form
+        alert('Thank you for your interest! Please contact us via email at info@qadrmcl.com or call +880 22222 5916–7 to schedule a consultation.');
+      });
+    }
+
+    // Animate elements on scroll
+    function animateOnScroll() {
+      const elements = document.querySelectorAll('.service-card, .client-category');
+
+      elements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (elementTop < windowHeight - 100) {
+          element.style.opacity = '1';
+          element.style.transform = 'translateY(0)';
+        }
+      });
+    }
+
+    // Initialize animations
+    document.addEventListener('DOMContentLoaded', () => {
+      animateOnScroll();
+      // Add animation class to elements
+      document.querySelectorAll('.service-card, .client-category').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      });
+    });
+
+    window.addEventListener('scroll', animateOnScroll);
+  </script>
+</body>
+
+</html>
