@@ -1,0 +1,1569 @@
+<!DOCTYPE html>
+<html lang="en" class="light scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cookie Policy | Qadr Media & Communications Ltd</title>
+
+  <!-- Meta tags for SEO and professionalism -->
+  <meta name="description"
+    content="Cookie Policy for Qadr Media & Communications Ltd. Learn about how we use cookies and similar technologies on our website.">
+  <meta name="keywords"
+    content="cookie policy, cookies, tracking technologies, GDPR, data privacy, Qadr Media, communications agency">
+  <meta name="author" content="Qadr Media & Communications Ltd">
+
+  <!-- Professional Fonts: Poppins for headings, Inter for body, Source Sans Pro for UI -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="shortcut icon" href="Logo/Logo(Transparent).png" type="image/x-icon">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["Inter", "ui-sans-serif", "system-ui"],
+            heading: ["Poppins", "Inter", "sans-serif"],
+          },
+          colors: {
+            // Dark mode optimized colors
+            dark: {
+              50: '#f8fafc',
+              100: '#f1f5f9',
+              200: '#e2e8f0',
+              300: '#cbd5e1',
+              400: '#94a3b8',
+              500: '#64748b',
+              600: '#475569',
+              700: '#334155',
+              800: '#1e293b',
+              900: '#0f172a',
+            },
+            // Primary brand colors (optimized for dark mode)
+            primary: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              200: '#bfdbfe',
+              300: '#93c5fd',
+              400: '#60a5fa',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e40af',
+              900: '#1e3a8a',
+            },
+            // Accent colors (teal - works well in dark mode)
+            accent: {
+              50: '#f0fdfa',
+              100: '#ccfbf1',
+              200: '#99f6e4',
+              300: '#5eead4',
+              400: '#2dd4bf',
+              500: '#14b8a6',
+              600: '#0d9488',
+              700: '#0f766e',
+              800: '#115e59',
+              900: '#134e4a',
+            }
+          },
+          boxShadow: {
+            'elegant': '0 10px 40px rgba(0, 0, 0, 0.05)',
+            'elegant-dark': '0 10px 40px rgba(0, 0, 0, 0.3)',
+            'lift': '0 20px 60px rgba(0, 0, 0, 0.08)',
+            'lift-dark': '0 20px 60px rgba(0, 0, 0, 0.35)',
+          },
+          animation: {
+            float: "float 3s ease-in-out infinite",
+            "pulse-glow": "pulse-glow 2s ease-in-out infinite",
+            "slide-up": "slide-up .5s ease-out",
+            "fade-in": "fade-in .8s ease-out",
+            "fade-in-up": "fade-in-up 0.6s ease-out",
+          },
+          keyframes: {
+            float: {
+              "0%,100%": { transform: "translateY(0)" },
+              "50%": { transform: "translateY(-10px)" }
+            },
+            "pulse-glow": {
+              "0%,100%": { opacity: 1 },
+              "50%": { opacity: .7 }
+            },
+            "slide-up": {
+              "0%": { transform: "translateY(20px)", opacity: 0 },
+              "100%": { transform: "translateY(0)", opacity: 1 }
+            },
+            "fade-in": {
+              "0%": { opacity: 0 },
+              "100%": { opacity: 1 }
+            },
+            "fade-in-up": {
+              "0%": { transform: "translateY(10px)", opacity: 0 },
+              "100%": { transform: "translateY(0)", opacity: 1 }
+            }
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    /* Professional typography */
+    body {
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .heading {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      letter-spacing: -0.025em;
+      line-height: 1.2;
+    }
+
+    /* Header blur on scroll */
+    .header-scrolled {
+      backdrop-filter: blur(12px) !important;
+      -webkit-backdrop-filter: blur(12px) !important;
+      background: rgba(255, 255, 255, 0.95) !important;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      border: 1px solid rgba(0, 0, 0, 0.05) !important;
+    }
+
+    .dark .header-scrolled {
+      background: rgba(15, 23, 42, 0.95) !important;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+
+    /* Initial header state - transparent */
+    #headerBar {
+      background: rgba(255, 255, 255, 0.1) !important;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+
+    .dark #headerBar {
+      background: rgba(15, 23, 42, 0.2) !important;
+      border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+
+    /* Drawer animations */
+    .drawer-backdrop {
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .drawer-backdrop.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .drawer-panel {
+      transform: translateX(-100%);
+      transition: transform .3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .drawer-panel.open {
+      transform: translateX(0);
+    }
+
+    /* Background patterns */
+    .bg-pattern-subtle {
+      background-color: #f8fafc;
+    }
+
+    .dark .bg-pattern-subtle {
+      background-color: #0f172a;
+      background-image:
+        radial-gradient(circle at 15% 50%, rgba(148, 163, 184, 0.05) 0%, transparent 55%),
+        radial-gradient(circle at 85% 30%, rgba(45, 212, 191, 0.05) 0%, transparent 55%);
+    }
+
+    /* Professional gradients */
+    .gradient-bg {
+      background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    }
+
+    .dark .gradient-bg {
+      background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #3b82f6 0%, #14b8a6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .dark .gradient-text {
+      background: linear-gradient(135deg, #60a5fa 0%, #2dd4bf 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .accent-gradient {
+      background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
+    }
+
+    .dark .accent-gradient {
+      background: linear-gradient(135deg, #2dd4bf 0%, #0f766e 100%);
+    }
+
+    /* Professional card hover effects */
+    .card-hover {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .card-hover:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    }
+
+    .dark .card-hover:hover {
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+
+    .dark ::-webkit-scrollbar-track {
+      background: #1e293b;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #94a3b8;
+      border-radius: 5px;
+    }
+
+    .dark ::-webkit-scrollbar-thumb {
+      background: #475569;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #64748b;
+    }
+
+    .dark ::-webkit-scrollbar-thumb:hover {
+      background: #64748b;
+    }
+
+    /* Professional button styles */
+    .btn-primary {
+      background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+      color: white;
+      font-weight: 500;
+      padding: 12px 28px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+    }
+
+    .dark .btn-primary {
+      background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+      box-shadow: 0 4px 15px rgba(30, 64, 175, 0.3);
+    }
+
+    .btn-accent {
+      background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
+      color: white;
+      font-weight: 500;
+      padding: 12px 28px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(20, 184, 166, 0.2);
+    }
+
+    .btn-accent:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(20, 184, 166, 0.3);
+    }
+
+    .dark .btn-accent {
+      background: linear-gradient(135deg, #2dd4bf 0%, #0f766e 100%);
+      box-shadow: 0 4px 15px rgba(45, 212, 191, 0.3);
+    }
+
+    /* Section spacing */
+    section {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+
+    @media (min-width: 768px) {
+      section {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+      }
+    }
+
+    /* Smooth theme transitions */
+    * {
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+
+    /* Cookie policy specific styles */
+    .cookie-content h2 {
+      font-size: 1.75rem;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: #1e293b;
+    }
+
+    .dark .cookie-content h2 {
+      color: #f1f5f9;
+    }
+
+    .cookie-content h3 {
+      font-size: 1.25rem;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+      color: #334155;
+    }
+
+    .dark .cookie-content h3 {
+      color: #cbd5e1;
+    }
+
+    .cookie-content p {
+      margin-bottom: 1.25rem;
+      line-height: 1.7;
+    }
+
+    .cookie-content ul, .cookie-content ol {
+      margin-bottom: 1.25rem;
+      padding-left: 1.5rem;
+    }
+
+    .cookie-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.6;
+    }
+
+    .cookie-content strong {
+      color: #1e293b;
+      font-weight: 600;
+    }
+
+    .dark .cookie-content strong {
+      color: #f1f5f9;
+    }
+
+    .cookie-content a {
+      color: #3b82f6;
+      text-decoration: underline;
+    }
+
+    .dark .cookie-content a {
+      color: #60a5fa;
+    }
+
+    .cookie-content a:hover {
+      color: #1d4ed8;
+    }
+
+    .dark .cookie-content a:hover {
+      color: #93c5fd;
+    }
+
+    .cookie-content .info-box {
+      background-color: #f1f5f9;
+      border-left: 4px solid #3b82f6;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 0.5rem 0.5rem 0;
+    }
+
+    .dark .cookie-content .info-box {
+      background-color: #1e293b;
+      border-left-color: #60a5fa;
+    }
+
+    .cookie-content .warning-box {
+      background-color: #fef2f2;
+      border-left: 4px solid #ef4444;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 0.5rem 0.5rem 0;
+    }
+
+    .dark .cookie-content .warning-box {
+      background-color: #2a1e1e;
+      border-left-color: #f87171;
+    }
+
+    /* Cookie table styles - UPDATED FOR RESPONSIVENESS */
+    .cookie-table-wrapper {
+      overflow-x: auto;
+      margin: 2rem 0;
+      border-radius: 0.5rem;
+      -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    }
+
+    .cookie-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 700px; /* Minimum width before scrolling kicks in */
+    }
+
+    .cookie-table th,
+    .cookie-table td {
+      border: 1px solid #e2e8f0;
+      padding: 1rem;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .dark .cookie-table th,
+    .dark .cookie-table td {
+      border-color: #334155;
+    }
+
+    .cookie-table th {
+      background-color: #f8fafc;
+      font-weight: 600;
+      color: #1e293b;
+      white-space: nowrap; /* Prevent header text from wrapping */
+    }
+
+    .dark .cookie-table th {
+      background-color: #1e293b;
+      color: #f1f5f9;
+    }
+
+    .cookie-table tr:nth-child(even) {
+      background-color: #f8fafc;
+    }
+
+    .dark .cookie-table tr:nth-child(even) {
+      background-color: #1e293b;
+    }
+
+    .cookie-table td {
+      color: #475569;
+    }
+
+    .dark .cookie-table td {
+      color: #cbd5e1;
+    }
+
+    /* Responsive table styles */
+    @media (max-width: 768px) {
+      .cookie-table {
+        font-size: 0.875rem; /* Smaller font on mobile */
+      }
+      
+      .cookie-table th,
+      .cookie-table td {
+        padding: 0.75rem 0.5rem; /* Reduced padding on mobile */
+      }
+      
+      .cookie-table-wrapper {
+        margin-left: -0.5rem;
+        margin-right: -0.5rem;
+        border-radius: 0;
+      }
+      
+      /* Add subtle shadow to indicate scrollability */
+      .cookie-table-wrapper::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 20px;
+        background: linear-gradient(to right, transparent, rgba(0,0,0,0.05));
+        pointer-events: none;
+      }
+      
+      .dark .cookie-table-wrapper::after {
+        background: linear-gradient(to right, transparent, rgba(0,0,0,0.2));
+      }
+    }
+
+    /* For very small screens */
+    @media (max-width: 480px) {
+      .cookie-table {
+        font-size: 0.8125rem;
+      }
+      
+      .cookie-table th,
+      .cookie-table td {
+        padding: 0.5rem 0.375rem;
+      }
+      
+      .cookie-type {
+        font-size: 0.6875rem;
+        padding: 0.125rem 0.5rem;
+      }
+    }
+
+    /* Cookie banner */
+    .cookie-banner {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: white;
+      box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      padding: 1.5rem;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+    }
+
+    .dark .cookie-banner {
+      background-color: #1e293b;
+      box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .cookie-banner.show {
+      transform: translateY(0);
+    }
+
+    /* Cookie preference center */
+    .cookie-preference {
+      background-color: #f8fafc;
+      border-radius: 0.75rem;
+      padding: 2rem;
+      margin: 2rem 0;
+    }
+
+    .dark .cookie-preference {
+      background-color: #1e293b;
+    }
+
+    .cookie-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 0;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .dark .cookie-toggle {
+      border-bottom-color: #334155;
+    }
+
+    .cookie-toggle:last-child {
+      border-bottom: none;
+    }
+
+    /* Cookie consent types */
+    .cookie-type {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      margin-right: 0.5rem;
+      white-space: nowrap;
+    }
+
+    .cookie-essential {
+      background-color: #dcfce7;
+      color: #166534;
+    }
+
+    .dark .cookie-essential {
+      background-color: #14532d;
+      color: #bbf7d0;
+    }
+
+    .cookie-functional {
+      background-color: #dbeafe;
+      color: #1e40af;
+    }
+
+    .dark .cookie-functional {
+      background-color: #1e3a8a;
+      color: #bfdbfe;
+    }
+
+    .cookie-analytics {
+      background-color: #f0f9ff;
+      color: #0369a1;
+    }
+
+    .dark .cookie-analytics {
+      background-color: #0c4a6e;
+      color: #bae6fd;
+    }
+
+    .cookie-marketing {
+      background-color: #fdf2f8;
+      color: #9d174d;
+    }
+
+    .dark .cookie-marketing {
+      background-color: #831843;
+      color: #fbcfe8;
+    }
+  </style>
+</head>
+
+<body class="font-sans bg-white dark:bg-dark-900 text-gray-800 dark:text-dark-100">
+
+  <!-- =======================
+      MOBILE DRAWER
+  ======================== -->
+  <div id="drawerBackdrop" class="drawer-backdrop fixed inset-0 z-50 bg-black/40">
+    <aside id="drawerPanel"
+      class="drawer-panel absolute left-0 top-0 h-full w-[85%] max-w-sm bg-white dark:bg-dark-800 border-r border-gray-200 dark:border-dark-700 p-6 flex flex-col">
+      <div class="flex items-center justify-between mb-8">
+        <a href="index.html" class="flex items-center gap-3">
+          <div class="h-16 w-40 rounded-lg overflow-hidden">
+            <img src="Logo/QMCL-Logo.png" alt="QMCL Logo" class="h-full w-full object-contain">
+          </div>
+        </a>
+        <button id="drawerClose"
+          class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-dark-700 text-gray-700 dark:text-dark-300"
+          aria-label="Close menu">
+          <i class="fas fa-times text-lg"></i>
+        </button>
+      </div>
+
+      <nav class="space-y-2 flex-1">
+        <a class="flex items-center px-4 py-3 rounded-lg font-medium hover:bg-gray-100 dark:hover:bg-dark-700 text-gray-700 dark:text-dark-300 hover:text-accent-600 dark:hover:text-accent-400 transition-colors"
+          href="index.html">
+          <i class="fas fa-home mr-3 w-5"></i> Home
+        </a>
+        <a class="flex items-center px-4 py-3 rounded-lg font-medium hover:bg-gray-100 dark:hover:bg-dark-700 text-gray-700 dark:text-dark-300 hover:text-accent-600 dark:hover:text-accent-400 transition-colors"
+          href="about.html">
+          <i class="fas fa-building mr-3 w-5"></i> About Us
+        </a>
+        <a class="flex items-center px-4 py-3 rounded-lg font-medium hover:bg-gray-100 dark:hover:bg-dark-700 text-gray-700 dark:text-dark-300 hover:text-accent-600 dark:hover:text-accent-400 transition-colors"
+          href="services.html">
+          <i class="fas fa-cogs mr-3 w-5"></i> Services
+        </a>
+        <a class="flex items-center px-4 py-3 rounded-lg font-medium hover:bg-gray-100 dark:hover:bg-dark-700 text-gray-700 dark:text-dark-300 hover:text-accent-600 dark:hover:text-accent-400 transition-colors"
+          href="portfolio.html">
+          <i class="fas fa-briefcase mr-3 w-5"></i> Portfolio
+        </a>
+        <a class="flex items-center px-4 py-3 rounded-lg font-medium hover:bg-gray-100 dark:hover:bg-dark-700 text-gray-700 dark:text-dark-300 hover:text-accent-600 dark:hover:text-accent-400 transition-colors"
+          href="contact.html">
+          <i class="fas fa-envelope mr-3 w-5"></i> Contact
+        </a>
+      </nav>
+
+      <div class="pt-4 border-t border-gray-200 dark:border-dark-700">
+        <a href="contact.html#contact-form" class="btn-accent block w-full text-center py-3 rounded-lg font-medium mb-3">
+          <i class="fas fa-calendar-check mr-2"></i> Get Quote
+        </a>
+        <p class="text-xs text-gray-500 dark:text-dark-400 text-center">
+          Strategic Communications • Measurable Impact
+        </p>
+      </div>
+    </aside>
+  </div>
+
+  <!-- ===============
+      HEADER 
+  ============== -->
+  <header id="siteHeader" class="fixed top-0 left-0 right-0 z-40">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div id="headerBar" class="mt-4 rounded-xl transition-all duration-300">
+        <div class="flex h-16 items-center justify-between px-4 sm:px-6 border border-transparent rounded-xl">
+          <!-- Logo -->
+          <a href="index.html" class="flex items-center">
+            <div class="h-16 w-40 rounded-lg overflow-hidden">
+              <img src="Logo/QMCL-Logo.png" alt="QMCL Logo" class="h-full w-full object-contain">
+            </div>
+          </a>
+
+          <!-- Desktop Navigation -->
+          <nav class="hidden lg:flex items-center space-x-1">
+            <a class="px-4 py-2 rounded-lg font-medium text-gray-700 dark:text-dark-300 hover:text-accent-600 dark:hover:text-accent-400 hover:bg-white/20 dark:hover:bg-dark-800/30 transition-colors"
+              href="index.html">Home</a>
+            <a class="px-4 py-2 rounded-lg font-medium text-gray-700 dark:text-dark-300 hover:text-accent-600 dark:hover:text-accent-400 hover:bg-white/20 dark:hover:bg-dark-800/30 transition-colors"
+              href="about.html">About</a>
+            <a class="px-4 py-2 rounded-lg font-medium text-gray-700 dark:text-dark-300 hover:text-accent-600 dark:hover:text-accent-400 hover:bg-white/20 dark:hover:bg-dark-800/30 transition-colors"
+              href="services.html">Services</a>
+            <a class="px-4 py-2 rounded-lg font-medium text-gray-700 dark:text-dark-300 hover:text-accent-600 dark:hover:text-accent-400 hover:bg-white/20 dark:hover:bg-dark-800/30 transition-colors"
+              href="portfolio.html">Portfolio</a>
+            <a class="px-4 py-2 rounded-lg font-medium text-gray-700 dark:text-dark-300 hover:text-accent-600 dark:hover:text-accent-400 hover:bg-white/20 dark:hover:bg-dark-800/30 transition-colors"
+              href="contact.html" class="hidden xl:inline">Contact</a>
+          </nav>
+
+          <!-- Actions -->
+          <div class="flex items-center space-x-3">
+            <button id="themeToggle"
+              class="w-10 h-10 rounded-full bg-white/20 dark:bg-dark-800/30 flex items-center justify-center hover:bg-white/30 dark:hover:bg-dark-700/40 transition-colors backdrop-blur-sm"
+              aria-label="Toggle theme">
+              <i id="sunIcon" class="fas fa-sun text-yellow-500 text-lg hidden"></i>
+              <i id="moonIcon" class="fas fa-moon text-gray-600 dark:text-dark-400 text-lg"></i>
+            </button>
+
+            <button id="drawerOpen"
+              class="lg:hidden w-10 h-10 rounded-full bg-white/20 dark:bg-dark-800/30 flex items-center justify-center hover:bg-white/30 dark:hover:bg-dark-700/40 transition-colors backdrop-blur-sm"
+              aria-label="Open menu">
+              <i class="fas fa-bars text-gray-700 dark:text-dark-300"></i>
+            </button>
+
+            <a href="contact.html#contact-form"
+              class="hidden lg:inline-flex items-center justify-center btn-accent px-6 py-2.5 rounded-lg font-medium backdrop-blur-sm">
+              <i class="fas fa-paper-plane mr-2"></i> Get Quote
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Spacer for fixed header -->
+  <div class="h-20"></div>
+
+  <!-- =========================
+       MAIN CONTENT
+  ========================== -->
+
+  <!-- COOKIE POLICY HERO SECTION -->
+  <section class="relative overflow-hidden pt-16 md:pt-20 bg-gradient-to-br from-gray-50 to-white dark:from-dark-900 dark:to-dark-800">
+    <!-- Animated background elements -->
+    <div
+      class="absolute top-40 left-10 w-40 h-48 bg-accent-300 dark:bg-accent-900 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl opacity-20 animate-pulse-glow">
+    </div>
+    <div
+      class="absolute bottom-20 right-10 w-72 h-72 bg-primary-300 dark:bg-primary-700 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl opacity-20 animate-pulse-glow animation-delay-2000">
+    </div>
+
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pb-10">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center animate-fade-in" style="opacity: 1; transform: translateY(0px); transition: opacity 0.8s, transform 0.8s;">
+          <div
+            class="inline-flex items-center px-4 py-2 rounded-full bg-accent-100 dark:bg-accent-900/30 text-accent-700 dark:text-accent-300 mb-6">
+            <i class="fas fa-cookie-bite mr-2"></i>
+            <span class="text-sm font-medium">Cookies & Tracking Technologies</span>
+          </div>
+
+          <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
+            Cookie <span class="gradient-text">Policy</span>
+          </h1>
+          <p class="text-lg text-gray-600 dark:text-dark-300 mb-8 max-w-2xl mx-auto">
+            This Cookie Policy explains how Qadr Media & Communications Ltd uses cookies and similar tracking technologies when you visit our website. We are committed to being transparent about our use of cookies and giving you control over your preferences.
+          </p>
+          
+          <div class="flex flex-wrap justify-center gap-3 mt-8">
+            <div class="flex items-center">
+              <i class="fas fa-check-circle text-accent-600 dark:text-accent-400 mr-2"></i>
+              <span class="text-sm">Last Updated: May 2024</span>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-check-circle text-accent-600 dark:text-accent-400 mr-2"></i>
+              <span class="text-sm">GDPR & ePrivacy Compliant</span>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-check-circle text-accent-600 dark:text-accent-400 mr-2"></i>
+              <span class="text-sm">User Control Options</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COOKIE POLICY CONTENT -->
+  <section class="bg-pattern-subtle">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-6xl mx-auto">
+        <div class="bg-white/90 dark:bg-dark-800/90 rounded-2xl p-6 md:p-12 border border-gray-200 dark:border-dark-700 backdrop-blur-sm">
+          <div class="cookie-content">
+            
+            <div class="info-box">
+              <p class="font-medium text-gray-900 dark:text-white">
+                <i class="fas fa-info-circle mr-2 text-primary-600 dark:text-primary-400"></i>
+                This Cookie Policy should be read alongside our <a href="privacyPolicy.html" class="underline">Privacy Policy</a> which provides more details about how we collect, use, and protect your personal information.
+              </p>
+            </div>
+
+            <h2>1. What Are Cookies?</h2>
+            <p>
+              Cookies are small text files that are placed on your computer, smartphone, or other device when you visit a website. They are widely used to make websites work more efficiently and provide information to website owners.
+            </p>
+            <p>
+              Cookies may be either "persistent" cookies or "session" cookies. A persistent cookie will be stored by a web browser and will remain valid until its set expiry date, unless deleted by the user before the expiry date. A session cookie will expire at the end of the user session, when the web browser is closed.
+            </p>
+
+            <h2>2. How We Use Cookies</h2>
+            <p>We use cookies for the following purposes:</p>
+            
+            <div class="cookie-preference">
+              <h3 class="text-lg font-bold mb-4">Cookie Categories</h3>
+              
+              <div class="cookie-toggle">
+                <div>
+                  <span class="cookie-type cookie-essential">Essential</span>
+                  <h4 class="font-semibold">Strictly Necessary Cookies</h4>
+                  <p class="text-sm text-gray-600 dark:text-dark-400 mt-1">These cookies are essential for the website to function properly. They enable basic functions like page navigation and access to secure areas of the website.</p>
+                </div>
+                <div class="relative">
+                  <input type="checkbox" id="essential-cookies" class="sr-only" checked disabled>
+                  <label for="essential-cookies" class="block w-12 h-6 bg-gray-300 rounded-full cursor-not-allowed"></label>
+                </div>
+              </div>
+              
+              <div class="cookie-toggle">
+                <div>
+                  <span class="cookie-type cookie-functional">Functional</span>
+                  <h4 class="font-semibold">Functionality Cookies</h4>
+                  <p class="text-sm text-gray-600 dark:text-dark-400 mt-1">These cookies allow the website to remember choices you make and provide enhanced, more personal features.</p>
+                </div>
+                <div class="relative">
+                  <input type="checkbox" id="functional-cookies" class="sr-only">
+                  <label for="functional-cookies" class="block w-12 h-6 bg-gray-300 rounded-full cursor-pointer"></label>
+                </div>
+              </div>
+              
+              <div class="cookie-toggle">
+                <div>
+                  <span class="cookie-type cookie-analytics">Analytics</span>
+                  <h4 class="font-semibold">Analytics Cookies</h4>
+                  <p class="text-sm text-gray-600 dark:text-dark-400 mt-1">These cookies help us understand how visitors interact with our website by collecting and reporting information anonymously.</p>
+                </div>
+                <div class="relative">
+                  <input type="checkbox" id="analytics-cookies" class="sr-only">
+                  <label for="analytics-cookies" class="block w-12 h-6 bg-gray-300 rounded-full cursor-pointer"></label>
+                </div>
+              </div>
+              
+              <div class="cookie-toggle">
+                <div>
+                  <span class="cookie-type cookie-marketing">Marketing</span>
+                  <h4 class="font-semibold">Marketing Cookies</h4>
+                  <p class="text-sm text-gray-600 dark:text-dark-400 mt-1">These cookies are used to track visitors across websites to display relevant advertisements.</p>
+                </div>
+                <div class="relative">
+                  <input type="checkbox" id="marketing-cookies" class="sr-only">
+                  <label for="marketing-cookies" class="block w-12 h-6 bg-gray-300 rounded-full cursor-pointer"></label>
+                </div>
+              </div>
+              
+              <button id="savePreferences" class="btn-accent w-full mt-6">
+                <i class="fas fa-save mr-2"></i> Save Cookie Preferences
+              </button>
+            </div>
+
+            <h2>3. Types of Cookies We Use</h2>
+            <p>The table below provides more information about the cookies we use and why:</p>
+            
+            <!-- UPDATED RESPONSIVE TABLE WITH WRAPPER -->
+            <div class="cookie-table-wrapper">
+              <table class="cookie-table">
+                <thead>
+                  <tr>
+                    <th>Cookie Name</th>
+                    <th>Category</th>
+                    <th>Purpose</th>
+                    <th>Duration</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>session_id</strong></td>
+                    <td><span class="cookie-type cookie-essential">Essential</span></td>
+                    <td>Maintains user session state across page requests</td>
+                    <td>Session</td>
+                  </tr>
+                  <tr>
+                    <td><strong>accept_cookies</strong></td>
+                    <td><span class="cookie-type cookie-essential">Essential</span></td>
+                    <td>Remembers your cookie preferences</td>
+                    <td>1 year</td>
+                  </tr>
+                  <tr>
+                    <td><strong>theme_preference</strong></td>
+                    <td><span class="cookie-type cookie-functional">Functional</span></td>
+                    <td>Remembers your dark/light mode preference</td>
+                    <td>1 year</td>
+                  </tr>
+                  <tr>
+                    <td><strong>_ga</strong></td>
+                    <td><span class="cookie-type cookie-analytics">Analytics</span></td>
+                    <td>Google Analytics - Distinguishes unique users</td>
+                    <td>2 years</td>
+                  </tr>
+                  <tr>
+                    <td><strong>_gid</strong></td>
+                    <td><span class="cookie-type cookie-analytics">Analytics</span></td>
+                    <td>Google Analytics - Distinguishes unique users</td>
+                    <td>24 hours</td>
+                  </tr>
+                  <tr>
+                    <td><strong>_gat</strong></td>
+                    <td><span class="cookie-type cookie-analytics">Analytics</span></td>
+                    <td>Google Analytics - Throttles request rate</td>
+                    <td>1 minute</td>
+                  </tr>
+                  <tr>
+                    <td><strong>_fbp</strong></td>
+                    <td><span class="cookie-type cookie-marketing">Marketing</span></td>
+                    <td>Facebook Pixel - Ad delivery and measurement</td>
+                    <td>3 months</td>
+                  </tr>
+                  <tr>
+                    <td><strong>_gcl_au</strong></td>
+                    <td><span class="cookie-type cookie-marketing">Marketing</span></td>
+                    <td>Google Ads - Conversion tracking</td>
+                    <td>3 months</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- END UPDATED TABLE SECTION -->
+
+            <div class="mt-4 text-sm text-gray-500 dark:text-dark-400 italic">
+              <i class="fas fa-info-circle mr-2"></i>
+              On mobile devices, you can scroll horizontally to view the full table.
+            </div>
+
+            <h2>4. Third-Party Cookies</h2>
+            <p>In addition to our own cookies, we may also use various third-party cookies to report usage statistics, deliver advertisements, and so on. These include:</p>
+            <ul>
+              <li><strong>Google Analytics:</strong> To understand how visitors interact with our website</li>
+              <li><strong>Google Ads:</strong> To measure the effectiveness of our advertising campaigns</li>
+              <li><strong>Facebook Pixel:</strong> To track conversions from Facebook ads</li>
+              <li><strong>LinkedIn Insight Tag:</strong> To track conversions from LinkedIn ads</li>
+              <li><strong>Hotjar:</strong> To understand user behavior and improve user experience</li>
+            </ul>
+            <p>These third-party cookies are subject to the respective privacy policies of these third parties. We recommend you review their privacy policies to understand how they use your information.</p>
+
+            <h2>5. How to Control Cookies</h2>
+            <h3>5.1 Browser Settings</h3>
+            <p>Most web browsers allow you to control cookies through their settings preferences. However, limiting cookies may affect your experience on our website and some features may not work properly.</p>
+            <p>To manage cookies in your browser:</p>
+            <ul>
+              <li><strong>Google Chrome:</strong> Settings → Privacy and security → Cookies and other site data</li>
+              <li><strong>Mozilla Firefox:</strong> Options → Privacy & Security → Cookies and Site Data</li>
+              <li><strong>Safari:</strong> Preferences → Privacy → Cookies and website data</li>
+              <li><strong>Microsoft Edge:</strong> Settings → Cookies and site permissions → Cookies and data stored</li>
+            </ul>
+            
+            <h3>5.2 Opt-Out Tools</h3>
+            <p>You can also opt out of specific third-party cookies:</p>
+            <ul>
+              <li><a href="https://tools.google.com/dlpage/gaoptout" target="_blank" class="underline">Google Analytics Opt-out Browser Add-on</a></li>
+              <li><a href="https://www.facebook.com/help/568137493302217" target="_blank" class="underline">Facebook Ad Preferences</a></li>
+              <li><a href="https://www.linkedin.com/psettings/guest-controls" target="_blank" class="underline">LinkedIn Cookie Preferences</a></li>
+              <li><a href="https://www.hotjar.com/legal/compliance/opt-out" target="_blank" class="underline">Hotjar Opt-Out</a></li>
+            </ul>
+
+            <h3>5.3 Do Not Track Signals</h3>
+            <p>Some browsers have a "Do Not Track" feature that lets you tell websites that you do not want to have your online activities tracked. Our website does not currently respond to "Do Not Track" signals.</p>
+
+            <h2>6. Changes to This Cookie Policy</h2>
+            <p>We may update this Cookie Policy from time to time to reflect changes in technology, regulation, or our data practices. We will notify you of any material changes by posting the new Cookie Policy on this page and updating the "Last Updated" date.</p>
+            <p>We encourage you to review this Cookie Policy periodically for any changes. Changes to this Cookie Policy are effective when they are posted on this page.</p>
+
+            <h2>7. Your Rights</h2>
+            <p>Depending on your location, you may have certain rights regarding your personal data and cookies:</p>
+            <ul>
+              <li><strong>Right to access:</strong> You can request information about the personal data we hold about you.</li>
+              <li><strong>Right to rectification:</strong> You can request correction of inaccurate personal data.</li>
+              <li><strong>Right to erasure:</strong> You can request deletion of your personal data under certain circumstances.</li>
+              <li><strong>Right to restrict processing:</strong> You can request restriction of processing of your personal data.</li>
+              <li><strong>Right to data portability:</strong> You can request to receive your personal data in a structured, commonly used format.</li>
+              <li><strong>Right to object:</strong> You can object to the processing of your personal data.</li>
+              <li><strong>Right to withdraw consent:</strong> You can withdraw your consent at any time where we rely on consent to process your personal data.</li>
+            </ul>
+            <p>To exercise these rights, please contact us using the details provided in Section 8.</p>
+
+            <h2>8. Contact Information</h2>
+            <p>If you have any questions about this Cookie Policy or our use of cookies, please contact us:</p>
+            <ul>
+              <li><strong>Data Protection Officer:</strong> privacy@qadrmcl.com</li>
+              <li><strong>Address:</strong> Qadr Media & Communications Ltd, Razzak Plaza (8th Floor), 1 New Eskaton Road, Moghbazar Circle, Dhaka-1217, Bangladesh</li>
+              <li><strong>Telephone:</strong> +880 22222 5916–7</li>
+            </ul>
+
+            <div class="mt-12 pt-8 border-t border-gray-200 dark:border-dark-700">
+              <p class="text-center text-gray-600 dark:text-dark-400">
+                <i class="fas fa-cookie-bite text-accent-600 dark:text-accent-400 mr-2"></i>
+                This Cookie Policy was last updated on May 1, 2024. We are committed to protecting your privacy and giving you control over your cookie preferences.
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
+            <button id="updatePreferences" class="btn-accent px-8 py-3 rounded-lg text-center">
+              <i class="fas fa-sliders-h mr-2"></i> Update Cookie Preferences
+            </button>
+            <a href="index.html" class="px-8 py-3 border border-gray-300 dark:border-dark-600 text-gray-700 dark:text-dark-300 rounded-lg hover:border-accent-600 dark:hover:border-accent-400 hover:text-accent-600 dark:hover:text-accent-400 transition-all duration-300 font-medium text-center">
+              <i class="fas fa-home mr-2"></i> Return to Homepage
+            </a>
+          </div>
+
+          <!-- Quick Links Section -->
+          <div class="mt-12 grid md:grid-cols-3 gap-6">
+            <a href="privacyPolicy.html" class="bg-gray-50 dark:bg-dark-800/50 p-6 rounded-xl border border-gray-200 dark:border-dark-700 hover:border-accent-400 transition-colors group">
+              <div class="flex items-center mb-3">
+                <div class="w-10 h-10 rounded-lg bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center mr-4">
+                  <i class="fas fa-shield-alt text-primary-600 dark:text-primary-400"></i>
+                </div>
+                <h4 class="font-bold text-gray-900 dark:text-white">Privacy Policy</h4>
+              </div>
+              <p class="text-sm text-gray-600 dark:text-dark-400">Learn how we collect, use, and protect your personal information.</p>
+              <div class="mt-4 text-accent-600 dark:text-accent-400 text-sm font-medium group-hover:underline">
+                Read Privacy Policy <i class="fas fa-arrow-right ml-1"></i>
+              </div>
+            </a>
+            
+            <a href="terms.html" class="bg-gray-50 dark:bg-dark-800/50 p-6 rounded-xl border border-gray-200 dark:border-dark-700 hover:border-accent-400 transition-colors group">
+              <div class="flex items-center mb-3">
+                <div class="w-10 h-10 rounded-lg bg-green-100 dark:bg-green-900/30 flex items-center justify-center mr-4">
+                  <i class="fas fa-file-contract text-green-600 dark:text-green-400"></i>
+                </div>
+                <h4 class="font-bold text-gray-900 dark:text-white">Terms of Service</h4>
+              </div>
+              <p class="text-sm text-gray-600 dark:text-dark-400">Review the terms and conditions for using our website and services.</p>
+              <div class="mt-4 text-accent-600 dark:text-accent-400 text-sm font-medium group-hover:underline">
+                Read Terms of Service <i class="fas fa-arrow-right ml-1"></i>
+              </div>
+            </a>
+            
+            <a href="contact.html" class="bg-gray-50 dark:bg-dark-800/50 p-6 rounded-xl border border-gray-200 dark:border-dark-700 hover:border-accent-400 transition-colors group">
+              <div class="flex items-center mb-3">
+                <div class="w-10 h-10 rounded-lg bg-accent-100 dark:bg-accent-900/30 flex items-center justify-center mr-4">
+                  <i class="fas fa-question-circle text-accent-600 dark:text-accent-400"></i>
+                </div>
+                <h4 class="font-bold text-gray-900 dark:text-white">Contact Us</h4>
+              </div>
+              <p class="text-sm text-gray-600 dark:text-dark-400">Have questions about our policies? Get in touch with our team.</p>
+              <div class="mt-4 text-accent-600 dark:text-accent-400 text-sm font-medium group-hover:underline">
+                Contact Our Team <i class="fas fa-arrow-right ml-1"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark-900 text-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="py-12">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+          <div>
+            <div class="mb-6">
+              <div class="h-16 w-40 rounded-lg overflow-hidden">
+                <img src="Logo/QMCL-Logo.png" alt="QMCL Logo" class="h-full w-full object-contain">
+              </div>
+            </div>
+            <p class="text-dark-400 text-sm leading-relaxed mb-4">
+              Leading strategic communications agency delivering measurable impact through innovative digital solutions,
+              web development, and creative services.
+            </p>
+            <div class="flex space-x-3">
+              <a href="#"
+                class="w-9 h-9 rounded-full bg-dark-800 hover:bg-accent-600 flex items-center justify-center transition-colors">
+                <i class="fab fa-linkedin-in text-sm"></i>
+              </a>
+              <a href="#"
+                class="w-9 h-9 rounded-full bg-dark-800 hover:bg-blue-500 flex items-center justify-center transition-colors">
+                <i class="fab fa-twitter text-sm"></i>
+              </a>
+              <a href="#"
+                class="w-9 h-9 rounded-full bg-dark-800 hover:bg-blue-700 flex items-center justify-center transition-colors">
+                <i class="fab fa-facebook-f text-sm"></i>
+              </a>
+              <a href="#"
+                class="w-9 h-9 rounded-full bg-dark-800 hover:bg-pink-600 flex items-center justify-center transition-colors">
+                <i class="fab fa-instagram text-sm"></i>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-lg mb-4">Services</h4>
+            <ul class="space-y-2">
+              <li><a href="services.html" class="text-dark-400 hover:text-white transition-colors text-sm">Website Design &
+                  Development</a></li>
+              <li><a href="services.html" class="text-dark-400 hover:text-white transition-colors text-sm">Digital
+                  Marketing</a></li>
+              <li><a href="services.html" class="text-dark-400 hover:text-white transition-colors text-sm">Software & Mobile
+                  Apps</a></li>
+              <li><a href="services.html" class="text-dark-400 hover:text-white transition-colors text-sm">Social Media
+                  Marketing</a></li>
+              <li><a href="services.html" class="text-dark-400 hover:text-white transition-colors text-sm">Video
+                  Services</a></li>
+              <li><a href="services.html" class="text-dark-400 hover:text-white transition-colors text-sm">Graphics & UI/UX
+                  Design</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-lg mb-4">Quick Links</h4>
+            <ul class="space-y-2">
+              <li><a href="index.html" class="text-dark-400 hover:text-white transition-colors text-sm">Home</a></li>
+              <li><a href="about.html" class="text-dark-400 hover:text-white transition-colors text-sm">About Us</a></li>
+              <li><a href="services.html" class="text-dark-400 hover:text-white transition-colors text-sm">Services</a></li>
+              <li><a href="portfolio.html" class="text-dark-400 hover:text-white transition-colors text-sm">Portfolio</a>
+              </li>
+              <li><a href="privacyPolicy.html" class="text-dark-400 hover:text-white transition-colors text-sm">Privacy Policy</a></li>
+              <li><a href="terms.html" class="text-dark-400 hover:text-white transition-colors text-sm">Terms of Service</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold text-lg mb-4">Contact Info</h4>
+            <ul class="space-y-3 text-dark-400 text-sm">
+              <li class="flex items-start">
+                <i class="fas fa-map-marker-alt mt-1 mr-3 text-accent-400"></i>
+                <span>Razzak Plaza, 8th Floor<br>Dhaka-1217, Bangladesh</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-phone mr-3 text-accent-400"></i>
+                <span>+880 22222 5916–7</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-envelope mr-3 text-accent-400"></i>
+                <span>info@qadrmcl.com</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-cookie-bite mr-3 text-accent-400"></i>
+                <span>privacy@qadrmcl.com</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-t border-dark-800 pt-8">
+          <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-dark-400 text-sm">© 2024 Qadr Media & Communications Ltd. All rights reserved.</p>
+            <div class="flex space-x-6 text-sm text-dark-400">
+              <a href="privacyPolicy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+              <a href="terms.html" class="hover:text-white transition-colors">Terms of Service</a>
+              <a href="cookiePolicy.html" class="text-accent-400 hover:text-white transition-colors">Cookie Policy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cookie Consent Banner -->
+  <div id="cookieBanner" class="cookie-banner">
+    <div class="container mx-auto">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="flex-1">
+          <h3 class="font-bold text-gray-900 dark:text-white mb-2">We Use Cookies</h3>
+          <p class="text-sm text-gray-600 dark:text-dark-400">
+            We use cookies to enhance your browsing experience, analyze site traffic, and personalize content. By clicking "Accept All", you consent to our use of cookies. You can manage your preferences at any time in our <a href="cookiePolicy.html" class="text-accent-600 dark:text-accent-400 underline">Cookie Policy</a>.
+          </p>
+        </div>
+        <div class="flex gap-3">
+          <button id="cookieReject" class="px-4 py-2 border border-gray-300 dark:border-dark-600 text-gray-700 dark:text-dark-300 rounded-lg hover:border-accent-600 dark:hover:border-accent-400 hover:text-accent-600 dark:hover:text-accent-400 transition-all duration-300 text-sm font-medium">
+            Reject Non-Essential
+          </button>
+          <button id="cookieAcceptAll" class="btn-accent px-4 py-2 rounded-lg text-sm font-medium">
+            Accept All
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =======================
+      JAVASCRIPT
+  ======================== -->
+  <script>
+    // DOM Elements
+    const htmlEl = document.documentElement;
+    const themeToggle = document.getElementById("themeToggle");
+    const sunIcon = document.getElementById("sunIcon");
+    const moonIcon = document.getElementById("moonIcon");
+
+    const drawerBackdrop = document.getElementById("drawerBackdrop");
+    const drawerPanel = document.getElementById("drawerPanel");
+    const drawerOpen = document.getElementById("drawerOpen");
+    const drawerClose = document.getElementById("drawerClose");
+
+    const headerBar = document.getElementById("headerBar");
+    const cookieBanner = document.getElementById("cookieBanner");
+    const cookieAcceptAll = document.getElementById("cookieAcceptAll");
+    const cookieReject = document.getElementById("cookieReject");
+    const savePreferencesBtn = document.getElementById("savePreferences");
+    const updatePreferencesBtn = document.getElementById("updatePreferences");
+
+    // Cookie Management
+    class CookieManager {
+      constructor() {
+        this.cookieCategories = {
+          essential: {
+            name: 'Essential',
+            required: true,
+            enabled: true,
+            description: 'Required for basic site functionality'
+          },
+          functional: {
+            name: 'Functional',
+            required: false,
+            enabled: false,
+            description: 'Enhances user experience'
+          },
+          analytics: {
+            name: 'Analytics',
+            required: false,
+            enabled: false,
+            description: 'Helps us understand site usage'
+          },
+          marketing: {
+            name: 'Marketing',
+            required: false,
+            enabled: false,
+            description: 'Used for personalized advertising'
+          }
+        };
+        
+        this.loadPreferences();
+      }
+      
+      loadPreferences() {
+        const savedPrefs = localStorage.getItem('cookiePreferences');
+        if (savedPrefs) {
+          try {
+            const prefs = JSON.parse(savedPrefs);
+            Object.keys(this.cookieCategories).forEach(key => {
+              if (prefs[key] !== undefined) {
+                this.cookieCategories[key].enabled = prefs[key];
+              }
+            });
+          } catch (e) {
+            console.error('Error loading cookie preferences:', e);
+          }
+        }
+        
+        // Update UI to reflect loaded preferences
+        this.updateCheckboxes();
+        
+        // Check if user has already made a choice
+        const hasConsent = localStorage.getItem('cookieConsent');
+        if (!hasConsent) {
+          // Show banner after a delay
+          setTimeout(() => {
+            cookieBanner.classList.add('show');
+          }, 1000);
+        }
+      }
+      
+      savePreferences() {
+        const preferences = {};
+        Object.keys(this.cookieCategories).forEach(key => {
+          preferences[key] = this.cookieCategories[key].enabled;
+        });
+        
+        localStorage.setItem('cookiePreferences', JSON.stringify(preferences));
+        localStorage.setItem('cookieConsent', 'true');
+        
+        // Hide banner
+        cookieBanner.classList.remove('show');
+        
+        // Show success message
+        this.showMessage('Cookie preferences saved successfully!', 'success');
+      }
+      
+      acceptAll() {
+        Object.keys(this.cookieCategories).forEach(key => {
+          this.cookieCategories[key].enabled = true;
+        });
+        
+        this.savePreferences();
+        this.updateCheckboxes();
+      }
+      
+      rejectNonEssential() {
+        Object.keys(this.cookieCategories).forEach(key => {
+          if (!this.cookieCategories[key].required) {
+            this.cookieCategories[key].enabled = false;
+          }
+        });
+        
+        this.savePreferences();
+        this.updateCheckboxes();
+      }
+      
+      updateCheckboxes() {
+        // Update checkboxes based on current preferences
+        const checkboxes = {
+          'essential-cookies': this.cookieCategories.essential.enabled,
+          'functional-cookies': this.cookieCategories.functional.enabled,
+          'analytics-cookies': this.cookieCategories.analytics.enabled,
+          'marketing-cookies': this.cookieCategories.marketing.enabled
+        };
+        
+        Object.keys(checkboxes).forEach(id => {
+          const checkbox = document.getElementById(id);
+          if (checkbox) {
+            checkbox.checked = checkboxes[id];
+            
+            // Update visual toggle
+            const label = checkbox.nextElementSibling;
+            if (label) {
+              label.classList.toggle('bg-accent-500', checkboxes[id]);
+              label.classList.toggle('bg-gray-300', !checkboxes[id]);
+            }
+          }
+        });
+      }
+      
+      showMessage(message, type = 'info') {
+        // Create message element
+        const messageEl = document.createElement('div');
+        messageEl.className = `fixed top-24 right-6 px-6 py-3 rounded-lg shadow-lg z-50 max-w-md ${
+          type === 'success' ? 'bg-green-100 text-green-800 border border-green-200' :
+          type === 'error' ? 'bg-red-100 text-red-800 border border-red-200' :
+          'bg-blue-100 text-blue-800 border border-blue-200'
+        }`;
+        
+        messageEl.innerHTML = `
+          <div class="flex items-center">
+            <i class="fas ${
+              type === 'success' ? 'fa-check-circle' :
+              type === 'error' ? 'fa-exclamation-circle' :
+              'fa-info-circle'
+            } mr-3"></i>
+            <span>${message}</span>
+          </div>
+        `;
+        
+        document.body.appendChild(messageEl);
+        
+        // Remove message after 3 seconds
+        setTimeout(() => {
+          messageEl.remove();
+        }, 3000);
+      }
+      
+      // Initialize event listeners for checkboxes
+      initCheckboxListeners() {
+        const checkboxes = [
+          'functional-cookies',
+          'analytics-cookies',
+          'marketing-cookies'
+        ];
+        
+        checkboxes.forEach(id => {
+          const checkbox = document.getElementById(id);
+          if (checkbox) {
+            checkbox.addEventListener('change', (e) => {
+              const category = id.replace('-cookies', '');
+              if (this.cookieCategories[category]) {
+                this.cookieCategories[category].enabled = e.target.checked;
+                
+                // Update visual toggle
+                const label = checkbox.nextElementSibling;
+                label.classList.toggle('bg-accent-500', e.target.checked);
+                label.classList.toggle('bg-gray-300', !e.target.checked);
+              }
+            });
+            
+            // Initialize visual toggle
+            const label = checkbox.nextElementSibling;
+            if (label) {
+              label.addEventListener('click', () => {
+                if (!checkbox.disabled) {
+                  checkbox.checked = !checkbox.checked;
+                  checkbox.dispatchEvent(new Event('change'));
+                }
+              });
+            }
+          }
+        });
+      }
+    }
+
+    // Initialize Cookie Manager
+    const cookieManager = new CookieManager();
+
+    // Theme Management
+    function setTheme(mode) {
+      const isDark = mode === "dark";
+      htmlEl.classList.toggle("dark", isDark);
+
+      // Toggle icons
+      if (isDark) {
+        sunIcon.classList.remove("hidden");
+        moonIcon.classList.add("hidden");
+      } else {
+        sunIcon.classList.add("hidden");
+        moonIcon.classList.remove("hidden");
+      }
+
+      localStorage.setItem("theme", mode);
+    }
+
+    // Initialize theme
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+      setTheme(savedTheme);
+    } else {
+      // Check user preference
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      setTheme(prefersDark ? "dark" : "light");
+    }
+
+    // Theme toggle event
+    themeToggle.addEventListener("click", () => {
+      setTheme(htmlEl.classList.contains("dark") ? "light" : "dark");
+    });
+
+    // Header scroll effect
+    function onScroll() {
+      const scrolled = window.scrollY > 20;
+      headerBar.classList.toggle("header-scrolled", scrolled);
+    }
+    window.addEventListener("scroll", onScroll);
+    onScroll();
+
+    // Drawer functionality
+    function openDrawer() {
+      drawerBackdrop.classList.add("open");
+      drawerPanel.classList.add("open");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeDrawer() {
+      drawerBackdrop.classList.remove("open");
+      drawerPanel.classList.remove("open");
+      document.body.style.overflow = "";
+    }
+
+    drawerOpen?.addEventListener("click", openDrawer);
+    drawerClose?.addEventListener("click", closeDrawer);
+
+    drawerBackdrop.addEventListener("click", (e) => {
+      if (e.target === drawerBackdrop) closeDrawer();
+    });
+
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeDrawer();
+    });
+
+    drawerPanel.querySelectorAll('a').forEach(a => a.addEventListener("click", closeDrawer));
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+
+        if (targetId.startsWith('#')) {
+          e.preventDefault();
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 100,
+              behavior: 'smooth'
+            });
+          }
+        }
+      });
+    });
+
+    // Cookie Banner Events
+    cookieAcceptAll?.addEventListener('click', () => {
+      cookieManager.acceptAll();
+    });
+
+    cookieReject?.addEventListener('click', () => {
+      cookieManager.rejectNonEssential();
+    });
+
+    // Save Preferences Button
+    savePreferencesBtn?.addEventListener('click', () => {
+      cookieManager.savePreferences();
+    });
+
+    // Update Preferences Button (scrolls to preferences section)
+    updatePreferencesBtn?.addEventListener('click', () => {
+      const preferencesSection = document.querySelector('.cookie-preference');
+      if (preferencesSection) {
+        window.scrollTo({
+          top: preferencesSection.offsetTop - 100,
+          behavior: 'smooth'
+        });
+      }
+    });
+
+    // Initialize checkbox listeners after DOM is loaded
+    document.addEventListener('DOMContentLoaded', () => {
+      cookieManager.initCheckboxListeners();
+    });
+
+    // Animate elements on scroll
+    function animateOnScroll() {
+      const elements = document.querySelectorAll('.animate-fade-in-up');
+
+      elements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (elementTop < windowHeight - 100) {
+          element.style.opacity = '1';
+          element.style.transform = 'translateY(0)';
+        }
+      });
+    }
+
+    // Initialize animations
+    document.addEventListener('DOMContentLoaded', () => {
+      animateOnScroll();
+    });
+
+    window.addEventListener('scroll', animateOnScroll);
+
+    // Last updated year in footer
+    document.addEventListener('DOMContentLoaded', function() {
+      const currentYear = new Date().getFullYear();
+      const yearElements = document.querySelectorAll('.current-year');
+      yearElements.forEach(el => {
+        el.textContent = currentYear;
+      });
+    });
+
+    // Set essential cookies toggle to disabled visually
+    document.addEventListener('DOMContentLoaded', function() {
+      const essentialToggle = document.querySelector('label[for="essential-cookies"]');
+      if (essentialToggle) {
+        essentialToggle.classList.add('cursor-not-allowed', 'bg-accent-500');
+      }
+    });
+  </script>
+</body>
+
+</html>
